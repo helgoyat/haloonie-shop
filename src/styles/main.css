@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: TangoSans;
+  src: url(./fonts/TangoSans_Bold.ttf);
+}
+
+/* Brand */
+.brand {
+  @apply font-['TangoSans'];
+}
+
+/* Main */
+body {
+  @apply font-sans;
+}
+.content {
+  @apply p-4 my-20 mx-16;
+}
+
+/* Titles */
+h2 {
+  @apply text-2xl;
+}
