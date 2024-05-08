@@ -9,7 +9,7 @@
       <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
         <button
           type="button"
-          class="text-white bg-emerald-400 hover:bg-emerald-500 font-medium rounded-full text-sm px-4 py-2 text-center">
+          class="text-white bg-emerald-400 font-medium rounded-full text-sm px-4 py-2 text-center">
           Get started
         </button>
         <button
