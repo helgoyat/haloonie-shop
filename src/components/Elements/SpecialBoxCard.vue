@@ -1,6 +1,6 @@
 <template>
   <div
-    class="w-full max-w-sm bg-white border-2 border-gray-100 rounded-lg shadow-sm hover:border-violet-400 transition-colors">
+    class="w-full max-w-sm bg-white border-2 border-gray-100 rounded-lg shadow-sm hover:border-emerald-300 transition-colors">
     <a href="#">
       <img
         class="p-8 rounded-t-lg"
@@ -17,7 +17,7 @@
         <span class="text-3xl font-bold text-gray-900">$599</span>
         <a
           href="#"
-          class="text-white bg-violet-600 font-medium rounded-md text-sm px-5 py-2.5 text-center">
+          class="text-white bg-emerald-500 font-medium rounded-md text-sm px-5 py-2.5 text-center">
           Add to cart
         </a>
       </div>

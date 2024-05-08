@@ -7,7 +7,7 @@
   src: url(./fonts/OmBotak.ttf);
 }
 
-@font-face {
+/* @font-face {
   font-family: TangoSans;
   src: url(./fonts/TangoSans.ttf);
 }
@@ -15,7 +15,7 @@
 @font-face {
   font-family: TangoSansBold;
   src: url(./fonts/TangoSans_Bold.ttf);
-}
+} */
 
 /* Brand */
 .brand {
@@ -24,10 +24,14 @@
 
 /* Titles */
 h1 {
-  @apply text-5xl text-center;
+  @apply text-5xl brand text-violet-800 text-center;
 }
 
 h2 {
+  @apply text-3xl text-center;
+}
+
+h3 {
   @apply text-2xl;
 }
 
