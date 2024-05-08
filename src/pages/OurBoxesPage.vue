@@ -1,16 +1,8 @@
 <script setup lang="ts"></script>
 
 <template>
-  <div class="header-container">
-    <h1 class="brand text-violet-800">Shop French Cookies</h1>
-    <button
-      type="button"
-      class="px-6 py-3 text-lg text-white ring-2 ring-offset-4 ring-violet-400 bg-violet-600 font-medium rounded-full text-center">
-      Get started
-    </button>
-  </div>
   <div class="content">
-    <h2>Welcome to you!</h2>
+    <h2>Our Boxes</h2>
     <p class="my-3 text-gray-500 dark:text-gray-400">
       Track work across the enterprise through an open, collaborative platform. Link issues across
       Jira and ingest data from other software development tools, so your IT support and operations
@@ -24,9 +16,3 @@
     </p>
   </div>
 </template>
-
-<style>
-.header-container {
-  @apply w-full h-[400px] flex flex-col gap-8 justify-center items-center bg-[url('../pictures/theme.jpg')] bg-cover bg-center p-4;
-}
-</style>
