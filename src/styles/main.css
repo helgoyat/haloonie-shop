@@ -3,24 +3,39 @@
 @tailwind utilities;
 
 @font-face {
+  font-family: OmBotak;
+  src: url(./fonts/OmBotak.ttf);
+}
+
+@font-face {
   font-family: TangoSans;
+  src: url(./fonts/TangoSans.ttf);
+}
+
+@font-face {
+  font-family: TangoSansBold;
   src: url(./fonts/TangoSans_Bold.ttf);
 }
 
 /* Brand */
 .brand {
-  @apply font-['TangoSans'];
+  @apply font-['OmBotak'];
+}
+
+/* Titles */
+h1 {
+  @apply text-5xl text-center;
+}
+
+h2 {
+  @apply text-2xl;
 }
 
 /* Main */
 body {
   @apply font-sans;
 }
-.content {
-  @apply p-4 my-20 mx-16;
-}
 
-/* Titles */
-h2 {
-  @apply text-2xl;
+.content {
+  @apply max-w-screen-lg mx-auto px-4 py-14;
 }
