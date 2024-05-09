@@ -18,7 +18,7 @@
         <a
           href="#"
           class="text-white bg-violet-600 font-medium rounded-md text-sm px-5 py-2.5 text-center">
-          Add to cart
+          Order
         </a>
       </div>
     </div>
