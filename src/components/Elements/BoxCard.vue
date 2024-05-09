@@ -1,6 +1,6 @@
 <template>
   <div
-    class="w-full max-w-sm bg-white border-2 border-gray-100 rounded-lg shadow-sm hover:border-violet-400 transition-colors">
+    class="w-full max-w-sm bg-white ring-2 ring-gray-100 rounded-lg shadow-sm hover:ring-violet-400 transition-all">
     <a href="#">
       <img
         class="p-8 rounded-t-lg"
@@ -9,7 +9,7 @@
     </a>
     <div class="px-5 pb-5">
       <a href="#">
-        <h5 class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">
+        <h5 class="text-xl font-semibold tracking-tight text-gray-900">
           Apple Watch Series 7 GPS, Aluminium Case, Starlight Sport
         </h5>
       </a>
