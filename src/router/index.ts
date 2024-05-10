@@ -1,8 +1,7 @@
-// import type { RouteLocation } from "vue-router";
 import HomePage from "@/pages/HomePage.vue";
 import OurBoxesPage from "@/pages/OurBoxesPage.vue";
 import NotFoundPage from "@/pages/NotFoundPage.vue";
-import SpecialsPage from "@/pages/SpecialsPage.vue";
+import SpecialBoxesPage from "@/pages/SpecialBoxesPage.vue";
 import BoxPage from "@/pages/BoxPage.vue";
 
 export default [
@@ -22,9 +21,9 @@ export default [
     component: OurBoxesPage,
   },
   {
-    path: "/specials",
-    name: "SpecialsPage",
-    component: SpecialsPage,
+    path: "/special-boxes",
+    name: "SpecialBoxesPage",
+    component: SpecialBoxesPage,
   },
   {
     path: "/box/:name",

@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { useRouter } from "vue-router";
 import { kebabCase } from "lodash";
-import { OurBoxes } from "@/data";
-import BoxCard from "@/components/BoxCard/BoxCard.vue";
+import { SpecialBoxes } from "@/data";
+import SpecialBoxCard from "@/components/BoxCard/SpecialBoxCard.vue";
 
 const router = useRouter();
 
@@ -13,10 +13,14 @@ const goToBoxPage = (boxName: string) => {
 
 <template>
   <div class="content">
-    <h2>Our Boxes</h2>
+    <h2>Specials</h2>
+    <div class="text-gray-500">
+      Track work across the enterprise through an open, collaborative platform. Link issues across
+      Jira and ingest data from other software development tools.
+    </div>
     <div class="grid grid-cols-3 gap-6 justify-items-center">
-      <box-card
-        v-for="item in OurBoxes"
+      <special-box-card
+        v-for="item in SpecialBoxes"
         :key="item.name"
         :box="item"
         @click="goToBoxPage(item.name)" />

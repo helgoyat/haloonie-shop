@@ -1,5 +1,9 @@
+<script setup lang="ts">
+import Message from "@/components/Elements/Message.vue";
+</script>
+
 <template>
   <div class="content">
-    <h2>Not Found</h2>
+    <message text="Not found" />
   </div>
 </template>

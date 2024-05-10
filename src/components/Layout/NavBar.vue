@@ -1,3 +1,11 @@
+<script setup lang="ts">
+import { useOrderStore } from "@/stores";
+import { storeToRefs } from "pinia";
+
+const orderStore = useOrderStore();
+const { isOrder, boxCount } = storeToRefs(orderStore);
+</script>
+
 <template>
   <nav class="bg-white sticky w-full z-20 top-0 start-0 border-b border-gray-200">
     <div class="max-w-screen-lg flex flex-wrap items-center justify-between mx-auto p-4">
@@ -9,8 +17,14 @@
       <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
         <button
           type="button"
-          class="text-white bg-emerald-400 font-medium rounded-full text-sm px-4 py-2 text-center">
-          Get started
+          class="relative font-medium rounded-full text-sm px-4 py-2 text-center"
+          :class="isOrder ? 'text-emerald-600 bg-emerald-100' : 'text-white bg-emerald-500'">
+          {{ isOrder ? "Order" : "Get started" }}
+          <div
+            v-if="isOrder"
+            class="absolute inline-flex items-center justify-center w-6 h-6 text-xs font-bold text-white bg-emerald-600 border-2 border-white rounded-full -top-2 -end-2">
+            {{ boxCount }}
+          </div>
         </button>
         <button
           data-collapse-toggle="navbar-sticky"
@@ -43,7 +57,7 @@
             v-for="item in [
               { name: 'About', link: 'AboutPage' },
               { name: 'Our Boxes', link: 'OurBoxesPage' },
-              { name: 'Specials', link: 'SpecialsPage' },
+              { name: 'Specials', link: 'SpecialBoxesPage' },
             ]"
             :key="item.name">
             <router-link
