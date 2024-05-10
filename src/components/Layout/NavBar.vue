@@ -15,17 +15,17 @@ const { isOrder, boxCount } = storeToRefs(orderStore);
         <span class="brand text-purple-700 self-center text-3xl whitespace-nowrap">Haloonie</span>
       </router-link>
       <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
-        <button
-          type="button"
+        <router-link
+          :to="{ name: 'OrderPage' }"
           class="relative font-medium rounded-full text-sm px-4 py-2 text-center"
-          :class="isOrder ? 'text-emerald-600 bg-emerald-100' : 'text-white bg-emerald-500'">
+          :class="isOrder ? 'text-emerald-600 bg-emerald-100' : 'text-white bg-emerald-400'">
           {{ isOrder ? "Order" : "Get started" }}
           <div
             v-if="isOrder"
             class="absolute inline-flex items-center justify-center w-6 h-6 text-xs font-bold text-white bg-emerald-600 border-2 border-white rounded-full -top-2 -end-2">
             {{ boxCount }}
           </div>
-        </button>
+        </router-link>
         <button
           data-collapse-toggle="navbar-sticky"
           type="button"

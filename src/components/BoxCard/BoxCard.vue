@@ -34,7 +34,7 @@ defineProps({
         <button
           type="button"
           class="text-white bg-violet-600 font-medium rounded-md text-sm px-5 py-2.5 text-center inline-flex items-center"
-          @click.stop="addBox(box.name)">
+          @click.stop="addBox(box.id)">
           Add
         </button>
       </div>

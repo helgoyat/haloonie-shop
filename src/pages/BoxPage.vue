@@ -1,11 +1,14 @@
 <script setup lang="ts">
 import { ref } from "vue";
-import { useRootStore } from "@/stores";
+import { useRootStore, useOrderStore } from "@/stores";
 import Message from "@/components/Elements/Message.vue";
 import { storeToRefs } from "pinia";
 
 const rootStore = useRootStore();
 const { box } = storeToRefs(rootStore);
+
+const orderStore = useOrderStore();
+const { addBox } = orderStore;
 
 const cookies = ref<string[]>([
   "https://www.coursesu.com/dw/image/v2/BBQX_PRD/on/demandware.static/-/Sites-digitalu-master-catalog/default/dw76e48d62/5900951251818_H1L1_7219122_S10.png",
@@ -52,7 +55,7 @@ const cookies = ref<string[]>([
         <button
           type="button"
           class="w-52 px-5 py-3 text-base font-medium text-center text-white bg-orange-500 rounded-full ring-2 ring-offset-4 ring-orange-300"
-          @click="">
+          @click="addBox(box.id)">
           Get a Box
         </button>
       </div>

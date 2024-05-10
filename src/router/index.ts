@@ -2,6 +2,7 @@ import HomePage from "@/pages/HomePage.vue";
 import OurBoxesPage from "@/pages/OurBoxesPage.vue";
 import NotFoundPage from "@/pages/NotFoundPage.vue";
 import SpecialBoxesPage from "@/pages/SpecialBoxesPage.vue";
+import OrderPage from "@/pages/OrderPage.vue";
 import BoxPage from "@/pages/BoxPage.vue";
 
 export default [
@@ -29,6 +30,11 @@ export default [
     path: "/box/:name",
     name: "BoxPage",
     component: BoxPage,
+  },
+  {
+    path: "/order",
+    name: "OrderPage",
+    component: OrderPage,
   },
   {
     path: "/:pathMatch(.*)*",

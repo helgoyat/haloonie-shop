@@ -7,8 +7,8 @@ const orderStore = () => {
 
   const boxCount = computed(() => boxes.value.length);
 
-  const addBox = (boxName: string): void => {
-    boxes.value.push(boxName);
+  const addBox = (id: string): void => {
+    boxes.value.push(id);
   };
 
   return {
