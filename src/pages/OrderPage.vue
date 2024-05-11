@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref } from "vue";
+import { ref, computed } from "vue";
 import { storeToRefs } from "pinia";
 import { useOrderStore } from "@/stores";
 import OrderTable from "@/components/OrderSteps/OrderTable.vue";
@@ -9,6 +9,10 @@ const orderStore = useOrderStore();
 const { isOrder } = storeToRefs(orderStore);
 
 const step = ref<number>(0);
+
+const nextStepLabel = computed((): string => {
+  return "Shipping";
+});
 </script>
 
 <template>
@@ -19,12 +23,12 @@ const step = ref<number>(0);
         <order-table v-if="step === 0" />
         <order-form v-if="step === 1" />
       </div>
-      <div class="flex justify-center my-4">
+      <div class="flex justify-center my-2">
         <button
           type="button"
           class="px-5 py-3 text-center inline-flex items-center text-base font-medium text-white bg-violet-600 rounded-lg"
           @click="() => ++step">
-          Next
+          {{ nextStepLabel }}
           <svg
             class="rtl:rotate-180 w-3.5 h-3.5 ms-2"
             aria-hidden="true"

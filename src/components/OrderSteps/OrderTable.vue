@@ -24,17 +24,17 @@ const isSpecialBox = (id: string): boolean => {
           </th>
           <th
             scope="col"
-            class="px-6 py-3">
+            class="px-6 py-3 w-72">
             Box
           </th>
           <th
             scope="col"
-            class="px-6 py-3">
+            class="px-6 py-3 w-48">
             Quantity
           </th>
           <th
             scope="col"
-            class="px-6 py-3">
+            class="px-6 py-3 text-right w-40">
             Price
           </th>
           <th
@@ -44,12 +44,11 @@ const isSpecialBox = (id: string): boolean => {
       </thead>
       <tbody>
         <tr
-          v-for="(item, index) in boxes"
-          class="bg-white border-violet-100"
-          :class="index < boxes.length - 1 && 'border-b'">
-          <td class="py-4 px-8">
+          v-for="item in boxes"
+          class="bg-white border-violet-100 border-b">
+          <td class="px-8 py-4">
             <div
-              class="h-24 w-full bg-contain bg-no-repeat bg-center bg-[url(https://flowbite.com/docs/images/products/apple-watch.png)]" />
+              class="h-24 w-24 bg-contain bg-no-repeat bg-center bg-[url(https://flowbite.com/docs/images/products/apple-watch.png)]" />
           </td>
           <td class="px-6 py-4 h-full font-semibold text-gray-900 text-base">
             <div class="flex items-center justify-stretch">
@@ -64,51 +63,51 @@ const isSpecialBox = (id: string): boolean => {
           <td class="px-6 py-4">
             <div class="flex items-center">
               <button
-                class="inline-flex items-center justify-center h-6 w-6 p-1 me-3 text-sm font-medium text-gray-500 bg-white border border-gray-400 rounded-full focus:outline-none focus:ring-4 focus:ring-gray-100 disabled:text-gray-200 disabled:border-gray-200 disabled:bg-white"
                 type="button"
+                class="text-gray-700 bg-gray-100 font-medium rounded-l-full text-sm p-2.5 text-center inline-flex items-center hover:bg-gray-200 disabled:bg-gray-50"
                 :disabled="boxIds[item.id] < 2"
                 @click="removeBox(item.id)">
-                <span class="sr-only">Quantity button</span>
                 <svg
-                  class="w-3 h-3"
+                  class="w-4 h-4"
                   aria-hidden="true"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
-                  viewBox="0 0 18 2">
+                  viewBox="0 0 24 24">
                   <path
                     stroke="currentColor"
                     stroke-linecap="round"
                     stroke-linejoin="round"
                     stroke-width="2"
-                    d="M1 1h16" />
+                    d="M5 12h14" />
                 </svg>
               </button>
-              <div class="font-semibold text-gray-900">
+              <div class="py-1.5 px-2 border-2 border-gray-100 bg-gray-100 text-gray-700">
                 {{ boxIds[item.id] }}
               </div>
               <button
-                class="inline-flex items-center justify-center h-6 w-6 p-1 ms-3 text-sm font-medium text-gray-500 bg-white border border-gray-400 rounded-full focus:outline-none focus:ring-4 focus:ring-gray-100 disabled:text-gray-200 disabled:border-gray-200 disabled:bg-white"
                 type="button"
+                class="text-gray-700 bg-gray-100 font-medium rounded-r-full text-sm p-2.5 text-center inline-flex items-center hover:bg-gray-200 disabled:bg-gray-50"
                 :disabled="isMaxBoxCount"
                 @click="addBox(item.id)">
-                <span class="sr-only">Quantity button</span>
                 <svg
-                  class="w-3 h-3"
+                  class="w-4 h-4"
                   aria-hidden="true"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
-                  viewBox="0 0 18 18">
+                  viewBox="0 0 24 24">
                   <path
                     stroke="currentColor"
                     stroke-linecap="round"
                     stroke-linejoin="round"
                     stroke-width="2"
-                    d="M9 1v16M1 9h16" />
+                    d="M5 12h14m-7 7V5" />
                 </svg>
               </button>
             </div>
           </td>
-          <td class="px-6 py-4 font-semibold text-gray-900">${{ item.price * boxIds[item.id] }}</td>
+          <td class="px-6 py-4 font-semibold text-gray-900 text-right">
+            ${{ item.price * boxIds[item.id] }}.00
+          </td>
           <td class="px-6 py-4">
             <button
               type="button"
@@ -127,6 +126,13 @@ const isSpecialBox = (id: string): boolean => {
               </svg>
             </button>
           </td>
+        </tr>
+        <tr class="bg-gray-50 text-violet-600">
+          <td class="px-8 py-4"></td>
+          <td class="px-6 py-4"></td>
+          <td class="px-6 py-4"><div class="text-xs uppercase font-bold text-right">Total</div></td>
+          <td class="px-6 py-4 font-semibold text-right">$178.00</td>
+          <td class="px-6 py-4"></td>
         </tr>
       </tbody>
     </table>
