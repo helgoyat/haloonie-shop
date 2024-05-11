@@ -44,8 +44,9 @@ const isSpecialBox = (id: string): boolean => {
       </thead>
       <tbody>
         <tr
-          v-for="item in boxes"
-          class="bg-white border-violet-100 border-b">
+          v-for="(item, index) in boxes"
+          class="bg-white border-violet-100"
+          :class="index < boxes.length - 1 && 'border-b'">
           <td class="px-8 py-4">
             <div
               class="h-24 w-24 bg-contain bg-no-repeat bg-center bg-[url(https://flowbite.com/docs/images/products/apple-watch.png)]" />

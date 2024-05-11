@@ -8,10 +8,15 @@ import OrderForm from "@/components/OrderSteps/OrderForm.vue";
 const orderStore = useOrderStore();
 const { isOrder } = storeToRefs(orderStore);
 
+const nextStepLabels: Record<string, string> = {
+  "0": "Continue",
+  "1": "Checkout",
+};
+
 const step = ref<number>(0);
 
 const nextStepLabel = computed((): string => {
-  return "Shipping";
+  return nextStepLabels[step.value.toString()];
 });
 </script>
 
