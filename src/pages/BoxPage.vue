@@ -54,7 +54,7 @@ const cookies = ref<string[]>([
       <div class="flex justify-center my-6">
         <button
           type="button"
-          class="w-52 px-5 py-3 text-base font-medium text-center text-white bg-orange-500 rounded-full ring-2 ring-offset-4 ring-orange-300"
+          class="w-52 px-5 py-3 text-base font-medium text-center text-white bg-orange-500 hover:bg-orange-600 rounded-full ring-2 ring-offset-4 ring-orange-300 focus:outline-none focus:ring-orange-500"
           @click="addBox(box.id)">
           Get a Box
         </button>

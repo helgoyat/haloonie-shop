@@ -17,8 +17,22 @@ const { isOrder, boxCount } = storeToRefs(orderStore);
       <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
         <router-link
           :to="{ name: 'OrderPage' }"
-          class="relative font-medium rounded-full text-sm px-4 py-2 text-center"
+          class="relative font-medium rounded-full text-sm px-4 py-2 text-center inline-flex items-center"
           :class="isOrder ? 'text-emerald-600 bg-emerald-100' : 'text-white bg-emerald-400'">
+          <svg
+            v-if="isOrder"
+            class="w-5 h-5 me-1 text-emerald-600"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24">
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M9 10V6a3 3 0 0 1 3-3v0a3 3 0 0 1 3 3v4m3-2 .917 11.923A1 1 0 0 1 17.92 21H6.08a1 1 0 0 1-.997-1.077L6 8h12Z" />
+          </svg>
           {{ isOrder ? "Order" : "Get started" }}
           <div
             v-if="isOrder"

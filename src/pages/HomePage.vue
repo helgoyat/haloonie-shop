@@ -27,6 +27,6 @@
 
 <style>
 .header-container {
-  @apply w-full h-[400px] flex flex-col gap-12 justify-center items-center bg-[url('../pictures/theme.jpg')] bg-cover bg-center p-4;
+  @apply w-full h-[400px] flex flex-col gap-12 justify-center items-center bg-[url('../pictures/theme.jpg')] bg-cover bg-bottom bg-fixed p-4;
 }
 </style>

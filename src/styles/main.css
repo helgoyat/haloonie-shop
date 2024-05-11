@@ -7,16 +7,6 @@
   src: url(./fonts/OmBotak.ttf);
 }
 
-/* @font-face {
-  font-family: TangoSans;
-  src: url(./fonts/TangoSans.ttf);
-}
-
-@font-face {
-  font-family: TangoSansBold;
-  src: url(./fonts/TangoSans_Bold.ttf);
-} */
-
 /* Brand */
 .brand {
   @apply font-['OmBotak'];
@@ -28,7 +18,7 @@ h1 {
 }
 
 h2 {
-  @apply text-3xl text-center;
+  @apply text-3xl text-center font-semibold text-gray-900;
 }
 
 h3 {

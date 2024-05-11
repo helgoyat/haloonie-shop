@@ -5,7 +5,7 @@ import { createPinia } from "pinia";
 import { startCase, camelCase } from "lodash";
 import { useRootStore } from "./stores";
 import routes from "./router";
-import { OurBoxes, SpecialBoxes } from "./data";
+import { Boxes } from "./data";
 import App from "./App.vue";
 import "./styles/main.css";
 
@@ -25,7 +25,7 @@ router.beforeEach((to: RouteLocation) => {
     const { setBox } = rootStore;
 
     const toBoxName = startCase(camelCase((to.params.name as string).replace("-", " ")));
-    const boxFound = [...OurBoxes, ...SpecialBoxes].find((item) => item.name === toBoxName);
+    const boxFound = Boxes.find((item) => item.name === toBoxName);
 
     if (boxFound) {
       setBox(boxFound);
