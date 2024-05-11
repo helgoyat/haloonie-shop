@@ -17,9 +17,9 @@ const isSpecialBox = (id: string): boolean => {
     <h2>Order</h2>
     <template v-if="isOrder">
       <div class="flex flex-col items-center">
-        <div class="max-w-3xl w-full border-2 border-violet-50 rounded-lg overflow-hidden">
+        <div class="max-w-4xl w-full border-2 border-gray-50 rounded-lg overflow-hidden">
           <table class="w-full text-sm text-left rtl:text-right text-gray-500">
-            <thead class="text-xs text-violet-600 uppercase bg-violet-50">
+            <thead class="text-xs text-gray-600 uppercase bg-gray-50">
               <tr>
                 <th
                   scope="col"
@@ -55,13 +55,15 @@ const isSpecialBox = (id: string): boolean => {
                   <div
                     class="h-24 w-full bg-contain bg-no-repeat bg-center bg-[url(https://flowbite.com/docs/images/products/apple-watch.png)]" />
                 </td>
-                <td class="px-6 py-4 font-semibold text-gray-900">
-                  {{ item.name }}
-                  <span
-                    v-if="isSpecialBox(item.id)"
-                    class="bg-orange-500 text-white text-xs font-medium ms-2 px-2 py-1 rounded">
-                    Special
-                  </span>
+                <td class="px-6 py-4 h-full font-semibold text-gray-900 text-base">
+                  <div class="flex items-center justify-stretch">
+                    {{ item.name }}
+                    <span
+                      v-if="isSpecialBox(item.id)"
+                      class="bg-orange-500 text-white text-xs font-medium ms-2 px-2 py-1 rounded">
+                      Special
+                    </span>
+                  </div>
                 </td>
                 <td class="px-6 py-4">
                   <div class="flex items-center">
@@ -110,7 +112,7 @@ const isSpecialBox = (id: string): boolean => {
                     </button>
                   </div>
                 </td>
-                <td class="px-6 py-4 font-semibold text-gray-900 dark:text-white">
+                <td class="px-6 py-4 font-semibold text-gray-900">
                   ${{ item.price * boxIds[item.id] }}
                 </td>
                 <td class="px-6 py-4">

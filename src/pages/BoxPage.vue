@@ -56,7 +56,11 @@ const onClickMinus = (id: string): void => {
             <div>Brand</div>
             <div class="text-gray-500 mt-2 flex flex-row justify-between gap-2">
               <div class="text-sm hover:underline hover:cursor-pointer">See details</div>
-              <div class="text-sm">1 item</div>
+              <div class="text-sm">
+                <span class="bg-violet-100 text-violet-700 text-xs font-medium px-2.5 py-1 rounded">
+                  1 unit
+                </span>
+              </div>
             </div>
           </div>
         </div>
