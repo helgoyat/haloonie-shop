@@ -33,7 +33,7 @@ const { isOrder, boxCount } = storeToRefs(orderStore);
               stroke-width="2"
               d="M9 10V6a3 3 0 0 1 3-3v0a3 3 0 0 1 3 3v4m3-2 .917 11.923A1 1 0 0 1 17.92 21H6.08a1 1 0 0 1-.997-1.077L6 8h12Z" />
           </svg>
-          {{ isOrder ? "Order" : "Get started" }}
+          {{ isOrder ? "Cart" : "Get started" }}
           <div
             v-if="isOrder"
             class="absolute inline-flex items-center justify-center w-6 h-6 text-xs font-bold text-white bg-emerald-500 border-2 border-white rounded-full -top-2 -end-2">
