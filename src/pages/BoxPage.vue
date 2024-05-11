@@ -8,7 +8,8 @@ const rootStore = useRootStore();
 const { box } = storeToRefs(rootStore);
 
 const orderStore = useOrderStore();
-const { addBox } = orderStore;
+const { boxIds } = storeToRefs(orderStore);
+const { addBox, deleteBox, removeBox } = orderStore;
 
 const cookies = ref<string[]>([
   "https://www.coursesu.com/dw/image/v2/BBQX_PRD/on/demandware.static/-/Sites-digitalu-master-catalog/default/dw76e48d62/5900951251818_H1L1_7219122_S10.png",
@@ -20,6 +21,15 @@ const cookies = ref<string[]>([
   "https://www.coursesu.com/dw/image/v2/BBQX_PRD/on/demandware.static/-/Sites-digitalu-master-catalog/default/dw90d77e45/5410041005707_H1N1_409078_S10.png?sw=250&sh=250&sm=fit",
   "https://www.coursesu.com/dw/image/v2/BBQX_PRD/on/demandware.static/-/Sites-digitalu-master-catalog/default/dwfa805be9/5410041423600_H1N1_1425685_S10.png?sw=250&sh=250&sm=fit",
 ]);
+
+const onClickMinus = (id: string): void => {
+  if (!box.value) return;
+  if (boxIds.value[box.value.id] === 1) {
+    deleteBox(id);
+  } else {
+    removeBox(id);
+  }
+};
 </script>
 
 <template>
@@ -52,11 +62,54 @@ const cookies = ref<string[]>([
         </div>
       </div>
       <div class="flex justify-center my-6">
+        <template v-if="boxIds[box.id]">
+          <button
+            type="button"
+            class="text-white bg-orange-500 font-medium rounded-l-full text-sm p-2.5 text-center inline-flex items-center"
+            @click.stop="onClickMinus(box.id)">
+            <svg
+              class="w-7 h-7"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24">
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M5 12h14" />
+            </svg>
+          </button>
+          <div
+            class="py-1.5 w-20 border-2 border-orange-500 bg-orange-500 text-white flex items-center justify-center">
+            {{ boxIds[box.id] }}
+          </div>
+          <button
+            type="button"
+            class="text-white bg-orange-500 font-medium rounded-r-full text-sm p-2.5 text-center inline-flex items-center"
+            @click.stop="addBox(box.id)">
+            <svg
+              class="w-7 h-7"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24">
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M5 12h14m-7 7V5" />
+            </svg>
+          </button>
+        </template>
         <button
+          v-else
           type="button"
-          class="w-52 px-5 py-3 text-base font-medium text-center text-white bg-orange-500 hover:bg-orange-600 rounded-full ring-2 ring-offset-4 ring-orange-300 focus:outline-none focus:ring-orange-500"
+          class="w-52 px-5 py-3 text-base font-medium text-center text-white bg-orange-500 rounded-full"
           @click="addBox(box.id)">
-          Get a Box
+          Add to cart
         </button>
       </div>
       <div class="inline-flex items-center justify-center w-full">
