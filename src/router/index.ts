@@ -4,6 +4,7 @@ import NotFoundPage from "@/pages/NotFoundPage.vue";
 import SpecialBoxesPage from "@/pages/SpecialBoxesPage.vue";
 import OrderPage from "@/pages/OrderPage.vue";
 import BoxPage from "@/pages/BoxPage.vue";
+import AboutPage from "@/pages/AboutPage.vue";
 
 export default [
   {
@@ -14,7 +15,7 @@ export default [
   {
     path: "/about",
     name: "AboutPage",
-    component: HomePage,
+    component: AboutPage,
   },
   {
     path: "/our-boxes",

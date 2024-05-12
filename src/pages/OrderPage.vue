@@ -9,7 +9,7 @@ const orderStore = useOrderStore();
 const { isOrder } = storeToRefs(orderStore);
 
 const nextStepLabels: Record<string, string> = {
-  "0": "Continue",
+  "0": "Shipping",
   "1": "Checkout",
 };
 
@@ -18,6 +18,11 @@ const step = ref<number>(0);
 const nextStepLabel = computed((): string => {
   return nextStepLabels[step.value.toString()];
 });
+
+const goToNextStep = (): void => {
+  window.scrollTo(0, 0);
+  ++step.value;
+};
 </script>
 
 <template>
@@ -32,7 +37,7 @@ const nextStepLabel = computed((): string => {
         <button
           type="button"
           class="px-5 py-3 text-center inline-flex items-center text-base font-medium text-white bg-violet-600 rounded-lg"
-          @click="() => ++step">
+          @click="goToNextStep">
           {{ nextStepLabel }}
           <svg
             class="rtl:rotate-180 w-3.5 h-3.5 ms-2"

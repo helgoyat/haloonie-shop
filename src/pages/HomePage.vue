@@ -1,4 +1,6 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import Featured from "@/components/Elements/Featured.vue";
+</script>
 
 <template>
   <div class="header-container">
@@ -22,6 +24,7 @@
       solutions.Accelerate critical development work, eliminate toil, and deploy changes with ease,
       with a complete audit trail for every change.
     </div>
+    <featured />
   </div>
 </template>
 

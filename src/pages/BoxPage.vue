@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { ref } from "vue";
 import { useRootStore, useOrderStore } from "@/stores";
 import Message from "@/components/Elements/Message.vue";
 import { storeToRefs } from "pinia";
@@ -10,17 +9,6 @@ const { box } = storeToRefs(rootStore);
 const orderStore = useOrderStore();
 const { boxIds } = storeToRefs(orderStore);
 const { addBox, deleteBox, removeBox } = orderStore;
-
-const cookies = ref<string[]>([
-  "https://www.coursesu.com/dw/image/v2/BBQX_PRD/on/demandware.static/-/Sites-digitalu-master-catalog/default/dw76e48d62/5900951251818_H1L1_7219122_S10.png",
-  "https://www.coursesu.com/dw/image/v2/BBQX_PRD/on/demandware.static/-/Sites-digitalu-master-catalog/default/dwdb7ff4d0/3017760002905_H1N1_800367_S10.png",
-  "https://www.coursesu.com/dw/image/v2/BBQX_PRD/on/demandware.static/-/Sites-digitalu-master-catalog/default/dwe19282d0/3061990142214_A1N1_5405800_S13.png",
-  "https://www.coursesu.com/dw/image/v2/BBQX_PRD/on/demandware.static/-/Sites-digitalu-master-catalog/default/dw1abe1a76/7622210422163_H1N1_21334_S10.png",
-  "https://www.coursesu.com/dw/image/v2/BBQX_PRD/on/demandware.static/-/Sites-digitalu-master-catalog/default/dw771729a3/5410126004021_A_7130141_S01.png?sw=250&sh=250&sm=fit",
-  "https://www.coursesu.com/dw/image/v2/BBQX_PRD/on/demandware.static/-/Sites-digitalu-master-catalog/default/dweae23f8a/4014400928891_H1N1_5008472_S10.png?sw=250&sh=250&sm=fit",
-  "https://www.coursesu.com/dw/image/v2/BBQX_PRD/on/demandware.static/-/Sites-digitalu-master-catalog/default/dw90d77e45/5410041005707_H1N1_409078_S10.png?sw=250&sh=250&sm=fit",
-  "https://www.coursesu.com/dw/image/v2/BBQX_PRD/on/demandware.static/-/Sites-digitalu-master-catalog/default/dwfa805be9/5410041423600_H1N1_1425685_S10.png?sw=250&sh=250&sm=fit",
-]);
 
 const onClickMinus = (id: string): void => {
   if (!box.value) return;
@@ -45,20 +33,20 @@ const onClickMinus = (id: string): void => {
       </div>
       <div class="grid grid-cols-4 gap-6 justify-items-center">
         <div
-          v-for="item in cookies"
-          :key="item"
+          v-for="item in box.cookies"
+          :key="item.name"
           class="w-full rounded ring-2 ring-gray-100 hover:ring-gray-200 transition-all">
           <div
             class="h-48 w-full bg-contain bg-no-repeat bg-center"
-            :style="`background-image: url(${item})`"></div>
+            :style="`background-image: url(${item.image})`"></div>
           <div class="p-5">
-            <div class="text-lg font-semibold tracking-tight text-gray-900">Product Name</div>
-            <div>Brand</div>
+            <div class="text-lg font-semibold tracking-tight text-gray-900">{{ item.name }}</div>
+            <div>{{ item.brand }}</div>
             <div class="text-gray-500 mt-2 flex flex-row justify-between gap-2">
               <div class="text-sm hover:underline hover:cursor-pointer">See details</div>
               <div class="text-sm">
                 <span class="bg-violet-100 text-violet-700 text-xs font-medium px-2.5 py-1 rounded">
-                  1 unit
+                  {{ item.itemCount }} unit
                 </span>
               </div>
             </div>
