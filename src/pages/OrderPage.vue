@@ -8,15 +8,15 @@ import OrderForm from "@/components/OrderSteps/OrderForm.vue";
 const orderStore = useOrderStore();
 const { isOrder } = storeToRefs(orderStore);
 
-const nextStepLabels: Record<string, string> = {
+const nextStepButtonLabels: Record<string, string> = {
   "0": "Shipping",
   "1": "Checkout",
 };
 
 const step = ref<number>(0);
 
-const nextStepLabel = computed((): string => {
-  return nextStepLabels[step.value.toString()];
+const nextStepButtonLabel = computed((): string => {
+  return nextStepButtonLabels[step.value.toString()];
 });
 
 const goToNextStep = (): void => {
@@ -38,7 +38,7 @@ const goToNextStep = (): void => {
           type="button"
           class="px-5 py-3 text-center inline-flex items-center text-base font-medium text-white bg-violet-600 rounded-lg"
           @click="goToNextStep">
-          {{ nextStepLabel }}
+          {{ nextStepButtonLabel }}
           <svg
             class="rtl:rotate-180 w-3.5 h-3.5 ms-2"
             aria-hidden="true"
