@@ -1,6 +1,6 @@
 <script setup lang="ts">
 // import { computed } from "vue";
-import Alert from "@/components/Elements/Alert.vue";
+import Info from "@/components/Elements/Info.vue";
 
 // const isFormValid = computed((): boolean => false);
 </script>
@@ -107,7 +107,7 @@ import Alert from "@/components/Elements/Alert.vue";
         </select>
       </div>
       <div class="mb-6">
-        <alert />
+        <info />
       </div>
       <div>
         <label class="inline-flex items-center me-5 cursor-pointer">

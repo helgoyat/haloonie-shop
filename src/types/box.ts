@@ -1,8 +1,7 @@
-import { ICookieBox } from "@/types";
-
 export interface IBox {
   id: string;
   name: string;
+  image: string;
   price: number;
-  cookies: ICookieBox[];
+  cookies: Record<string, number>;
 }

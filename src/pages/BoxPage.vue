@@ -1,7 +1,10 @@
 <script setup lang="ts">
-import { useRootStore, useOrderStore } from "@/stores";
-import Message from "@/components/Elements/Message.vue";
+import { computed } from "vue";
 import { storeToRefs } from "pinia";
+import { useRootStore, useOrderStore } from "@/stores";
+import { ICookie } from "@/types";
+import { Cookies } from "@/data";
+import Message from "@/components/Elements/Message.vue";
 
 const rootStore = useRootStore();
 const { box } = storeToRefs(rootStore);
@@ -9,6 +12,13 @@ const { box } = storeToRefs(rootStore);
 const orderStore = useOrderStore();
 const { boxIds } = storeToRefs(orderStore);
 const { addBox, deleteBox, removeBox } = orderStore;
+
+const cookies = computed((): ICookie[] => {
+  if (!box.value) return [];
+  return Object.keys(box.value.cookies)
+    .map((id) => Cookies.find((item) => item.id === id) || null)
+    .filter((e) => !!e) as ICookie[];
+});
 
 const onClickMinus = (id: string): void => {
   if (!box.value) return;
@@ -31,22 +41,22 @@ const onClickMinus = (id: string): void => {
           Cookies
         </span>
       </div>
-      <div class="grid grid-cols-4 gap-6 justify-items-center">
+      <div class="grid grid-cols-4 gap-6 justify-items-center items-start">
         <div
-          v-for="item in box.cookies"
+          v-for="item in cookies"
           :key="item.name"
-          class="w-full rounded ring-2 ring-gray-100 hover:ring-gray-200 transition-all">
+          class="w-full rounded ring-2 ring-gray-100 hover:ring-gray-200 transition-all p-2">
           <div
             class="h-48 w-full bg-contain bg-no-repeat bg-center"
             :style="`background-image: url(${item.image})`"></div>
-          <div class="p-5">
+          <div class="p-3">
             <div class="text-lg font-semibold tracking-tight text-gray-900">{{ item.name }}</div>
             <div>{{ item.brand }}</div>
             <div class="text-gray-500 mt-2 flex flex-row justify-between gap-2">
               <div class="text-sm hover:underline hover:cursor-pointer">See details</div>
               <div class="text-sm">
                 <span class="bg-violet-100 text-violet-700 text-xs font-medium px-2.5 py-1 rounded">
-                  {{ item.itemCount }} unit
+                  {{ box.cookies[item.id] }} unit
                 </span>
               </div>
             </div>
@@ -74,7 +84,7 @@ const onClickMinus = (id: string): void => {
             </svg>
           </button>
           <div
-            class="py-1.5 w-20 border-2 border-orange-500 bg-orange-500 text-white flex items-center justify-center">
+            class="py-1.5 w-14 border-2 border-orange-500 bg-orange-500 text-white flex items-center justify-center">
             {{ boxIds[box.id] }}
           </div>
           <button
@@ -104,48 +114,29 @@ const onClickMinus = (id: string): void => {
           Add to cart
         </button>
       </div>
-      <div class="inline-flex items-center justify-center w-full">
+      <!-- <div class="inline-flex items-center justify-center w-full">
         <hr class="w-80 h-px my-8 bg-violet-300 border-0" />
         <span
           class="absolute px-3 brand text-2xl text-violet-600 -translate-x-1/2 bg-white left-1/2">
-          Ingredients
+          Details
         </span>
-      </div>
-      <div>
+      </div> -->
+      <!-- <div>
         <ul class="w-full text-sm space-y-6 text-gray-900 list-none list-inside">
           <li>
-            <span class="font-semibold text-gray-900">Product Name - Brand</span>
+            <span class="font-semibold text-gray-900">How it works</span>
             <div class="text-gray-500 mt-2">
-              Chocolat au LAIT* 48% (sucre*, beurre de cacao*, LAIT entier en poudre*, pâte de
-              cacao*), farine de BLE* (France) 36%, sucre*, BEURRE* 8,8%, LAIT ÉCRÉMÉ en poudre*,
-              poudres à lever : carbonates d'ammonium et de potassium, sel, poudre de jus de
-              citron*. Traces éventuelles de fruits à coque, d'oeuf, de soja et de graines de
-              sésame. * ingrédient issu de l'agriculture biologique.
+              We engage ourselves to deliver in best delays.
             </div>
           </li>
           <li>
-            <span class="font-semibold text-gray-900">Product Name - Brand</span>
+            <span class="font-semibold text-gray-900">Background</span>
             <div class="text-gray-500 mt-2">
-              Farine de BLÉ 37 %, chocolat au LAIT 27 % [sucre, pâte de cacao, beurre de cacao,
-              lactosérum en poudre (de LAIT), LAIT écrémé en poudre, graisses végétales (karité,
-              palme en proportion variable), BEURRE pâtissier, émulsifiants (lécithines de SOJA,
-              E476), lactose (de LAIT), arôme], huile de palme, farine de BLÉ complète 12 %, sucre,
-              sirop de sucre, poudres à lever (carbonates de sodium, carbonates d'ammonium), sel,
-              correcteur d'acidité (acide citrique). PEUT CONTENIR OEUF, SÉSAME, FRUITS À COQUE.
-              Fabriqué à Cestas. Blé français.
-            </div>
-          </li>
-          <li>
-            <span class="font-semibold text-gray-900">Product Name - Brand</span>
-            <div class="text-gray-500 mt-2">
-              Farine de BLÉ 47 %, huiles végétales (palme, coprah), sucre, chocolat en poudre 7,5 %
-              (sucre, cacao en poudre), lactose (de LAIT), poudres à lever (carbonates d'ammonium,
-              carbonates de sodium), LAIT entier en poudre, pâte de cacao, sel, pâte de NOISETTES,
-              émulsifiant (lécithines de SOJA).PEUT CONTENIR OEUF ET AUTRES FRUITS À COQUE.
+              Story of our lives.
             </div>
           </li>
         </ul>
-      </div>
+      </div> -->
     </template>
     <template v-else>
       <message text="Invalid box" />

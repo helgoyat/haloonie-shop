@@ -9,7 +9,7 @@ const orderStore = useOrderStore();
 const { isOrder } = storeToRefs(orderStore);
 
 const nextStepButtonLabels: Record<string, string> = {
-  "0": "Shipping",
+  "0": "Continue",
   "1": "Checkout",
 };
 
@@ -33,7 +33,7 @@ const goToNextStep = (): void => {
         <order-table v-if="step === 0" />
         <order-form v-if="step === 1" />
       </div>
-      <div class="flex justify-center my-2">
+      <div class="flex justify-center my-6">
         <button
           type="button"
           class="px-5 py-3 text-center inline-flex items-center text-base font-medium text-white bg-violet-600 rounded-lg"

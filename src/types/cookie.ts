@@ -1,9 +1,7 @@
-export interface ICookieBox extends ICookie {
-  itemCount: number;
-}
-
 export interface ICookie {
+  id: string;
   name: string;
   brand: string;
   image: string;
+  active: boolean;
 }

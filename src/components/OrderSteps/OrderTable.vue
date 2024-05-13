@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { storeToRefs } from "pinia";
 import { useOrderStore } from "@/stores";
-import { SpecialBoxes } from "@/data";
+import { CollectionBoxes, SpecialBoxes } from "@/data";
 
 const orderStore = useOrderStore();
 const { boxIds, boxes, isMaxBoxCount } = storeToRefs(orderStore);
@@ -10,10 +10,14 @@ const { addBox, removeBox, deleteBox } = orderStore;
 const isSpecialBox = (id: string): boolean => {
   return !!SpecialBoxes.find((item) => item.id === id);
 };
+
+const isCollectionBox = (id: string): boolean => {
+  return !!CollectionBoxes.find((item) => item.id === id);
+};
 </script>
 
 <template>
-  <div class="max-w-4xl w-full border-2 border-gray-50 rounded-lg overflow-hidden">
+  <div class="max-w-4xl w-full border border-gray-100 rounded-lg overflow-hidden">
     <table class="w-full text-sm text-left rtl:text-right text-gray-500">
       <thead class="text-xs text-gray-600 uppercase bg-gray-50">
         <tr>
@@ -49,7 +53,8 @@ const isSpecialBox = (id: string): boolean => {
           :class="index < boxes.length - 1 && 'border-b'">
           <td class="px-8 py-4">
             <div
-              class="h-24 w-24 bg-contain bg-no-repeat bg-center bg-[url(https://flowbite.com/docs/images/products/apple-watch.png)]" />
+              class="h-24 w-24 bg-contain bg-no-repeat bg-center"
+              :style="`background-image: url(${item.image})`" />
           </td>
           <td class="px-6 py-4 h-full font-semibold text-gray-900 text-base">
             <div class="flex items-center justify-stretch">
@@ -58,6 +63,11 @@ const isSpecialBox = (id: string): boolean => {
                 v-if="isSpecialBox(item.id)"
                 class="bg-orange-500 text-white text-xs font-medium ms-2 px-2 py-1 rounded">
                 Special
+              </span>
+              <span
+                v-if="isCollectionBox(item.id)"
+                class="bg-emerald-500 text-white text-xs font-medium ms-2 px-2 py-1 rounded">
+                Collection
               </span>
             </div>
           </td>
@@ -128,7 +138,7 @@ const isSpecialBox = (id: string): boolean => {
             </button>
           </td>
         </tr>
-        <tr class="bg-gray-50 text-violet-600">
+        <tr class="border-t border-violet-300 text-violet-600">
           <td class="px-8 py-4"></td>
           <td class="px-6 py-4"></td>
           <td class="px-6 py-4"><div class="text-xs uppercase font-bold text-right">Total</div></td>

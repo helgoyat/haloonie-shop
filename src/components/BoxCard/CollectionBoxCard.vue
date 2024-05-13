@@ -26,7 +26,7 @@ const onClickMinus = (id: string): void => {
 
 <template>
   <div
-    class="w-full max-w-sm bg-white ring-2 ring-gray-100 rounded-lg shadow-sm hover:ring-orange-300 transition-all cursor-pointer">
+    class="w-full max-w-sm bg-white ring-2 ring-gray-100 rounded-lg shadow-sm hover:ring-emerald-300 transition-all cursor-pointer">
     <div class="p-8">
       <div
         class="h-48 w-full bg-contain bg-no-repeat bg-center"
@@ -44,7 +44,7 @@ const onClickMinus = (id: string): void => {
           <template v-if="boxIds[box.id]">
             <button
               type="button"
-              class="text-white bg-orange-500 font-medium rounded-l-full text-sm p-2.5 text-center inline-flex items-center"
+              class="text-white bg-emerald-500 font-medium rounded-l-full text-sm p-2.5 text-center inline-flex items-center"
               @click.stop="onClickMinus(box.id)">
               <svg
                 class="w-5 h-5"
@@ -60,12 +60,12 @@ const onClickMinus = (id: string): void => {
                   d="M5 12h14" />
               </svg>
             </button>
-            <div class="py-1.5 border-2 border-orange-500 bg-orange-500 text-white">
+            <div class="py-1.5 border-2 border-emerald-500 bg-emerald-500 text-white">
               {{ boxIds[box.id] }}
             </div>
             <button
               type="button"
-              class="text-white bg-orange-500 font-medium rounded-r-full text-sm p-2.5 text-center inline-flex items-center"
+              class="text-white bg-emerald-500 font-medium rounded-r-full text-sm p-2.5 text-center inline-flex items-center"
               @click.stop="addBox(box.id)">
               <svg
                 class="w-5 h-5"
@@ -85,7 +85,7 @@ const onClickMinus = (id: string): void => {
           <button
             v-else
             type="button"
-            class="text-white bg-orange-500 font-medium rounded-full text-sm p-2.5 text-center inline-flex items-center"
+            class="text-white bg-emerald-500 font-medium rounded-full text-sm p-2.5 text-center inline-flex items-center"
             @click.stop="addBox(box.id)">
             <svg
               class="w-5 h-5"

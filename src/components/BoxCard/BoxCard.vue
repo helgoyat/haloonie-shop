@@ -27,12 +27,11 @@ const onClickMinus = (id: string): void => {
 <template>
   <div
     class="w-full max-w-sm bg-white ring-2 ring-gray-100 rounded-lg shadow-sm hover:ring-violet-400 transition-all cursor-pointer">
-    <a href="#">
-      <img
-        class="p-8 rounded-t-lg"
-        src="https://flowbite.com/docs/images/products/apple-watch.png"
-        alt="product image" />
-    </a>
+    <div class="p-8">
+      <div
+        class="h-48 w-full bg-contain bg-no-repeat bg-center"
+        :style="`background-image: url(${box.image})`"></div>
+    </div>
     <div class="px-5 pb-5">
       <a href="#">
         <h5 class="text-xl font-semibold tracking-tight text-gray-900">

@@ -24,6 +24,19 @@ import Featured from "@/components/Elements/Featured.vue";
       solutions.Accelerate critical development work, eliminate toil, and deploy changes with ease,
       with a complete audit trail for every change.
     </div>
+    <div class="inline-flex items-center justify-center w-full">
+      <hr class="w-80 h-px my-8 bg-violet-300 border-0" />
+      <span class="absolute px-3 brand text-2xl text-violet-600 -translate-x-1/2 bg-white left-1/2">
+        Featured Boxes
+      </span>
+    </div>
+    <featured />
+    <div class="inline-flex items-center justify-center w-full">
+      <hr class="w-80 h-px my-8 bg-violet-300 border-0" />
+      <span class="absolute px-3 brand text-2xl text-violet-600 -translate-x-1/2 bg-white left-1/2">
+        Soon
+      </span>
+    </div>
     <featured />
   </div>
 </template>
