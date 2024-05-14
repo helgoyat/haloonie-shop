@@ -9,6 +9,7 @@ export const CollectionBoxes: IBox[] = [
     cookies: {
       "f50f9320-f33e-4ede-8582-c3500532f98c": 1,
       "523edc74-9902-4bea-8747-b8c91b3e9b6d": 1,
+      "f2a284aa-bb9d-46a7-895e-17a81b60788e": 1,
     },
   },
   {
@@ -19,6 +20,10 @@ export const CollectionBoxes: IBox[] = [
     cookies: {
       "163746cb-fc56-4581-8039-3cf8b0e7bb5c": 1,
       "fbb6ad4d-6559-4018-b66f-c56020061650": 1,
+      "ab4d5376-4540-47b0-af51-c1d879be41a8": 1,
+      "3c9e18eb-e784-425b-8ee3-1f3ca6e45346": 1,
+      "585e01b4-b622-4cf8-b30b-179313c51c15": 1,
+      "69365e47-acde-4812-8806-4b99ea004d4e": 1,
     },
   },
   {
@@ -43,6 +48,7 @@ export const CollectionBoxes: IBox[] = [
     cookies: {
       "03b47f63-efea-460d-a24e-406aae52b549": 1,
       "c1bf2eb5-c13f-456e-9524-678b20210c6e": 1,
+      "f7a27502-67fe-48ba-bdb1-f474234bcea8": 1,
     },
   },
   {
@@ -54,6 +60,8 @@ export const CollectionBoxes: IBox[] = [
     cookies: {
       "03d8982b-a05b-49c3-a150-c6908f444033": 1,
       "cd63002d-04b0-49cc-b16a-7e2d58af9d82": 1,
+      "1fdd286f-ee0d-4542-9706-73b9a92ed969": 1,
+      "01764df6-5870-4e21-9c41-c523372863cc": 1,
     },
   },
   {
@@ -66,6 +74,10 @@ export const CollectionBoxes: IBox[] = [
       "e8f9491e-1ebc-45d7-9a61-5a094c23a60f": 1,
       "9331ad12-29ae-47f2-ae6b-a4af63adaa67": 1,
       "bf09553c-8307-4f8b-aaec-080fa92c8683": 1,
+      "19915fad-b76d-4522-bbba-3a72812800ac": 1,
+      "a42990f0-3951-444b-9716-6688ba9e60d2": 1,
+      "49dd0213-776e-4774-a022-60ab18f80b01": 1,
+      "a0ee17a3-00c1-4fce-a4d0-28b34a968c05": 1,
     },
   },
   {
@@ -78,6 +90,10 @@ export const CollectionBoxes: IBox[] = [
       "6847c9a7-40f6-4ad9-b79a-6bbecdd2a7a9": 1,
       "3b6faf3a-a99a-4860-9237-ff505fcbba42": 1,
       "1c9005fb-e165-4a5e-aabf-f1dd286f7d19": 1,
+      "4b953e44-99e5-47db-9f5b-800e6e16221d": 1,
+      "e6cae7c7-8507-4846-bb3b-79b894ef1698": 1,
+      "7dd68d77-2afa-4aa7-a718-68b1f5b80c07": 1,
+      "f7857c54-c44c-4ea2-a502-fa0a64d77f7c": 1,
     },
   },
 ];

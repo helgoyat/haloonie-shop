@@ -251,7 +251,7 @@ export const Cookies: ICookie[] = [
   },
   {
     id: "1c9005fb-e165-4a5e-aabf-f1dd286f7d19",
-    name: "Tartelettes aux framboise",
+    name: "Tartelettes aux framboises",
     brand: "Bonne Maman",
     image:
       "https://www.coursesu.com/dw/image/v2/BBQX_PRD/on/demandware.static/-/Sites-digitalu-master-catalog/default/dwfec36df1/3178530402995_A1L1_2782844_S12.png?sw=250&sh=250&sm=fit",
@@ -271,6 +271,141 @@ export const Cookies: ICookie[] = [
     brand: "LU",
     image:
       "https://www.coursesu.com/dw/image/v2/BBQX_PRD/on/demandware.static/-/Sites-digitalu-master-catalog/default/dw06a53941/7622300788094_H1N1_6300719_S10.png?sw=250&sh=250&sm=fit",
+    active: true,
+  },
+  {
+    id: "f2a284aa-bb9d-46a7-895e-17a81b60788e",
+    name: "Biscuits petit beurre chocolat au lait Petit Ecolier",
+    brand: "LU",
+    image:
+      "https://www.coursesu.com/dw/image/v2/BBQX_PRD/on/demandware.static/-/Sites-digitalu-master-catalog/default/dw731a8c19/7622210422026_H1N1_92401_S10.png?sw=250&sh=250&sm=fit",
+    active: true,
+  },
+  {
+    id: "1fdd286f-ee0d-4542-9706-73b9a92ed969",
+    name: "Fourres Choco",
+    brand: "BN",
+    image:
+      "https://www.coursesu.com/dw/image/v2/BBQX_PRD/on/demandware.static/-/Sites-digitalu-master-catalog/default/dweeb4abce/3061990142672_A_382753061990142672_S01.jpeg?sw=250&sh=250&sm=fit",
+    active: true,
+  },
+  {
+    id: "ab4d5376-4540-47b0-af51-c1d879be41a8",
+    name: "Gâteaux aux pépites de chocolat Pepito",
+    brand: "LU",
+    image:
+      "https://www.coursesu.com/dw/image/v2/BBQX_PRD/on/demandware.static/-/Sites-digitalu-master-catalog/default/dwcad62719/3048282900646_H1L1_2461242_S10.png?sw=250&sh=250&sm=fit",
+    active: true,
+  },
+  {
+    id: "3c9e18eb-e784-425b-8ee3-1f3ca6e45346",
+    name: "Biscuits barre fourrés au chocolat au lait Pepito",
+    brand: "LU",
+    image:
+      "https://www.coursesu.com/dw/image/v2/BBQX_PRD/on/demandware.static/-/Sites-digitalu-master-catalog/default/dw638e69a6/3017760329798_H1N1_475734_S10.png?sw=250&sh=250&sm=fit",
+    active: true,
+  },
+  {
+    id: "585e01b4-b622-4cf8-b30b-179313c51c15",
+    name: "Gâteaux fourrés au chocolat mini roulés Pepito",
+    brand: "LU",
+    image:
+      "https://www.coursesu.com/dw/image/v2/BBQX_PRD/on/demandware.static/-/Sites-digitalu-master-catalog/default/dw056e1a20/3017760314497_H1L1_2479168_S10.png?sw=250&sh=250&sm=fit",
+    active: true,
+  },
+  {
+    id: "69365e47-acde-4812-8806-4b99ea004d4e",
+    name: "Pepito Chocolat Noir",
+    brand: "LU",
+    image:
+      "https://www.coursesu.com/dw/image/v2/BBQX_PRD/on/demandware.static/-/Sites-digitalu-master-catalog/default/dw2ef0c65d/2000000902524_A_905932000000902524_S01.png?sw=250&sh=250&sm=fit",
+    active: true,
+  },
+  {
+    id: "01764df6-5870-4e21-9c41-c523372863cc",
+    name: "Biscuit tarto chocolat",
+    brand: "BN",
+    image:
+      "https://www.coursesu.com/dw/image/v2/BBQX_PRD/on/demandware.static/-/Sites-digitalu-master-catalog/default/dwb5821afa/3061990143785_A1L1_3903315_S12.png?sw=250&sh=250&sm=fit",
+    active: true,
+  },
+  {
+    id: "f7a27502-67fe-48ba-bdb1-f474234bcea8",
+    name: "Biscuits Choco Barre Prince",
+    brand: "LU",
+    image:
+      "https://www.coursesu.com/dw/image/v2/BBQX_PRD/on/demandware.static/-/Sites-digitalu-master-catalog/default/dwc1ca00e2/3017760404396_A1L1_51748_S12.png?sw=250&sh=250&sm=fit",
+    active: true,
+  },
+  {
+    id: "19915fad-b76d-4522-bbba-3a72812800ac",
+    name: "Galette moelleuse marbrée au chocolat",
+    brand: "St Michel",
+    image:
+      "https://www.coursesu.com/dw/image/v2/BBQX_PRD/on/demandware.static/-/Sites-digitalu-master-catalog/default/dw2205e643/3178530422733_A1L1_4044297_S12.png?sw=250&sh=250&sm=fit",
+    active: true,
+  },
+  {
+    id: "a42990f0-3951-444b-9716-6688ba9e60d2",
+    name: "Galette moelleuse tigrée nappée au chocolat lait",
+    brand: "St Michel",
+    image:
+      "https://www.coursesu.com/dw/image/v2/BBQX_PRD/on/demandware.static/-/Sites-digitalu-master-catalog/default/dw219860fc/3178530423792_A1L1_3861237_S12.png?sw=250&sh=250&sm=fit",
+    active: true,
+  },
+  {
+    id: "49dd0213-776e-4774-a022-60ab18f80b01",
+    name: "Biscuits Galettes moelleuse pépites chocolat",
+    brand: "St Michel",
+    image:
+      "https://www.coursesu.com/dw/image/v2/BBQX_PRD/on/demandware.static/-/Sites-digitalu-master-catalog/default/dw8ee5ba1d/3178530421118_A1L1_2562473_S12.png?sw=250&sh=250&sm=fit",
+    active: true,
+  },
+  {
+    id: "a0ee17a3-00c1-4fce-a4d0-28b34a968c05",
+    name: "Mini brownie chocolat cocottes",
+    brand: "St Michel",
+    image:
+      "https://www.coursesu.com/dw/image/v2/BBQX_PRD/on/demandware.static/-/Sites-digitalu-master-catalog/default/dw1a88eb55/3178530411553_A1L1_5934935_S12.png?sw=250&sh=250&sm=fit",
+    active: true,
+  },
+  {
+    id: "4b953e44-99e5-47db-9f5b-800e6e16221d",
+    name: "Gâteau moelleux au chocolat",
+    brand: "Bonne Maman",
+    image:
+      "https://www.coursesu.com/dw/image/v2/BBQX_PRD/on/demandware.static/-/Sites-digitalu-master-catalog/default/dwe5a329db/3178530425208_A1L1_7054381_S12.png?sw=250&sh=250&sm=fit",
+    active: true,
+  },
+  {
+    id: "e6cae7c7-8507-4846-bb3b-79b894ef1698",
+    name: "Madeleines au fourrage myrtille",
+    brand: "Bonne Maman",
+    image:
+      "https://www.coursesu.com/dw/image/v2/BBQX_PRD/on/demandware.static/-/Sites-digitalu-master-catalog/default/dw026457cf/3178530421392_A1L1_4631853_S12.png?sw=250&sh=250&sm=fit",
+    active: true,
+  },
+  {
+    id: "7dd68d77-2afa-4aa7-a718-68b1f5b80c07",
+    name: "Madeleines coeur chocolat",
+    brand: "Bonne Maman",
+    image:
+      "https://www.coursesu.com/dw/image/v2/BBQX_PRD/on/demandware.static/-/Sites-digitalu-master-catalog/default/dwe6bb7ec4/3178530420395_A1L1_6426575_S12.png?sw=250&sh=250&sm=fit",
+    active: true,
+  },
+  {
+    id: "f7857c54-c44c-4ea2-a502-fa0a64d77f7c",
+    name: "Gâteaux Petits marbrés au chocolat",
+    brand: "Bonne Maman",
+    image:
+      "https://www.coursesu.com/dw/image/v2/BBQX_PRD/on/demandware.static/-/Sites-digitalu-master-catalog/default/dw43dd0d76/3178530412741_A1L1_5775640_S12.png?sw=250&sh=250&sm=fit",
+    active: true,
+  },
+  {
+    id: "accdfcbd-e7af-44f9-831e-8b8a98b1863d",
+    name: "",
+    brand: "",
+    image: "",
     active: true,
   },
 ];
