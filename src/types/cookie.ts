@@ -3,5 +3,4 @@ export interface ICookie {
   name: string;
   brand: string;
   image: string;
-  active: boolean;
 }

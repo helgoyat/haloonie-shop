@@ -1,10 +1,14 @@
 <script setup lang="ts">
+import { computed } from "vue";
 import { useRouter } from "vue-router";
 import { kebabCase } from "lodash";
-import { OurBoxes } from "@/data";
+import { Boxes } from "@/data";
+import { IBox, BoxType } from "@/types";
 import BoxCard from "@/components/BoxCard/BoxCard.vue";
 
 const router = useRouter();
+
+const OurBoxes = computed((): IBox[] => Boxes.filter((item) => item.type === BoxType.Regular));
 
 const goToBoxPage = (boxName: string) => {
   router.push({ name: "BoxPage", params: { name: kebabCase(boxName) } });

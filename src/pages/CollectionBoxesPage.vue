@@ -1,10 +1,16 @@
 <script setup lang="ts">
+import { computed } from "vue";
 import { useRouter } from "vue-router";
 import { kebabCase } from "lodash";
-import { CollectionBoxes } from "@/data";
-import CollectionBoxCard from "@/components/BoxCard/CollectionBoxCard.vue";
+import { Boxes } from "@/data";
+import { BoxType, IBox } from "@/types";
+import BoxCard from "@/components/BoxCard/BoxCard.vue";
 
 const router = useRouter();
+
+const CollectionBoxes = computed((): IBox[] =>
+  Boxes.filter((item) => item.type === BoxType.Collection),
+);
 
 const goToBoxPage = (boxName: string) => {
   router.push({ name: "BoxPage", params: { name: kebabCase(boxName) } });
@@ -19,7 +25,7 @@ const goToBoxPage = (boxName: string) => {
       Jira and ingest data from other software development tools.
     </div>
     <div class="grid grid-cols-3 gap-6 justify-items-center">
-      <collection-box-card
+      <box-card
         v-for="item in CollectionBoxes"
         :key="item.name"
         :box="item"

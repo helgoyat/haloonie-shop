@@ -1,9 +1,27 @@
-import { IBox } from "@/types";
+import { BoxType, IBox } from "@/types";
 
-export const CollectionBoxes: IBox[] = [
+export const Boxes: IBox[] = [
+  {
+    id: "f55ed955-304d-4327-be48-2b2d8446aa1a",
+    name: "Marie",
+    type: BoxType.Regular,
+    image: "https://stickershop.line-scdn.net/stickershop/v1/product/1717/LINEStorePC/main.png?v=1",
+    price: 45,
+    cookies: {
+      "f50f9320-f33e-4ede-8582-c3500532f98c": 1,
+      "c2ae0379-9801-4e6c-a842-069fc78c4c49": 1,
+      "90d80965-c02f-4772-9e68-eedd864e0d2a": 1,
+      "8da70bfb-6539-4fe3-a21b-1281808d3a96": 1,
+      "523edc74-9902-4bea-8747-b8c91b3e9b6d": 1,
+      "e8f9491e-1ebc-45d7-9a61-5a094c23a60f": 1,
+      "565db74a-a6bb-4938-8847-8486c6ce1380": 1,
+      "bc47b267-7b1f-4a53-9ee4-7b2a892002a5": 1,
+    },
+  },
   {
     id: "4e8ba3ce-2f68-4e14-a37d-53c2680accd7",
     name: "Petit Ecolier",
+    type: BoxType.Collection,
     image: "https://upload.wikimedia.org/wikipedia/commons/4/4c/Petit_%C3%A9colier_Lu_logo.svg",
     price: 63,
     cookies: {
@@ -15,6 +33,7 @@ export const CollectionBoxes: IBox[] = [
   {
     id: "fa2215fc-e281-412c-bc47-b46324eefa53",
     name: "Pepito",
+    type: BoxType.Collection,
     image: "https://cdn.worldvectorlogo.com/logos/pepito.svg",
     price: 78,
     cookies: {
@@ -29,6 +48,7 @@ export const CollectionBoxes: IBox[] = [
   {
     id: "c5bf8a6b-770f-411f-956a-b9945dc6a9c2",
     name: "Granola",
+    type: BoxType.Collection,
     image:
       "https://www.mavieencouleurs.fr/sites/default/files/2021-04/335316-GRLA-LOGO-Q1-2020.png",
     price: 30,
@@ -43,6 +63,7 @@ export const CollectionBoxes: IBox[] = [
   {
     id: "29b9c25f-d220-48d4-b7a7-dbf41312bfd1",
     name: "Prince",
+    type: BoxType.Collection,
     image: "https://lemediacom.com/wp-content/uploads/2022/05/LU_Prince-logo-2.png",
     price: 54,
     cookies: {
@@ -54,6 +75,7 @@ export const CollectionBoxes: IBox[] = [
   {
     id: "9aa04c84-5ec8-4c70-a644-03e7ec6688e9",
     name: "Bn",
+    type: BoxType.Collection,
     image:
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgdhkFRpTGR6V75XQuL5lJ111KXiNQSf1pugUYYlxslw&s",
     price: 62,
@@ -67,6 +89,7 @@ export const CollectionBoxes: IBox[] = [
   {
     id: "068f549a-2a7e-4b43-8b17-3272932c8992",
     name: "St Michel",
+    type: BoxType.Collection,
     image:
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAdezQrFMkABMTkzG0z0Ss3UUJuxALyrtSIqQXbYLdgQ&s",
     price: 40,
@@ -83,6 +106,7 @@ export const CollectionBoxes: IBox[] = [
   {
     id: "b20dbfa2-db7d-48b8-84f0-611d5f3b68f6",
     name: "Bonne Maman",
+    type: BoxType.Collection,
     image: "https://cdn.worldvectorlogo.com/logos/bonne-maman.svg",
     price: 46,
     cookies: {
@@ -94,6 +118,23 @@ export const CollectionBoxes: IBox[] = [
       "e6cae7c7-8507-4846-bb3b-79b894ef1698": 1,
       "7dd68d77-2afa-4aa7-a718-68b1f5b80c07": 1,
       "f7857c54-c44c-4ea2-a502-fa0a64d77f7c": 1,
+    },
+  },
+  {
+    id: "fae39da9-2601-4ba8-8382-62a867aa71d9",
+    name: "Hirondelle",
+    type: BoxType.Special,
+    image: "https://upload.wikimedia.org/wikipedia/en/0/0c/The_Genie_Aladdin.png",
+    price: 48,
+    cookies: {
+      "f50f9320-f33e-4ede-8582-c3500532f98c": 1,
+      "c2ae0379-9801-4e6c-a842-069fc78c4c49": 1,
+      "90d80965-c02f-4772-9e68-eedd864e0d2a": 1,
+      "8da70bfb-6539-4fe3-a21b-1281808d3a96": 1,
+      "523edc74-9902-4bea-8747-b8c91b3e9b6d": 1,
+      "e8f9491e-1ebc-45d7-9a61-5a094c23a60f": 1,
+      "565db74a-a6bb-4938-8847-8486c6ce1380": 1,
+      "bc47b267-7b1f-4a53-9ee4-7b2a892002a5": 1,
     },
   },
 ];
