@@ -1,9 +1,9 @@
-import { BoxType } from "./enum";
+import { BoxTypeEnum } from "./enum";
 
 export interface IBox {
   id: string;
   name: string;
-  type: BoxType;
+  type: BoxTypeEnum;
   image: string;
   price: number;
   cookies: Record<string, number>;

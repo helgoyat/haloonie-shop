@@ -20,7 +20,7 @@ import HrTitle from "@/components/Elements/HrTitle.vue";
           <input
             type="text"
             id="firstName"
-            class="bg-gray-50 border border-gray-300 text-gray-900 text-base rounded-lg focus:ring-violet-300 focus:border-violet-300 block w-full p-2.5"
+            class="bg-white border border-gray-300 text-gray-900 text-base rounded-lg focus:ring-violet-300 focus:border-violet-300 block w-full p-2.5"
             placeholder="First name"
             required />
         </div>
@@ -33,7 +33,7 @@ import HrTitle from "@/components/Elements/HrTitle.vue";
           <input
             type="text"
             id="lastName"
-            class="bg-gray-50 border border-gray-300 text-gray-900 text-base rounded-lg focus:ring-violet-300 focus:border-violet-300 block w-full p-2.5"
+            class="bg-white border border-gray-300 text-gray-900 text-base rounded-lg focus:ring-violet-300 focus:border-violet-300 block w-full p-2.5"
             placeholder="Last name"
             required />
         </div>
@@ -47,7 +47,7 @@ import HrTitle from "@/components/Elements/HrTitle.vue";
         <input
           type="email"
           id="email"
-          class="bg-gray-50 border border-gray-300 text-gray-900 text-base rounded-lg focus:ring-violet-300 focus:border-violet-300 block w-full p-2.5"
+          class="bg-white border border-gray-300 text-gray-900 text-base rounded-lg focus:ring-violet-300 focus:border-violet-300 block w-full p-2.5"
           placeholder="Email"
           required />
       </div>
@@ -60,7 +60,7 @@ import HrTitle from "@/components/Elements/HrTitle.vue";
         <input
           type="email"
           id="confirmEmail"
-          class="bg-gray-50 border border-gray-300 text-gray-900 text-base rounded-lg focus:ring-violet-300 focus:border-violet-300 block w-full p-2.5"
+          class="bg-white border border-gray-300 text-gray-900 text-base rounded-lg focus:ring-violet-300 focus:border-violet-300 block w-full p-2.5"
           placeholder="Confirm email"
           required />
       </div>
@@ -75,7 +75,7 @@ import HrTitle from "@/components/Elements/HrTitle.vue";
         </label>
         <select
           id="state"
-          class="bg-gray-50 border border-gray-300 text-gray-900 text-base rounded-lg focus:ring-violet-300 focus:border-violet-300 block w-full p-2.5">
+          class="bg-white border border-gray-300 text-gray-900 text-base rounded-lg focus:ring-violet-300 focus:border-violet-300 block w-full p-2.5">
           <option selected>Select</option>
           <option value="VA">Virginia</option>
           <option value="CA">California</option>
@@ -89,7 +89,7 @@ import HrTitle from "@/components/Elements/HrTitle.vue";
         </label>
         <select
           id="pickuplocation"
-          class="bg-gray-50 border border-gray-300 text-gray-900 text-base rounded-lg focus:ring-violet-300 focus:border-violet-300 block w-full p-2.5">
+          class="bg-white border border-gray-300 text-gray-900 text-base rounded-lg focus:ring-violet-300 focus:border-violet-300 block w-full p-2.5">
           <option selected>Select</option>
           <option value="Reston">Reston</option>
           <option value="Washington">Washington D.C.</option>

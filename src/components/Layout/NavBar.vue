@@ -1,6 +1,7 @@
 <script setup lang="ts">
-import { useOrderStore } from "@/stores";
 import { storeToRefs } from "pinia";
+import { useOrderStore } from "@/stores";
+import { BoxTypeParamEnum } from "@/types";
 
 const orderStore = useOrderStore();
 const { isOrder, boxCount } = storeToRefs(orderStore);
@@ -16,7 +17,11 @@ const { isOrder, boxCount } = storeToRefs(orderStore);
       </router-link>
       <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
         <router-link
-          :to="{ name: isOrder ? 'OrderPage' : 'OurBoxesPage' }"
+          :to="
+            isOrder
+              ? { name: 'OrderPage' }
+              : { name: 'BoxesPage', params: { boxType: BoxTypeParamEnum.Regular } }
+          "
           class="relative font-medium rounded-full text-sm px-4 py-2 text-center inline-flex items-center"
           :class="isOrder ? 'text-emerald-600 bg-emerald-100' : 'text-white bg-emerald-400'">
           <svg
@@ -69,13 +74,13 @@ const { isOrder, boxCount } = storeToRefs(orderStore);
           class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white">
           <li
             v-for="item in [
-              { name: 'Our Boxes', link: 'OurBoxesPage' },
-              { name: 'Collections', link: 'CollectionBoxesPage' },
-              { name: 'Specials', link: 'SpecialBoxesPage' },
+              { name: 'Our Boxes', boxType: BoxTypeParamEnum.Regular },
+              { name: 'Collections', boxType: BoxTypeParamEnum.Collection },
+              { name: 'Specials', boxType: BoxTypeParamEnum.Special },
             ]"
             :key="item.name">
             <router-link
-              :to="{ name: item.link }"
+              :to="{ name: 'BoxesPage', params: { boxType: item.boxType } }"
               active-class="text-violet-500"
               class="block py-2 px-3 text-gray-900 rounded hover:bg-violet-300 md:hover:bg-transparent hover:text-violet-700 md:p-0">
               {{ item.name }}

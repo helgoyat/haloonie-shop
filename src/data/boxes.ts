@@ -1,10 +1,10 @@
-import { BoxType, IBox } from "@/types";
+import { BoxTypeEnum, IBox } from "@/types";
 
 export const Boxes: IBox[] = [
   {
     id: "f55ed955-304d-4327-be48-2b2d8446aa1a",
     name: "Marie",
-    type: BoxType.Regular,
+    type: BoxTypeEnum.Regular,
     image: "https://stickershop.line-scdn.net/stickershop/v1/product/1717/LINEStorePC/main.png?v=1",
     price: 45,
     cookies: {
@@ -21,7 +21,7 @@ export const Boxes: IBox[] = [
   {
     id: "4e8ba3ce-2f68-4e14-a37d-53c2680accd7",
     name: "Petit Ecolier",
-    type: BoxType.Collection,
+    type: BoxTypeEnum.Collection,
     image: "https://upload.wikimedia.org/wikipedia/commons/4/4c/Petit_%C3%A9colier_Lu_logo.svg",
     price: 63,
     cookies: {
@@ -33,7 +33,7 @@ export const Boxes: IBox[] = [
   {
     id: "fa2215fc-e281-412c-bc47-b46324eefa53",
     name: "Pepito",
-    type: BoxType.Collection,
+    type: BoxTypeEnum.Collection,
     image: "https://cdn.worldvectorlogo.com/logos/pepito.svg",
     price: 78,
     cookies: {
@@ -48,7 +48,7 @@ export const Boxes: IBox[] = [
   {
     id: "c5bf8a6b-770f-411f-956a-b9945dc6a9c2",
     name: "Granola",
-    type: BoxType.Collection,
+    type: BoxTypeEnum.Collection,
     image:
       "https://www.mavieencouleurs.fr/sites/default/files/2021-04/335316-GRLA-LOGO-Q1-2020.png",
     price: 30,
@@ -63,7 +63,7 @@ export const Boxes: IBox[] = [
   {
     id: "29b9c25f-d220-48d4-b7a7-dbf41312bfd1",
     name: "Prince",
-    type: BoxType.Collection,
+    type: BoxTypeEnum.Collection,
     image: "https://lemediacom.com/wp-content/uploads/2022/05/LU_Prince-logo-2.png",
     price: 54,
     cookies: {
@@ -75,7 +75,7 @@ export const Boxes: IBox[] = [
   {
     id: "9aa04c84-5ec8-4c70-a644-03e7ec6688e9",
     name: "Bn",
-    type: BoxType.Collection,
+    type: BoxTypeEnum.Collection,
     image:
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgdhkFRpTGR6V75XQuL5lJ111KXiNQSf1pugUYYlxslw&s",
     price: 62,
@@ -89,7 +89,7 @@ export const Boxes: IBox[] = [
   {
     id: "068f549a-2a7e-4b43-8b17-3272932c8992",
     name: "St Michel",
-    type: BoxType.Collection,
+    type: BoxTypeEnum.Collection,
     image:
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAdezQrFMkABMTkzG0z0Ss3UUJuxALyrtSIqQXbYLdgQ&s",
     price: 40,
@@ -106,7 +106,7 @@ export const Boxes: IBox[] = [
   {
     id: "b20dbfa2-db7d-48b8-84f0-611d5f3b68f6",
     name: "Bonne Maman",
-    type: BoxType.Collection,
+    type: BoxTypeEnum.Collection,
     image: "https://cdn.worldvectorlogo.com/logos/bonne-maman.svg",
     price: 46,
     cookies: {
@@ -123,7 +123,7 @@ export const Boxes: IBox[] = [
   {
     id: "fae39da9-2601-4ba8-8382-62a867aa71d9",
     name: "Hirondelle",
-    type: BoxType.Special,
+    type: BoxTypeEnum.Special,
     image: "https://upload.wikimedia.org/wikipedia/en/0/0c/The_Genie_Aladdin.png",
     price: 48,
     cookies: {

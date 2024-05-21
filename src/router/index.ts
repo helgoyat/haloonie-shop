@@ -1,7 +1,5 @@
 import HomePage from "@/pages/HomePage.vue";
-import OurBoxesPage from "@/pages/OurBoxesPage.vue";
-import CollectionBoxesPage from "@/pages/CollectionBoxesPage.vue";
-import SpecialBoxesPage from "@/pages/SpecialBoxesPage.vue";
+import BoxesPage from "@/pages/BoxesPage.vue";
 import NotFoundPage from "@/pages/NotFoundPage.vue";
 import OrderPage from "@/pages/OrderPage.vue";
 import BoxPage from "@/pages/BoxPage.vue";
@@ -20,19 +18,9 @@ export default [
     component: AboutPage,
   },
   {
-    path: "/our-boxes",
-    name: "OurBoxesPage",
-    component: OurBoxesPage,
-  },
-  {
-    path: "/collection-boxes",
-    name: "CollectionBoxesPage",
-    component: CollectionBoxesPage,
-  },
-  {
-    path: "/special-boxes",
-    name: "SpecialBoxesPage",
-    component: SpecialBoxesPage,
+    path: "/boxes/:boxType",
+    name: "BoxesPage",
+    component: BoxesPage,
   },
   {
     path: "/box/:name",

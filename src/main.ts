@@ -6,6 +6,7 @@ import { startCase, camelCase } from "lodash";
 import { useRootStore } from "./stores";
 import routes from "./router";
 import { Boxes } from "./data";
+import { BoxTypeParamEnum } from "./types";
 import App from "./App.vue";
 import "./styles/main.css";
 
@@ -15,11 +16,19 @@ const router = createRouter({
   scrollBehavior() {
     return { top: 0 };
   },
+  strict: true,
 });
 
 createApp(App).use(createPinia()).use(router).mount("#app");
 
 router.beforeEach((to: RouteLocation) => {
+  if (to.name === "BoxesPage") {
+    const boxType = to.params.boxType as string;
+
+    if (!(Object.values(BoxTypeParamEnum) as string[]).includes(boxType)) {
+      return { name: "NotFoundPage" };
+    }
+  }
   if (to.name === "BoxPage") {
     const rootStore = useRootStore();
     const { setBox } = rootStore;

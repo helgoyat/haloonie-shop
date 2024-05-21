@@ -2,18 +2,18 @@
 import { storeToRefs } from "pinia";
 import { useOrderStore } from "@/stores";
 import { Boxes } from "@/data";
-import { BoxType } from "@/types";
+import { BoxTypeEnum } from "@/types";
 
 const orderStore = useOrderStore();
 const { boxIds, boxes, isMaxBoxCount } = storeToRefs(orderStore);
 const { addBox, removeBox, deleteBox } = orderStore;
 
 const isSpecialBox = (id: string): boolean => {
-  return !!Boxes.find((item) => item.id === id && item.type === BoxType.Special);
+  return !!Boxes.find((item) => item.id === id && item.type === BoxTypeEnum.Special);
 };
 
 const isCollectionBox = (id: string): boolean => {
-  return !!Boxes.find((item) => item.id === id && item.type === BoxType.Collection);
+  return !!Boxes.find((item) => item.id === id && item.type === BoxTypeEnum.Collection);
 };
 </script>
 
