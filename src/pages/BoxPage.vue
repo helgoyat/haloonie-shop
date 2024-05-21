@@ -5,6 +5,7 @@ import { useRootStore, useOrderStore } from "@/stores";
 import { ICookie } from "@/types";
 import { Cookies } from "@/data";
 import Message from "@/components/Elements/Message.vue";
+import HrTitle from "@/components/Elements/HrTitle.vue";
 
 const rootStore = useRootStore();
 const { box } = storeToRefs(rootStore);
@@ -34,18 +35,12 @@ const onClickMinus = (id: string): void => {
   <div class="content">
     <template v-if="box">
       <h2>{{ box.name }}</h2>
-      <div class="inline-flex items-center justify-center w-full">
-        <hr class="w-80 h-px my-8 bg-violet-300 border-0" />
-        <span
-          class="absolute px-3 brand text-2xl text-violet-600 -translate-x-1/2 bg-white left-1/2">
-          Cookies
-        </span>
-      </div>
+      <hr-title title="Cookies" />
       <div class="grid grid-cols-4 gap-6 justify-items-center items-start">
         <div
           v-for="item in cookies"
           :key="item.name"
-          class="w-full rounded ring-2 ring-gray-100 hover:ring-gray-200 transition-all p-2">
+          class="w-full rounded ring-1 ring-gray-100 hover:ring-gray-200 transition-all p-2">
           <div
             class="h-48 w-full bg-contain bg-no-repeat bg-center"
             :style="`background-image: url(${item.image})`"></div>
@@ -55,7 +50,7 @@ const onClickMinus = (id: string): void => {
             <div class="text-gray-500 mt-2 flex flex-row justify-between gap-2">
               <div class="text-sm hover:underline hover:cursor-pointer">See details</div>
               <div class="text-sm">
-                <span class="bg-violet-100 text-violet-700 text-xs font-medium px-2.5 py-1 rounded">
+                <span class="text-gray-600 bg-gray-100 text-xs font-medium px-2.5 py-1 rounded">
                   {{ box.cookies[item.id] }} unit
                 </span>
               </div>
@@ -114,13 +109,7 @@ const onClickMinus = (id: string): void => {
           Add to cart
         </button>
       </div>
-      <!-- <div class="inline-flex items-center justify-center w-full">
-        <hr class="w-80 h-px my-8 bg-violet-300 border-0" />
-        <span
-          class="absolute px-3 brand text-2xl text-violet-600 -translate-x-1/2 bg-white left-1/2">
-          Details
-        </span>
-      </div> -->
+      <!-- <hr-title title="Details" /> -->
       <!-- <div>
         <ul class="w-full text-sm space-y-6 text-gray-900 list-none list-inside">
           <li>

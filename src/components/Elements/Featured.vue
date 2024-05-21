@@ -14,7 +14,7 @@ const cookies = ref<string[]>([
     <div
       v-for="item in cookies"
       :key="item"
-      class="w-full rounded ring-2 ring-gray-100 hover:ring-gray-200 transition-all">
+      class="w-full rounded ring-1 ring-gray-100 hover:ring-gray-200 transition-all">
       <div
         class="h-48 w-full bg-contain bg-no-repeat bg-center"
         :style="`background-image: url(${item})`"></div>

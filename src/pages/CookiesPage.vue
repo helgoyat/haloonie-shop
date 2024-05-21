@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { useRouter } from "vue-router";
 import { kebabCase } from "lodash";
-import { Cookies, Boxes, Theme } from "@/data";
-import { BoxType, IBox } from "@/types";
+import { Cookies, Boxes } from "@/data";
+import { IBox } from "@/types";
 
 const router = useRouter();
 
@@ -16,10 +16,6 @@ const getCookieBoxes = (cookieId: string): IBox[] => {
   return result;
 };
 
-const getChipBgColor = (type: BoxType) => {
-  return Theme[type]?.bg || "bg-gray-400";
-};
-
 const goToBoxPage = (boxName: string) => {
   router.push({ name: "BoxPage", params: { name: kebabCase(boxName) } });
 };
@@ -31,22 +27,19 @@ const goToBoxPage = (boxName: string) => {
       <div
         v-for="item in Cookies"
         :key="item.name"
-        class="w-full rounded ring-2 ring-gray-100 hover:ring-gray-200 transition-all p-2">
+        class="w-full rounded ring-1 ring-gray-100 hover:ring-gray-200 transition-all p-2">
         <div
           class="h-48 w-full bg-contain bg-no-repeat bg-center"
           :style="`background-image: url(${item.image})`"></div>
         <div class="p-3">
           <div class="text-lg font-semibold tracking-tight text-gray-900">{{ item.name }}</div>
-          <div>{{ item.brand }}</div>
-          <hr class="h-px my-4 bg-gray-200 border-0" />
-          <div class="tracking-tight text-gray-900 mb-2">Boxes</div>
+          <div class="mb-2">{{ item.brand }}</div>
           <div
             v-if="getCookieBoxes(item.id).length > 0"
             class="flex flex-row flex-wrap gap-2">
             <div
               v-for="element in getCookieBoxes(item.id)"
-              class="text-sm text-white font-medium px-2 py-1 rounded hover:cursor-pointer"
-              :class="getChipBgColor(element.type)"
+              class="text-sm text-white bg-gray-500 font-medium px-2 py-1 rounded hover:cursor-pointer"
               @click="goToBoxPage(element.name)">
               {{ element.name }}
             </div>

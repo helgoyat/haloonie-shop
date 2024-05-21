@@ -3,7 +3,6 @@ import { PropType } from "vue";
 import { storeToRefs } from "pinia";
 import { useOrderStore } from "@/stores";
 import { IBox } from "@/types";
-import { Theme } from "@/data";
 
 const orderStore = useOrderStore();
 const { boxIds } = storeToRefs(orderStore);
@@ -27,7 +26,7 @@ const onClickMinus = (id: string): void => {
 
 <template>
   <div
-    class="w-full max-w-sm bg-white ring-2 ring-gray-100 rounded-lg shadow-sm hover:ring-gray-200 transition-all cursor-pointer">
+    class="w-full max-w-sm bg-white ring-1 ring-gray-100 hover:ring-gray-200 rounded-lg shadow-sm transition-all cursor-pointer">
     <div class="p-8">
       <div
         class="h-48 w-full bg-contain bg-no-repeat bg-center"
@@ -45,8 +44,7 @@ const onClickMinus = (id: string): void => {
           <template v-if="boxIds[box.id]">
             <button
               type="button"
-              class="text-white font-medium rounded-l-full text-sm p-2.5 text-center inline-flex items-center"
-              :class="Theme[box.type]?.bg || 'bg-gray-400'"
+              class="text-white bg-violet-600 font-medium rounded-l-full text-sm p-2.5 text-center inline-flex items-center"
               @click.stop="onClickMinus(box.id)">
               <svg
                 class="w-5 h-5"
@@ -62,18 +60,12 @@ const onClickMinus = (id: string): void => {
                   d="M5 12h14" />
               </svg>
             </button>
-            <div
-              class="py-1.5 border-2 text-white"
-              :class="[
-                Theme[box.type]?.bg || 'bg-gray-400',
-                Theme[box.type]?.br || 'border-gray-400',
-              ]">
+            <div class="py-1.5 border-2 text-white bg-violet-600 border-violet-600">
               {{ boxIds[box.id] }}
             </div>
             <button
               type="button"
-              class="text-white font-medium rounded-r-full text-sm p-2.5 text-center inline-flex items-center"
-              :class="Theme[box.type]?.bg || 'bg-gray-400'"
+              class="text-white bg-violet-600 font-medium rounded-r-full text-sm p-2.5 text-center inline-flex items-center"
               @click.stop="addBox(box.id)">
               <svg
                 class="w-5 h-5"
@@ -93,8 +85,7 @@ const onClickMinus = (id: string): void => {
           <button
             v-else
             type="button"
-            class="text-white font-medium rounded-full text-sm p-2.5 text-center inline-flex items-center"
-            :class="Theme[box.type]?.bg || 'bg-gray-400'"
+            class="text-white bg-violet-600 font-medium rounded-full text-sm p-2.5 text-center inline-flex items-center"
             @click.stop="addBox(box.id)">
             <svg
               class="w-5 h-5"

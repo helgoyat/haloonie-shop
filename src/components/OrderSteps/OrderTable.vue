@@ -18,9 +18,9 @@ const isCollectionBox = (id: string): boolean => {
 </script>
 
 <template>
-  <div class="max-w-4xl w-full border border-gray-100 rounded-lg overflow-hidden">
+  <div class="max-w-4xl w-full border border-violet-100 rounded-lg overflow-hidden">
     <table class="w-full text-sm text-left rtl:text-right text-gray-500">
-      <thead class="text-xs text-gray-600 uppercase bg-gray-50">
+      <thead class="text-xs text-violet-700 uppercase bg-violet-50">
         <tr>
           <th
             scope="col"
@@ -61,14 +61,9 @@ const isCollectionBox = (id: string): boolean => {
             <div class="flex items-center justify-stretch">
               {{ item.name }}
               <span
-                v-if="isSpecialBox(item.id)"
-                class="bg-orange-500 text-white text-xs font-medium ms-2 px-2 py-1 rounded">
-                Special
-              </span>
-              <span
-                v-if="isCollectionBox(item.id)"
-                class="bg-emerald-500 text-white text-xs font-medium ms-2 px-2 py-1 rounded">
-                Collection
+                v-if="isSpecialBox(item.id) || isCollectionBox(item.id)"
+                class="bg-orange-500 text-white text-xs font-medium ms-3 px-2 py-1 rounded">
+                {{ isSpecialBox(item.id) ? "Special" : "Collection" }}
               </span>
             </div>
           </td>
@@ -139,7 +134,7 @@ const isCollectionBox = (id: string): boolean => {
             </button>
           </td>
         </tr>
-        <tr class="border-t border-violet-300 text-violet-600">
+        <tr class="border-t border-gray-400 text-gray-900">
           <td class="px-8 py-4"></td>
           <td class="px-6 py-4"></td>
           <td class="px-6 py-4"><div class="text-xs uppercase font-bold text-right">Total</div></td>
