@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed } from "vue";
 import { useRouter, useRoute } from "vue-router";
-import { kebabCase } from "lodash";
+import { kebabCase, startCase, camelCase } from "lodash";
 import { Boxes } from "@/data";
 import { IBox, BoxTypeEnum, BoxTypeParamEnum } from "@/types";
 import BoxCard from "@/components/BoxCard/BoxCard.vue";
@@ -23,7 +23,7 @@ const goToBoxPage = (boxName: string) => {
 
 <template>
   <div class="content">
-    <h2>Name</h2>
+    <h2>{{ startCase(camelCase((route.params.boxType as string).replace("-", " "))) }}</h2>
     <div class="grid grid-cols-3 gap-6 justify-items-center">
       <box-card
         v-for="item in boxes"

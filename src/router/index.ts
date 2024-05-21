@@ -18,7 +18,7 @@ export default [
     component: AboutPage,
   },
   {
-    path: "/boxes/:boxType",
+    path: "/:boxType",
     name: "BoxesPage",
     component: BoxesPage,
   },

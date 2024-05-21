@@ -33,8 +33,8 @@ router.beforeEach((to: RouteLocation) => {
     const rootStore = useRootStore();
     const { setBox } = rootStore;
 
-    const toBoxName = startCase(camelCase((to.params.name as string).replace("-", " ")));
-    const boxFound = Boxes.find((item) => item.name === toBoxName);
+    const boxName = startCase(camelCase((to.params.name as string).replace("-", " ")));
+    const boxFound = Boxes.find((item) => item.name === boxName);
 
     if (boxFound) {
       setBox(boxFound);

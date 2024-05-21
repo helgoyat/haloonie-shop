@@ -6,6 +6,6 @@ export enum BoxTypeEnum {
 
 export enum BoxTypeParamEnum {
   Regular = "our-boxes",
-  Collection = "collection-boxes",
-  Special = "special-boxes",
+  Collection = "collections",
+  Special = "specials",
 }
