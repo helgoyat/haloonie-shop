@@ -25,9 +25,7 @@ import HrTitle from "@/components/Elements/HrTitle.vue";
       solutions.Accelerate critical development work, eliminate toil, and deploy changes with ease,
       with a complete audit trail for every change.
     </div>
-    <hr-title title="Featured Boxes" />
-    <featured />
-    <hr-title title="Soon" />
+    <hr-title title="Featured" />
     <featured />
   </div>
 </template>
