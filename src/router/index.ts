@@ -1,8 +1,8 @@
 import HomePage from "@/pages/HomePage.vue";
 import BoxesPage from "@/pages/BoxesPage.vue";
+import MakeYourBoxPage from "@/pages/MakeYourBoxPage.vue";
 import NotFoundPage from "@/pages/NotFoundPage.vue";
 import OrderPage from "@/pages/OrderPage.vue";
-import BoxPage from "@/pages/BoxPage.vue";
 import AboutPage from "@/pages/AboutPage.vue";
 import CookiesPage from "@/pages/CookiesPage.vue";
 
@@ -18,14 +18,14 @@ export default [
     component: AboutPage,
   },
   {
-    path: "/:boxType",
-    name: "BoxesPage",
-    component: BoxesPage,
+    path: "/make-your-box",
+    name: "MakeYourBoxPage",
+    component: MakeYourBoxPage,
   },
   {
-    path: "/box/:name",
-    name: "BoxPage",
-    component: BoxPage,
+    path: "/:boxType/:boxName?",
+    name: "BoxesPage",
+    component: BoxesPage,
   },
   {
     path: "/order",
