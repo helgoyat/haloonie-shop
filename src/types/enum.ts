@@ -1,11 +1,11 @@
 export enum BoxTypeEnum {
-  Regular,
+  MakeYourBox,
   Collection,
   Special,
 }
 
 export enum BoxTypeParamEnum {
-  Regular = "our-boxes",
+  MakeYourBox = "make-your-box",
   Collection = "collections",
   Special = "specials",
 }

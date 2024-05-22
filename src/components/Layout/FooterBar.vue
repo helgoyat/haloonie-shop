@@ -16,21 +16,7 @@
               <a
                 href="#"
                 class="hover:underline">
-                Careers
-              </a>
-            </li>
-            <li class="mb-4">
-              <a
-                href="#"
-                class="hover:underline">
-                Brand Center
-              </a>
-            </li>
-            <li class="mb-4">
-              <a
-                href="#"
-                class="hover:underline">
-                Blog
+                How it works
               </a>
             </li>
           </ul>
@@ -42,28 +28,14 @@
               <a
                 href="#"
                 class="hover:underline">
-                Discord Server
+                F.A.Q.
               </a>
             </li>
             <li class="mb-4">
               <a
                 href="#"
                 class="hover:underline">
-                Twitter
-              </a>
-            </li>
-            <li class="mb-4">
-              <a
-                href="#"
-                class="hover:underline">
-                Facebook
-              </a>
-            </li>
-            <li class="mb-4">
-              <a
-                href="#"
-                class="hover:underline">
-                Contact Us
+                Contact us
               </a>
             </li>
           </ul>
@@ -82,47 +54,26 @@
               <a
                 href="#"
                 class="hover:underline">
-                Licensing
-              </a>
-            </li>
-            <li class="mb-4">
-              <a
-                href="#"
-                class="hover:underline">
-                Terms &amp; Conditions
+                Terms and Conditions
               </a>
             </li>
           </ul>
         </div>
         <div>
-          <h4 class="mb-6 text-sm font-semibold text-gray-900 uppercase">Download</h4>
+          <h4 class="mb-6 text-sm font-semibold text-gray-900 uppercase">Follow Us</h4>
           <ul class="text-gray-600 font-medium">
             <li class="mb-4">
               <a
                 href="#"
                 class="hover:underline">
-                iOS
+                Instagram
               </a>
             </li>
             <li class="mb-4">
               <a
                 href="#"
                 class="hover:underline">
-                Android
-              </a>
-            </li>
-            <li class="mb-4">
-              <a
-                href="#"
-                class="hover:underline">
-                Windows
-              </a>
-            </li>
-            <li class="mb-4">
-              <a
-                href="#"
-                class="hover:underline">
-                MacOS
+                Facebook
               </a>
             </li>
           </ul>

@@ -24,12 +24,15 @@ const goToBoxPage = (boxName: string) => {
 <template>
   <div class="content">
     <h2>{{ startCase(camelCase((route.params.boxType as string).replace("-", " "))) }}</h2>
-    <div class="grid grid-cols-3 gap-6 justify-items-center">
+    <div
+      v-if="route.params.boxType !== BoxTypeParamEnum.MakeYourBox"
+      class="grid grid-cols-3 gap-6 justify-items-center">
       <box-card
         v-for="item in boxes"
         :key="item.name"
         :box="item"
         @click="goToBoxPage(item.name)" />
     </div>
+    <div v-else>Make it happen !</div>
   </div>
 </template>

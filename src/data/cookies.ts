@@ -1,5 +1,12 @@
 import { ICookie } from "@/types";
 
+export const FeaturedCookies: string[] = [
+  "6b7ff405-26d8-4138-9fa2-e39ec4ba6b15",
+  "a6efb036-8b64-488f-b7f3-e5cf9f86c5ec",
+  "7db5a204-1f51-4b47-8d85-83b2e8017526",
+  "585e01b4-b622-4cf8-b30b-179313c51c15",
+];
+
 export const Cookies: ICookie[] = [
   {
     id: "f50f9320-f33e-4ede-8582-c3500532f98c",
@@ -325,8 +332,210 @@ export const Cookies: ICookie[] = [
   },
   {
     id: "accdfcbd-e7af-44f9-831e-8b8a98b1863d",
-    name: "",
-    brand: "",
-    image: "",
+    name: "Mini brownies aux pépites de chocolat",
+    brand: "Brossard",
+    image:
+      "https://www.coursesu.com/dw/image/v2/BBQX_PRD/on/demandware.static/-/Sites-digitalu-master-catalog/default/dw67f87c66/3498425591253_A1R1_11056_S18.png?sw=250&sh=250&sm=fit",
   },
+  {
+    id: "37310e59-9aee-4063-b852-23d9c9b44825",
+    name: "Gâteaux fourrés au chocolat L'Ourson LuLu",
+    brand: "LU",
+    image:
+      "https://www.coursesu.com/dw/image/v2/BBQX_PRD/on/demandware.static/-/Sites-digitalu-master-catalog/default/dw0e90cca6/3048282322646_H1N1_179051_S10.png?sw=250&sh=250&sm=fit",
+  },
+  {
+    id: "fd2bd0d9-258b-4cac-86a9-2f8fc4176aa9",
+    name: "Gâteaux chocolat Cake & Choc",
+    brand: "Milka",
+    image:
+      "https://www.coursesu.com/dw/image/v2/BBQX_PRD/on/demandware.static/-/Sites-digitalu-master-catalog/default/dw6bf7f9e9/7622300784751_H1L1_6303457_S10.png?sw=250&sh=250&sm=fit",
+  },
+  {
+    id: "7b491487-9ad4-4dc8-b8d7-8e577e86e2dc",
+    name: "Gâteau SAVANE Max Barr' Pocket",
+    brand: "Brossard",
+    image:
+      "https://www.coursesu.com/dw/image/v2/BBQX_PRD/on/demandware.static/-/Sites-digitalu-master-catalog/default/dwd0e7ca6e/3660140958851_A1L1_6296733_S12.png?sw=250&sh=250&sm=fit",
+  },
+  {
+    id: "7db45f32-0e1b-4ba7-aaf4-3b7dc68ec811",
+    name: "Gâteau duo Fraise PTIT SAVANE",
+    brand: "Brossard",
+    image:
+      "https://www.coursesu.com/dw/image/v2/BBQX_PRD/on/demandware.static/-/Sites-digitalu-master-catalog/default/dwab769ed4/3660140945455_A1L1_5609571_S12.png?sw=250&sh=250&sm=fit",
+  },
+  {
+    id: "5e94d1a8-b482-4701-b3e7-96aa85edda22",
+    name: "Biscuits Galettes moelleuse nappée au chocolat au lait",
+    brand: "St Michel",
+    image:
+      "https://www.coursesu.com/dw/image/v2/BBQX_PRD/on/demandware.static/-/Sites-digitalu-master-catalog/default/dwd7ba7154/3178530421132_A1L1_2562396_S12.png?sw=250&sh=250&sm=fit",
+  },
+  {
+    id: "aae254ee-7368-49f9-a6b4-963bfdee44da",
+    name: "Mini brownies chocolat aux noisettes",
+    brand: "Brossard",
+    image:
+      "https://www.coursesu.com/dw/image/v2/BBQX_PRD/on/demandware.static/-/Sites-digitalu-master-catalog/default/dwedcda5c6/3498425590355_A1R1_11134_S18.png?sw=250&sh=250&sm=fit",
+  },
+  {
+    id: "5a0d4964-ab46-49b5-b955-b1ac6664885a",
+    name: "Cookies aux pépites de chocolat sur gâteaux au chocolat",
+    brand: "Brossard",
+    image:
+      "https://www.coursesu.com/dw/image/v2/BBQX_PRD/on/demandware.static/-/Sites-digitalu-master-catalog/default/dw79d2ceb4/3660140942058_A1R1_2977611_S18.png?sw=250&sh=250&sm=fit",
+  },
+  {
+    id: "7edee0bb-986a-4b9d-bf76-864d9438a81e",
+    name: "Mini brownie blanc cocottes",
+    brand: "St Michel",
+    image:
+      "https://www.coursesu.com/dw/image/v2/BBQX_PRD/on/demandware.static/-/Sites-digitalu-master-catalog/default/dw5a6f746c/3178530411560_A1L1_5935374_S12.png?sw=250&sh=250&sm=fit",
+  },
+  {
+    id: "4cef0e97-cea3-41f9-90e9-a939632eb02f",
+    name: "Gâteau marbré SAVANE cacao noisettes",
+    brand: "Brossard",
+    image:
+      "https://www.coursesu.com/dw/image/v2/BBQX_PRD/on/demandware.static/-/Sites-digitalu-master-catalog/default/dwacc18c05/3660140954358_A1L1_2329335_S12.png?sw=250&sh=250&sm=fit",
+  },
+  {
+    id: "126a8c12-d15f-44e8-b379-8689ab2af98c",
+    name: "Gâteaux fourrés au chocolat tout chocolat L'Ourson LuLu",
+    brand: "LU",
+    image:
+      "https://www.coursesu.com/dw/image/v2/BBQX_PRD/on/demandware.static/-/Sites-digitalu-master-catalog/default/dw90e7fe5c/3017769149854_H1N1_5682464_S10.png?sw=250&sh=250&sm=fit",
+  },
+  {
+    id: "df470b45-afb8-4add-b019-c05cec804bca",
+    name: "Galette moelleuse tigrée nappée au chocolat blanc",
+    brand: "St Michel",
+    image:
+      "https://www.coursesu.com/dw/image/v2/BBQX_PRD/on/demandware.static/-/Sites-digitalu-master-catalog/default/dwdaff8d34/3178530423808_A1N1_7078100_S13.png?sw=250&sh=250&sm=fit",
+  },
+  {
+    id: "b59b8667-5712-46c2-90ff-0c3bb7ba2c04",
+    name: "Génoises roulées avec un fourrage au chocolat et à la noisette",
+    brand: "Brossard",
+    image:
+      "https://www.coursesu.com/dw/image/v2/BBQX_PRD/on/demandware.static/-/Sites-digitalu-master-catalog/default/dw8e072a2e/3660140960359_A1L1_6547595_S12.png?sw=250&sh=250&sm=fit",
+  },
+  {
+    id: "a940d4a8-1cc0-4ea7-b200-9412f2b67037",
+    name: "P'tit moelleux fraise SAVANE",
+    brand: "Brossard",
+    image:
+      "https://www.coursesu.com/dw/image/v2/BBQX_PRD/on/demandware.static/-/Sites-digitalu-master-catalog/default/dw90e0a5b1/3660140967051_A1L1_6720580_S12.png?sw=250&sh=250&sm=fit",
+  },
+  {
+    id: "4a02eb7b-8096-400e-ba80-118b42598b4e",
+    name: "Gâteaux au chocolat L'Original Napolitain",
+    brand: "LU",
+    image:
+      "https://www.coursesu.com/dw/image/v2/BBQX_PRD/on/demandware.static/-/Sites-digitalu-master-catalog/default/dwd38b774c/7622201809638_H1N1_2010913_S10.png?sw=250&sh=250&sm=fit",
+  },
+  {
+    id: "83ee9497-ff94-48a1-a160-c4bac246c9dd",
+    name: "Gâteaux au chocolat et à la framboise Napolitain",
+    brand: "LU",
+    image:
+      "https://www.coursesu.com/dw/image/v2/BBQX_PRD/on/demandware.static/-/Sites-digitalu-master-catalog/default/dwfa2e63c9/7622201809768_A1L1_2011033_S12.png?sw=250&sh=250&sm=fit",
+  },
+  // {
+  //   id: "bd184a37-7697-48f7-9c6a-1828f482c970",
+  //   name: "",
+  //   brand: "",
+  //   image: "",
+  // },
+  // {
+  //   id: "d597e3b4-7de0-4e43-934e-3a475cd2ce5c",
+  //   name: "",
+  //   brand: "",
+  //   image: "",
+  // },
+  // {
+  //   id: "1f8c6bda-97b2-42b9-a1fa-5b191c6dc583",
+  //   name: "",
+  //   brand: "",
+  //   image: "",
+  // },
+  // {
+  //   id: "10ef5517-3539-4649-bfa8-6c75feb597a2",
+  //   name: "",
+  //   brand: "",
+  //   image: "",
+  // },
+  // {
+  //   id: "a780bfa3-1e7d-4253-b6ac-6cebf5a8a1fb",
+  //   name: "",
+  //   brand: "",
+  //   image: "",
+  // },
+  // {
+  //   id: "cb7536db-2f5c-4aeb-a8d0-a318aa4e4f58",
+  //   name: "",
+  //   brand: "",
+  //   image: "",
+  // },
+  // {
+  //   id: "acd51440-59f6-4a88-82dc-2c9b35af090d",
+  //   name: "",
+  //   brand: "",
+  //   image: "",
+  // },
+  // {
+  //   id: "a3f99e09-80ab-4354-9dd1-a82290bbf6a0",
+  //   name: "",
+  //   brand: "",
+  //   image: "",
+  // },
+  // {
+  //   id: "b6184566-5a3a-45ac-9a37-19287b280423",
+  //   name: "",
+  //   brand: "",
+  //   image: "",
+  // },
+  // {
+  //   id: "8c75ae83-aaed-4fed-b585-49153e4336bf",
+  //   name: "",
+  //   brand: "",
+  //   image: "",
+  // },
+  // {
+  //   id: "98a47890-9326-43ea-940e-ec6f2f4b540a",
+  //   name: "",
+  //   brand: "",
+  //   image: "",
+  // },
+  // {
+  //   id: "2a55ebfd-1357-48d5-851c-2223d7c9ee16",
+  //   name: "",
+  //   brand: "",
+  //   image: "",
+  // },
+  // {
+  //   id: "d3df94bb-0dd3-4e4f-82a2-a6627ccc4e81",
+  //   name: "",
+  //   brand: "",
+  //   image: "",
+  // },
+  // {
+  //   id: "4c39e00a-1106-4ae9-90f6-e749c19af78d",
+  //   name: "",
+  //   brand: "",
+  //   image: "",
+  // },
+  // {
+  //   id: "e981fb11-6ab1-4775-a5ef-6e22e09a40ce",
+  //   name: "",
+  //   brand: "",
+  //   image: "",
+  // },
+  // {
+  //   id: "8872348b-098e-4efd-a7c8-fa4c7109851d",
+  //   name: "",
+  //   brand: "",
+  //   image: "",
+  // },
 ];

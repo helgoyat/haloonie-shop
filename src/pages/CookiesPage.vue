@@ -39,9 +39,9 @@ const goToBoxPage = (boxName: string) => {
             class="flex flex-row flex-wrap gap-2">
             <div
               v-for="element in getCookieBoxes(item.id)"
-              class="text-sm text-white bg-gray-600 font-medium px-2 py-1 rounded hover:cursor-pointer"
+              class="text-sm text-gray-800 bg-gray-200 font-medium px-3 py-1 rounded hover:cursor-pointer"
               @click="goToBoxPage(element.name)">
-              {{ element.name }}
+              {{ element.name }} Box
             </div>
           </div>
           <div

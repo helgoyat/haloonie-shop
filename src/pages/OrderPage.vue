@@ -2,7 +2,7 @@
 import { ref, computed } from "vue";
 import { storeToRefs } from "pinia";
 import { useOrderStore } from "@/stores";
-import OrderTable from "@/components/OrderSteps/OrderTable.vue";
+import OrderSummary from "@/components/OrderSteps/OrderSummary.vue";
 import OrderForm from "@/components/OrderSteps/OrderForm.vue";
 
 const orderStore = useOrderStore();
@@ -30,7 +30,7 @@ const goToNextStep = (): void => {
     <h2>Order</h2>
     <template v-if="isOrder">
       <div class="flex flex-col items-center">
-        <order-table v-if="step === 0" />
+        <order-summary v-if="step === 0" />
         <order-form v-if="step === 1" />
       </div>
       <div class="flex justify-center my-6">

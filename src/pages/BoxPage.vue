@@ -29,6 +29,10 @@ const onClickMinus = (id: string): void => {
     removeBox(id);
   }
 };
+
+const getLargerImagePath = (image: string): string => {
+  return image.split("?")[0];
+};
 </script>
 
 <template>
@@ -47,12 +51,15 @@ const onClickMinus = (id: string): void => {
           <div class="p-3">
             <div class="text-lg font-semibold tracking-tight text-gray-900">{{ item.name }}</div>
             <div>{{ item.brand }}</div>
-            <div class="text-gray-500 mt-2 flex flex-row justify-between gap-2">
-              <div class="text-sm hover:underline hover:cursor-pointer">See details</div>
-              <div class="text-sm">
-                <span class="text-gray-600 bg-gray-100 text-xs font-medium px-2.5 py-1 rounded">
-                  {{ box.cookies[item.id] }} unit
-                </span>
+            <div class="text-gray-500 mt-2 flex flex-row justify-between gap-2 items-center">
+              <a
+                class="text-sm hover:underline hover:cursor-pointer"
+                :href="getLargerImagePath(item.image)"
+                target="_blank">
+                See product
+              </a>
+              <div class="text-sm text-gray-800 bg-gray-100 font-medium px-2.5 py-1 rounded">
+                {{ box.cookies[item.id] }} unit
               </div>
             </div>
           </div>
@@ -109,23 +116,6 @@ const onClickMinus = (id: string): void => {
           Add to cart
         </button>
       </div>
-      <!-- <hr-title title="Details" /> -->
-      <!-- <div>
-        <ul class="w-full text-sm space-y-6 text-gray-900 list-none list-inside">
-          <li>
-            <span class="font-semibold text-gray-900">How it works</span>
-            <div class="text-gray-500 mt-2">
-              We engage ourselves to deliver in best delays.
-            </div>
-          </li>
-          <li>
-            <span class="font-semibold text-gray-900">Background</span>
-            <div class="text-gray-500 mt-2">
-              Story of our lives.
-            </div>
-          </li>
-        </ul>
-      </div> -->
     </template>
     <template v-else>
       <message text="Invalid box" />

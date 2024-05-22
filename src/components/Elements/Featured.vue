@@ -1,26 +1,55 @@
 <script setup lang="ts">
-import { ref } from "vue";
+import { computed } from "vue";
+import { useRouter } from "vue-router";
+import { kebabCase } from "lodash";
+import { ICookie, IBox } from "@/types";
+import { Cookies, Boxes, FeaturedCookies } from "@/data";
 
-const cookies = ref<string[]>([
-  "https://www.coursesu.com/dw/image/v2/BBQX_PRD/on/demandware.static/-/Sites-digitalu-master-catalog/default/dw76e48d62/5900951251818_H1L1_7219122_S10.png",
-  "https://www.coursesu.com/dw/image/v2/BBQX_PRD/on/demandware.static/-/Sites-digitalu-master-catalog/default/dwdb7ff4d0/3017760002905_H1N1_800367_S10.png",
-  "https://www.coursesu.com/dw/image/v2/BBQX_PRD/on/demandware.static/-/Sites-digitalu-master-catalog/default/dwe19282d0/3061990142214_A1N1_5405800_S13.png",
-  "https://www.coursesu.com/dw/image/v2/BBQX_PRD/on/demandware.static/-/Sites-digitalu-master-catalog/default/dw1abe1a76/7622210422163_H1N1_21334_S10.png",
-]);
+const router = useRouter();
+
+const cookies = computed((): ICookie[] => {
+  return FeaturedCookies.map((id) => Cookies.find((item) => item.id === id) || null).filter(
+    (e) => !!e,
+  ) as ICookie[];
+});
+
+const getCookieBoxes = (cookieId: string): IBox[] => {
+  const result = [];
+  for (let item in Boxes) {
+    if (Object.keys(Boxes[item].cookies).includes(cookieId)) {
+      result.push(Boxes[item]);
+    }
+  }
+  return result;
+};
+
+const goToBoxPage = (boxName: string) => {
+  router.push({ name: "BoxPage", params: { name: kebabCase(boxName) } });
+};
 </script>
 
 <template>
-  <div class="grid grid-cols-4 gap-6 justify-items-center">
+  <div class="grid grid-cols-4 gap-6 justify-items-center items-start">
     <div
       v-for="item in cookies"
-      :key="item"
-      class="w-full rounded ring-1 ring-gray-100 hover:ring-gray-200 transition-all">
+      :key="item.name"
+      class="w-full rounded ring-1 ring-gray-100 hover:ring-gray-200 transition-all p-2">
       <div
         class="h-48 w-full bg-contain bg-no-repeat bg-center"
-        :style="`background-image: url(${item})`"></div>
-      <div class="p-5">
-        <div class="text-lg font-semibold tracking-tight text-gray-900">Product Name</div>
-        <div>Brand</div>
+        :style="`background-image: url(${item.image})`"></div>
+      <div class="p-3">
+        <div class="text-lg font-semibold tracking-tight text-gray-900">{{ item.name }}</div>
+        <div class="mb-2">{{ item.brand }}</div>
+        <div
+          v-if="getCookieBoxes(item.id).length > 0"
+          class="flex flex-row flex-wrap gap-2">
+          <div
+            v-for="element in getCookieBoxes(item.id)"
+            class="text-sm text-white bg-orange-500 font-medium px-3 py-1 rounded hover:cursor-pointer"
+            @click="goToBoxPage(element.name)">
+            {{ element.name }} Box
+          </div>
+        </div>
       </div>
     </div>
   </div>

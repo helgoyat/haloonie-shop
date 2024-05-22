@@ -20,7 +20,7 @@ const isCollectionBox = (id: string): boolean => {
 <template>
   <div class="max-w-4xl w-full border border-violet-100 rounded-lg overflow-hidden">
     <table class="w-full text-sm text-left rtl:text-right text-gray-500">
-      <thead class="text-xs text-violet-700 uppercase bg-violet-50">
+      <thead class="text-sm text-violet-700 uppercase bg-violet-50">
         <tr>
           <th
             scope="col"
@@ -61,9 +61,14 @@ const isCollectionBox = (id: string): boolean => {
             <div class="flex items-center justify-stretch">
               {{ item.name }}
               <span
-                v-if="isSpecialBox(item.id) || isCollectionBox(item.id)"
+                v-if="isSpecialBox(item.id)"
                 class="bg-orange-500 text-white text-xs font-medium ms-3 px-2 py-1 rounded">
-                {{ isSpecialBox(item.id) ? "Special" : "Collection" }}
+                Special
+              </span>
+              <span
+                v-if="isCollectionBox(item.id)"
+                class="text-orange-500 bg-white border border-orange-500 text-xs font-medium ms-3 px-2 py-1 rounded">
+                Collection
               </span>
             </div>
           </td>
@@ -133,13 +138,6 @@ const isCollectionBox = (id: string): boolean => {
               </svg>
             </button>
           </td>
-        </tr>
-        <tr class="border-t border-gray-400 text-gray-900">
-          <td class="px-8 py-4"></td>
-          <td class="px-6 py-4"></td>
-          <td class="px-6 py-4"><div class="text-xs uppercase font-bold text-right">Total</div></td>
-          <td class="px-6 py-4 font-semibold text-right">$178.00</td>
-          <td class="px-6 py-4"></td>
         </tr>
       </tbody>
     </table>
