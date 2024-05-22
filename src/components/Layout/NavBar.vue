@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { storeToRefs } from "pinia";
 import { useOrderStore } from "@/stores";
-import { BoxTypeParamEnum } from "@/types";
+import { BoxTypeEnum } from "@/types";
 
 const orderStore = useOrderStore();
 const { isOrder, boxCount } = storeToRefs(orderStore);
@@ -73,11 +73,11 @@ const { isOrder, boxCount } = storeToRefs(orderStore);
               { name: 'Make Your Box', to: { name: 'MakeYourBoxPage' } },
               {
                 name: 'Collections',
-                to: { name: 'BoxesPage', params: { boxType: BoxTypeParamEnum.Collection } },
+                to: { name: 'BoxesPage', params: { boxType: BoxTypeEnum.Collection } },
               },
               {
                 name: 'Specials',
-                to: { name: 'BoxesPage', params: { boxType: BoxTypeParamEnum.Special } },
+                to: { name: 'BoxesPage', params: { boxType: BoxTypeEnum.Special } },
               },
             ]"
             :key="item.name">

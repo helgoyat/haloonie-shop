@@ -62,7 +62,7 @@ const isCollectionBox = (id: string): boolean => {
               {{ item.name }}
               <span
                 v-if="isSpecialBox(item.id)"
-                class="bg-orange-500 text-white text-xs font-medium ms-3 px-2 py-1 rounded">
+                class="bg-orange-500 text-white border border-orange-500 text-xs font-medium ms-3 px-2 py-1 rounded">
                 Special
               </span>
               <span

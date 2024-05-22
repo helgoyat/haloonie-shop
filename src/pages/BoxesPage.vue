@@ -5,7 +5,7 @@ import { storeToRefs } from "pinia";
 import { kebabCase, startCase, camelCase } from "lodash";
 import { useRootStore } from "@/stores";
 import { Boxes } from "@/data";
-import { IBox, BoxTypeEnum, BoxTypeParamEnum } from "@/types";
+import { IBox } from "@/types";
 import BoxCard from "@/components/Elements/BoxCard.vue";
 import Box from "@/components/Elements/Box.vue";
 
@@ -16,10 +16,7 @@ const rootStore = useRootStore();
 const { box } = storeToRefs(rootStore);
 
 const boxes = computed((): IBox[] => {
-  const index = Object.values(BoxTypeParamEnum).indexOf(route.params.boxType as BoxTypeParamEnum);
-  return Boxes.filter(
-    (item) => item.type === BoxTypeEnum[BoxTypeEnum[index] as keyof typeof BoxTypeEnum],
-  );
+  return Boxes.filter((item) => item.type === route.params.boxType);
 });
 
 const goToBoxPage = (boxName: string) => {

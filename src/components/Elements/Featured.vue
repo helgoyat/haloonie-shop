@@ -23,8 +23,8 @@ const getCookieBoxes = (cookieId: string): IBox[] => {
   return result;
 };
 
-const goToBoxPage = (boxName: string) => {
-  router.push({ name: "BoxPage", params: { name: kebabCase(boxName) } });
+const goToBoxPage = (box: IBox) => {
+  router.push({ name: "BoxesPage", params: { boxType: box.type, boxName: kebabCase(box.name) } });
 };
 </script>
 
@@ -46,7 +46,7 @@ const goToBoxPage = (boxName: string) => {
           <div
             v-for="element in getCookieBoxes(item.id)"
             class="text-sm text-white bg-orange-500 font-medium px-3 py-1 rounded hover:cursor-pointer"
-            @click="goToBoxPage(element.name)">
+            @click="goToBoxPage(element)">
             {{ element.name }} Box
           </div>
         </div>

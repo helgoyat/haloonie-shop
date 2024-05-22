@@ -6,7 +6,7 @@ import { startCase, camelCase } from "lodash";
 import { useRootStore } from "./stores";
 import routes from "./router";
 import { Boxes } from "./data";
-import { BoxTypeEnum, BoxTypeParamEnum } from "./types";
+import { BoxTypeEnum } from "./types";
 import App from "./App.vue";
 import "./styles/main.css";
 
@@ -31,7 +31,7 @@ router.beforeEach((to: RouteLocation) => {
     const boxName = to.params.boxName as string;
     setBox(null);
 
-    if (!(Object.values(BoxTypeParamEnum) as string[]).includes(boxType)) {
+    if (!(Object.values(BoxTypeEnum) as string[]).includes(boxType)) {
       return { name: "NotFoundPage" };
     }
 
@@ -41,9 +41,7 @@ router.beforeEach((to: RouteLocation) => {
       );
       const boxFound = Boxes.find((item) => item.name === boxNameFormatted);
 
-      const isValidParamBoxType =
-        (boxFound?.type === BoxTypeEnum.Collection && boxType === BoxTypeParamEnum.Collection) ||
-        (boxFound?.type === BoxTypeEnum.Special && boxType === BoxTypeParamEnum.Special);
+      const isValidParamBoxType = boxFound?.type === boxType;
 
       if (boxFound && isValidParamBoxType) {
         setBox(boxFound);
