@@ -34,12 +34,12 @@ export const Boxes: IBox[] = [
     image: "https://cdn.worldvectorlogo.com/logos/pepito.svg",
     price: 78,
     cookies: {
-      "163746cb-fc56-4581-8039-3cf8b0e7bb5c": 1,
-      "fbb6ad4d-6559-4018-b66f-c56020061650": 1,
-      "ab4d5376-4540-47b0-af51-c1d879be41a8": 1,
-      "3c9e18eb-e784-425b-8ee3-1f3ca6e45346": 1,
-      "585e01b4-b622-4cf8-b30b-179313c51c15": 1,
-      "69365e47-acde-4812-8806-4b99ea004d4e": 1,
+      "163746cb-fc56-4581-8039-3cf8b0e7bb5c": 2,
+      "fbb6ad4d-6559-4018-b66f-c56020061650": 2,
+      "ab4d5376-4540-47b0-af51-c1d879be41a8": 2,
+      "3c9e18eb-e784-425b-8ee3-1f3ca6e45346": 2,
+      "585e01b4-b622-4cf8-b30b-179313c51c15": 2,
+      "69365e47-acde-4812-8806-4b99ea004d4e": 2,
     },
   },
   {

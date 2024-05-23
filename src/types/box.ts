@@ -3,8 +3,13 @@ import { BoxTypeEnum } from "./enum";
 export interface IBox {
   id: string;
   name: string;
-  type: BoxTypeEnum | null;
+  type: BoxTypeEnum;
   image: string;
   price: number;
+  cookies: Record<string, number>;
+}
+
+export interface IUserBox {
+  id: string;
   cookies: Record<string, number>;
 }

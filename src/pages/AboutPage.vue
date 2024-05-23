@@ -2,6 +2,6 @@
 
 <template>
   <div class="content">
-    <h2>How it works</h2>
+    <h2>About</h2>
   </div>
 </template>

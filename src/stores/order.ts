@@ -1,14 +1,18 @@
-import { IBox } from "@/types";
+import { IBox, IUserBox } from "@/types";
 import { ref, computed } from "vue";
 import { Boxes, MaxBoxCount } from "@/data";
 
 const orderStore = () => {
   const boxIds = ref<Record<string, number>>({});
+  const userBoxes = ref<IUserBox[]>([]);
 
-  const isOrder = computed((): boolean => Object.keys(boxIds.value).length > 0);
+  const isOrder = computed(
+    (): boolean => [...Object.keys(boxIds.value), ...userBoxes.value].length > 0,
+  );
 
-  const boxCount = computed((): number =>
-    Object.values(boxIds.value).reduce((total, curr) => total + curr, 0),
+  const boxCount = computed(
+    (): number =>
+      Object.values(boxIds.value).reduce((total, curr) => total + curr, 0) + userBoxes.value.length,
   );
 
   const isMaxBoxCount = computed((): boolean => boxCount.value >= MaxBoxCount);
@@ -44,8 +48,17 @@ const orderStore = () => {
     }
   };
 
+  const addUserBox = (userBox: IUserBox): void => {
+    userBoxes.value.push(userBox);
+  };
+
+  const deleteUserBox = (id: string): void => {
+    userBoxes.value = userBoxes.value.filter((item) => item.id !== id);
+  };
+
   return {
     boxIds,
+    userBoxes,
     isOrder,
     boxCount,
     isMaxBoxCount,
@@ -53,6 +66,8 @@ const orderStore = () => {
     addBox,
     removeBox,
     deleteBox,
+    addUserBox,
+    deleteUserBox,
   };
 };
 

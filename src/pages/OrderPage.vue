@@ -36,7 +36,7 @@ const goToNextStep = (): void => {
       <div class="flex justify-center my-6">
         <button
           type="button"
-          class="px-5 py-3 text-center inline-flex items-center text-base font-medium text-white bg-violet-600 rounded-lg"
+          class="px-6 py-3 text-center inline-flex items-center text-base font-medium text-white bg-violet-600 rounded-md"
           @click="goToNextStep">
           {{ nextStepButtonLabel }}
           <svg

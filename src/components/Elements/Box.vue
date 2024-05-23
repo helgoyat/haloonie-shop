@@ -57,10 +57,10 @@ const getLargerImagePath = (image: string): string => {
             class="text-sm hover:underline hover:cursor-pointer"
             :href="getLargerImagePath(item.image)"
             target="_blank">
-            See product
+            See image
           </a>
           <div class="text-sm text-gray-800 bg-gray-100 font-medium px-2.5 py-1 rounded">
-            {{ box.cookies[item.id] }} unit
+            {{ box.cookies[item.id] }} {{ box.cookies[item.id] === 1 ? "unit" : "units" }}
           </div>
         </div>
       </div>
@@ -87,7 +87,7 @@ const getLargerImagePath = (image: string): string => {
         </svg>
       </button>
       <div
-        class="py-1.5 w-14 border-2 border-orange-500 bg-orange-500 text-white flex items-center justify-center">
+        class="py-1.5 px-3 border-2 border-orange-500 bg-orange-500 text-white flex items-center justify-center">
         {{ boxIds[box.id] }}
       </div>
       <button
@@ -112,7 +112,7 @@ const getLargerImagePath = (image: string): string => {
     <button
       v-else
       type="button"
-      class="w-52 px-5 py-3 text-base font-medium text-center text-white bg-orange-500 rounded-full"
+      class="px-6 py-3 text-base font-medium text-center text-white bg-orange-500 rounded-md"
       @click="addBox(box.id)">
       Add to cart
     </button>

@@ -4,6 +4,7 @@ import MakeYourBoxPage from "@/pages/MakeYourBoxPage.vue";
 import NotFoundPage from "@/pages/NotFoundPage.vue";
 import OrderPage from "@/pages/OrderPage.vue";
 import AboutPage from "@/pages/AboutPage.vue";
+import HowItWorksPage from "@/pages/HowItWorksPage.vue";
 import CookiesPage from "@/pages/CookiesPage.vue";
 
 export default [
@@ -16,6 +17,11 @@ export default [
     path: "/about",
     name: "AboutPage",
     component: AboutPage,
+  },
+  {
+    path: "/how-it-works",
+    name: "HowItWorksPage",
+    component: HowItWorksPage,
   },
   {
     path: "/make-your-box",

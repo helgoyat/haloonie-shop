@@ -20,28 +20,5 @@
       More info about this info alert goes here. This example text is going to run a bit longer so
       that you can see how spacing within an alert works with this kind of content.
     </div>
-    <!-- <div class="flex mt-4">
-      <button
-        type="button"
-        class="text-white bg-violet-800 hover:bg-violet-900 focus:ring-4 focus:outline-none focus:ring-violet-200 font-medium rounded-lg text-xs px-3 py-1.5 me-2 text-center inline-flex items-center dark:bg-violet-600 dark:hover:bg-violet-700 dark:focus:ring-violet-800">
-        <svg
-          class="me-2 h-3 w-3"
-          aria-hidden="true"
-          xmlns="http://www.w3.org/2000/svg"
-          fill="currentColor"
-          viewBox="0 0 20 14">
-          <path
-            d="M10 0C4.612 0 0 5.336 0 7c0 1.742 3.546 7 10 7 6.454 0 10-5.258 10-7 0-1.664-4.612-7-10-7Zm0 10a3 3 0 1 1 0-6 3 3 0 0 1 0 6Z" />
-        </svg>
-        View more
-      </button>
-      <button
-        type="button"
-        class="text-violet-800 bg-transparent border border-violet-800 hover:bg-violet-900 hover:text-white focus:ring-4 focus:outline-none focus:ring-violet-200 font-medium rounded-lg text-xs px-3 py-1.5 text-center dark:hover:bg-violet-600 dark:border-violet-600 dark:text-violet-400 dark:hover:text-white dark:focus:ring-violet-800"
-        data-dismiss-target="#alert-additional-content-1"
-        aria-label="Close">
-        Dismiss
-      </button>
-    </div> -->
   </div>
 </template>

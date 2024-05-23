@@ -20,7 +20,7 @@ const isCollectionBox = (id: string): boolean => {
 <template>
   <div class="max-w-4xl w-full border border-violet-100 rounded-lg overflow-hidden">
     <table class="w-full text-sm text-left rtl:text-right text-gray-500">
-      <thead class="text-sm text-violet-700 uppercase bg-violet-50">
+      <thead class="text-sm text-gray-900 uppercase bg-gray-100">
         <tr>
           <th
             scope="col"

@@ -3,4 +3,4 @@
 export * from "@/data/boxes";
 export * from "@/data/cookies";
 
-export const MaxBoxCount = 18;
+export const MaxBoxCount = 8;
