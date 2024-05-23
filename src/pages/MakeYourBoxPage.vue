@@ -1,8 +1,12 @@
 <script setup lang="ts">
 import { onMounted, ref, computed, watch } from "vue";
 import { v4 as uuidv4 } from "uuid";
+import { useOrderStore } from "@/stores";
 import { Cookies } from "@/data";
 import { IUserBox } from "@/types";
+
+const orderStore = useOrderStore();
+const { addUserBox } = orderStore;
 
 const userBox = ref<IUserBox>({ id: "", cookies: {} });
 
@@ -33,6 +37,13 @@ const onClickMinus = (id: string): void => {
   } else {
     userBox.value.cookies[id] -= 1;
   }
+};
+
+const addUserBoxToCart = (): void => {
+  addUserBox({ ...userBox.value });
+  userBox.value = { id: "", cookies: {} };
+  userBox.value.id = uuidv4();
+  window.scrollTo(0, 0);
 };
 
 watch(
@@ -141,7 +152,8 @@ onMounted(() => (userBox.value.id = uuidv4()));
       <button
         type="button"
         :disabled="!isUserBoxFull"
-        class="px-6 py-3 text-center inline-flex items-center text-base font-medium text-white disabled:bg-orange-300 bg-orange-500 rounded-md">
+        class="px-6 py-3 text-center inline-flex items-center text-base font-medium text-white disabled:bg-orange-300 bg-orange-500 rounded-md"
+        @click="addUserBoxToCart">
         Add to cart
       </button>
     </div>

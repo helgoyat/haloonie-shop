@@ -49,6 +49,7 @@ const orderStore = () => {
   };
 
   const addUserBox = (userBox: IUserBox): void => {
+    if (isMaxBoxCount.value) return;
     userBoxes.value.push(userBox);
   };
 

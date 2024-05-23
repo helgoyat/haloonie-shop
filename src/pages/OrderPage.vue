@@ -72,7 +72,7 @@ const goToNextStep = (): void => {
             stroke-width="2"
             d="M9 10V6a3 3 0 0 1 3-3v0a3 3 0 0 1 3 3v4m3-2 .917 11.923A1 1 0 0 1 17.92 21H6.08a1 1 0 0 1-.997-1.077L6 8h12Z" />
         </svg>
-        <div class="text-gray-400 text-base">There is no box yet</div>
+        <div class="text-gray-400 text-base">There is no box yet.</div>
       </div>
     </template>
   </div>
