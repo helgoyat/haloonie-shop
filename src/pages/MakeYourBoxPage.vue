@@ -62,7 +62,8 @@ onMounted(() => (userBox.value.id = uuidv4()));
   <div class="content">
     <h2>Make Your Box</h2>
     <h6>A box is made of 8 cookie units.</h6>
-    <div class="grid grid-cols-4 gap-6 justify-items-center items-start">
+    <div
+      class="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-6 justify-items-center items-start">
       <div
         v-for="item in Cookies"
         :key="item.name"
@@ -152,7 +153,7 @@ onMounted(() => (userBox.value.id = uuidv4()));
       <button
         type="button"
         :disabled="!isUserBoxFull"
-        class="px-6 py-3 text-center inline-flex items-center text-base font-medium text-white disabled:bg-orange-300 bg-orange-500 rounded-md"
+        class="px-6 py-3 text-center inline-flex items-center text-base font-medium text-white disabled:bg-orange-200 bg-orange-500 rounded-md"
         @click="addUserBoxToCart">
         Add to cart
       </button>

@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { ref, computed } from "vue";
+import type { Component } from "vue";
 import { storeToRefs } from "pinia";
 import { useOrderStore } from "@/stores";
 import OrderSummary from "@/components/OrderSteps/OrderSummary.vue";
@@ -8,30 +9,44 @@ import OrderForm from "@/components/OrderSteps/OrderForm.vue";
 const orderStore = useOrderStore();
 const { isOrder } = storeToRefs(orderStore);
 
+const components: Record<number, Component> = {
+  0: OrderSummary,
+  1: OrderForm,
+};
+
+const stepTitles: Record<number, string> = {
+  1: "Information",
+};
+
 const nextStepButtonLabels: Record<string, string> = {
-  "0": "Continue",
-  "1": "Checkout",
+  0: "Continue",
+  1: "Checkout",
 };
 
 const step = ref<number>(0);
 
+const pageTitle = computed((): string => stepTitles[step.value]);
+
 const nextStepButtonLabel = computed((): string => {
-  return nextStepButtonLabels[step.value.toString()];
+  return nextStepButtonLabels[step.value];
 });
 
 const goToNextStep = (): void => {
   window.scrollTo(0, 0);
   ++step.value;
 };
+
+const getComponent = (val: number): Component => {
+  return components[val];
+};
 </script>
 
 <template>
   <div class="content">
-    <h2>Order</h2>
+    <h2 v-if="step !== 0">{{ pageTitle }}</h2>
     <template v-if="isOrder">
       <div class="flex flex-col items-center">
-        <order-summary v-if="step === 0" />
-        <order-form v-if="step === 1" />
+        <component :is="getComponent(step)" />
       </div>
       <div class="flex justify-center my-6">
         <button

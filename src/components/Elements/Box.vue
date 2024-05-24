@@ -41,7 +41,8 @@ const getLargerImagePath = (image: string): string => {
 <template>
   <h2>{{ box.name }}</h2>
   <hr-title title="Cookies" />
-  <div class="grid grid-cols-4 gap-6 justify-items-center items-start">
+  <div
+    class="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-6 justify-items-center items-start">
     <div
       v-for="item in cookies"
       :key="item.name"
