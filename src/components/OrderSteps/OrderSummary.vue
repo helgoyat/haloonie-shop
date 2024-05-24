@@ -1,12 +1,31 @@
 <script setup lang="ts">
+import { computed } from "vue";
 import { storeToRefs } from "pinia";
 import { useOrderStore } from "@/stores";
-import { Boxes } from "@/data";
+import { Boxes, Cookies } from "@/data";
 import { BoxTypeEnum } from "@/types";
 
 const orderStore = useOrderStore();
-const { boxIds, boxes, boxCount, isMaxBoxCount } = storeToRefs(orderStore);
+const { boxIds, boxes, userBoxes, boxCount, isMaxBoxCount } = storeToRefs(orderStore);
 const { addBox, removeBox, deleteBox } = orderStore;
+
+const cartBoxes = computed((): Array<any> => {
+  return [
+    ...boxes.value.map((item) => ({
+      ...item,
+      cost: item.price * boxIds.value[item.id],
+      quantity: boxIds.value[item.id],
+      isMakeYourBox: false,
+    })),
+    ...userBoxes.value.map((item) => ({
+      ...item,
+      name: "Make Your Box",
+      cost: 36,
+      quantity: 1,
+      isMakeYourBox: true,
+    })),
+  ];
+});
 
 const isSpecialBox = (id: string): boolean => {
   return !!Boxes.find((item) => item.id === id && item.type === BoxTypeEnum.Special);
@@ -14,6 +33,12 @@ const isSpecialBox = (id: string): boolean => {
 
 const isCollectionBox = (id: string): boolean => {
   return !!Boxes.find((item) => item.id === id && item.type === BoxTypeEnum.Collection);
+};
+
+const getMakeYourBoxCookieList = (cookies: Record<string, number>): Array<string> => {
+  return Object.keys(cookies).map((id) => {
+    return `${Cookies.find((e) => e.id === id)?.name} (x${cookies[id]})` || "";
+  });
 };
 </script>
 
@@ -25,7 +50,7 @@ const isCollectionBox = (id: string): boolean => {
           <tr>
             <th
               scope="col"
-              class="px-6 py-3 w-72">
+              class="px-6 py-3 min-w-72">
               Box
             </th>
             <th
@@ -38,24 +63,18 @@ const isCollectionBox = (id: string): boolean => {
               class="px-6 py-3 text-right w-40">
               Price
             </th>
-            <th
-              scope="col"
-              class="px-16 py-3">
-              <span class="sr-only">Image</span>
-            </th>
-            <th
-              scope="col"
-              class="px-6 py-3"></th>
+            <th scope="col"></th>
+            <th scope="col"></th>
           </tr>
         </thead>
         <tbody>
           <tr
-            v-for="(item, index) in boxes"
+            v-for="(item, index) in cartBoxes"
             class="bg-white border-gray-200"
-            :class="index < boxes.length - 1 && 'border-b'">
+            :class="index < cartBoxes.length - 1 && 'border-b'">
             <td class="px-6 py-4 h-full font-semibold text-gray-900 text-base">
               <div class="flex items-center justify-stretch">
-                {{ item.name }}
+                <div>{{ item.name }}</div>
                 <span
                   v-if="isSpecialBox(item.id)"
                   class="bg-orange-500 text-white border border-orange-500 text-xs font-medium ms-3 px-2 py-1 rounded">
@@ -67,9 +86,20 @@ const isCollectionBox = (id: string): boolean => {
                   Collection
                 </span>
               </div>
+              <div
+                v-if="item.isMakeYourBox"
+                class="text-sm text-gray-500 font-normal mt-2">
+                <div
+                  class="text-gray-500 text-xs"
+                  v-for="el in getMakeYourBoxCookieList(item.cookies)">
+                  {{ el }}
+                </div>
+              </div>
             </td>
             <td class="px-6 py-4">
-              <div class="flex items-center">
+              <div
+                v-if="!item.isMakeYourBox"
+                class="flex items-center">
                 <button
                   type="button"
                   class="text-gray-700 bg-gray-100 font-medium rounded-l-full text-sm p-2.5 text-center inline-flex items-center hover:bg-gray-200 disabled:bg-gray-50"
@@ -90,7 +120,7 @@ const isCollectionBox = (id: string): boolean => {
                   </svg>
                 </button>
                 <div class="py-1.5 px-2 border-2 border-gray-100 bg-gray-100 text-gray-700">
-                  {{ boxIds[item.id] }}
+                  {{ item.quantity }}
                 </div>
                 <button
                   type="button"
@@ -112,11 +142,16 @@ const isCollectionBox = (id: string): boolean => {
                   </svg>
                 </button>
               </div>
+              <div
+                v-else
+                class="flex items-center justify-center">
+                <div class="py-1.5 px-4 text-gray-700">
+                  {{ item.quantity }}
+                </div>
+              </div>
             </td>
-            <td class="px-6 py-4 font-semibold text-gray-900 text-right">
-              ${{ item.price * boxIds[item.id] }}.00
-            </td>
-            <td class="px-8 py-4">
+            <td class="px-6 py-4 font-semibold text-gray-900 text-right">${{ item.cost }}.00</td>
+            <td class="px-4 py-4">
               <div
                 class="h-24 w-24 bg-contain bg-no-repeat bg-center"
                 :style="`background-image: url(${item.image})`" />
@@ -145,7 +180,7 @@ const isCollectionBox = (id: string): boolean => {
     </div>
     <div class="flex-1 min-w-56 border border-violet-200 rounded-md overflow-hidden">
       <table class="w-full text-base text-left rtl:text-right text-violet-600">
-        <thead class="text-base text-white uppercase bg-violet-600">
+        <thead class="text-sm text-white uppercase bg-violet-600">
           <tr>
             <th
               scope="col"
@@ -156,7 +191,7 @@ const isCollectionBox = (id: string): boolean => {
         </thead>
         <tbody>
           <tr>
-            <td class="px-6 py-4 flex flex-col gap-2">
+            <td class="px-6 py-4 flex flex-col gap-2 text-base">
               <div class="flex flex-row justify-between">
                 <div class="font-bold">Box count</div>
                 <div>{{ boxCount }}</div>

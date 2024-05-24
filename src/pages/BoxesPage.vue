@@ -31,7 +31,7 @@ const goToBoxPage = (boxName: string) => {
   <div class="content">
     <template v-if="!box">
       <h2>{{ startCase(camelCase((route.params.boxType as string).replace("-", " "))) }}</h2>
-      <div class="grid grid-cols-3 gap-6 justify-items-center">
+      <div class="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-6 justify-items-center">
         <box-card
           v-for="item in boxes"
           :key="item.name"
