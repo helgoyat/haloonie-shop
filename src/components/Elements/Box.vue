@@ -51,6 +51,17 @@ const getLargerImagePath = (image: string): string => {
         class="h-48 w-full bg-contain bg-no-repeat bg-center"
         :style="`background-image: url(${item.image})`"></div>
       <div class="p-3">
+        <div class="mb-2 text-right">
+          <span
+            class="text-sm text-orange-600 bg-orange-100 font-medium pl-2.5 pr-2 py-1 rounded-s-full">
+            {{ box.cookies[item.id] * item.bag }}
+            {{ box.cookies[item.id] * item.bag > 1 ? "units" : "unit" }}
+          </span>
+          <span
+            class="text-sm text-violet-600 bg-violet-100 font-medium pr-2.5 pl-1.5 py-1 rounded-e-full">
+            x {{ item.cookiesPerBag }} {{ item.cookiesPerBag > 1 ? "cookies" : "cookie" }}
+          </span>
+        </div>
         <div class="text-lg font-semibold tracking-tight text-gray-900">{{ item.name }}</div>
         <div>{{ item.brand }}</div>
         <div class="text-gray-500 mt-2 flex flex-row justify-between gap-2 items-center">
@@ -60,9 +71,6 @@ const getLargerImagePath = (image: string): string => {
             target="_blank">
             See image
           </a>
-          <div class="text-sm text-gray-800 bg-gray-100 font-medium px-2.5 py-1 rounded">
-            {{ box.cookies[item.id] }} {{ box.cookies[item.id] === 1 ? "unit" : "units" }}
-          </div>
         </div>
       </div>
     </div>

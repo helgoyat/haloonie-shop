@@ -41,10 +41,17 @@ const orderStore = () => {
     }
   };
 
-  const deleteBox = (id: string): void => {
-    const isBox = Object.keys(boxIds.value).includes(id);
-    if (isBox) {
-      delete boxIds.value[id];
+  const deleteBox = (id: string, isMakeYourBox: boolean = false): void => {
+    if (!isMakeYourBox) {
+      const isBox = Object.keys(boxIds.value).includes(id);
+      if (isBox) {
+        delete boxIds.value[id];
+      }
+    } else {
+      const isBox = userBoxes.value.find((item) => item.id === id);
+      if (isBox) {
+        userBoxes.value = userBoxes.value.filter((item) => item.id !== id);
+      }
     }
   };
 

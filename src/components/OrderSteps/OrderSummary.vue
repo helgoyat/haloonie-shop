@@ -36,9 +36,16 @@ const isCollectionBox = (id: string): boolean => {
 };
 
 const getMakeYourBoxCookieList = (cookies: Record<string, number>): Array<string> => {
-  return Object.keys(cookies).map((id) => {
-    return `${Cookies.find((e) => e.id === id)?.name} (x${cookies[id]})` || "";
-  });
+  return Object.keys(cookies)
+    .map((id) => {
+      const cookie = Cookies.find((e) => e.id === id);
+      if (!cookie) return null;
+      return (
+        `${cookie.name} ${cookie.brand} (${cookies[id]} x ${cookie.bag} unit x ${cookie.cookiesPerBag} cookies)` ||
+        ""
+      );
+    })
+    .filter((item) => !!item) as Array<string>;
 };
 </script>
 
@@ -46,7 +53,7 @@ const getMakeYourBoxCookieList = (cookies: Record<string, number>): Array<string
   <div class="w-full flex gap-4 md:flex-row flex-col">
     <div class="border border-gray-100 rounded-md overflow-x-auto">
       <table class="w-full text-sm text-left rtl:text-right text-gray-500">
-        <thead class="text-sm text-gray-900 uppercase bg-gray-100">
+        <thead class="text-sm text-white uppercase bg-gray-700">
           <tr>
             <th
               scope="col"
@@ -88,11 +95,11 @@ const getMakeYourBoxCookieList = (cookies: Record<string, number>): Array<string
               </div>
               <div
                 v-if="item.isMakeYourBox"
-                class="text-sm text-gray-500 font-normal mt-2">
+                class="text-sm text-gray-500 font-normal mt-2 p-4 bg-gray-50 rounded">
                 <div
-                  class="text-gray-500 text-xs"
+                  class="text-gray-500 text-xs my-1"
                   v-for="el in getMakeYourBoxCookieList(item.cookies)">
-                  {{ el }}
+                  - {{ el }}
                 </div>
               </div>
             </td>
@@ -160,7 +167,7 @@ const getMakeYourBoxCookieList = (cookies: Record<string, number>): Array<string
               <button
                 type="button"
                 class="text-gray-400 hover:text-gray-600 rounded-full inline-flex items-center"
-                @click="deleteBox(item.id)">
+                @click="deleteBox(item.id, item.isMakeYourBox)">
                 <svg
                   class="w-6 h-6"
                   aria-hidden="true"

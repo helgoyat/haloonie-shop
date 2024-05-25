@@ -5,7 +5,7 @@ import { storeToRefs } from "pinia";
 import { kebabCase, startCase, camelCase } from "lodash";
 import { useRootStore } from "@/stores";
 import { Boxes } from "@/data";
-import { IBox } from "@/types";
+import { BoxTypeEnum, IBox } from "@/types";
 import BoxCard from "@/components/Elements/BoxCard.vue";
 import Box from "@/components/Elements/Box.vue";
 
@@ -19,6 +19,10 @@ const boxes = computed((): IBox[] => {
   return Boxes.filter((item) => item.type === route.params.boxType);
 });
 
+const isCollections = computed(() => route.params.boxType === BoxTypeEnum.Collection);
+
+const isSpecials = computed(() => route.params.boxType === BoxTypeEnum.Special);
+
 const goToBoxPage = (boxName: string) => {
   router.push({
     name: "BoxesPage",
@@ -31,6 +35,13 @@ const goToBoxPage = (boxName: string) => {
   <div class="content">
     <template v-if="!box">
       <h2>{{ startCase(camelCase((route.params.boxType as string).replace("-", " "))) }}</h2>
+      <h6 v-if="isCollections || isSpecials">
+        {{
+          isCollections
+            ? "Assortments of your favorite classic cookies."
+            : "Boxes with exclusive cookies."
+        }}
+      </h6>
       <div class="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-6 justify-items-center">
         <box-card
           v-for="item in boxes"

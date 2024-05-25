@@ -39,7 +39,7 @@ export default [
     component: OrderPage,
   },
   {
-    path: "/cookies",
+    path: "/cookies", // to be deleted
     name: "CookiesPage",
     component: CookiesPage,
   },
