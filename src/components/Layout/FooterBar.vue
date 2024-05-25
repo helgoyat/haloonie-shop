@@ -6,18 +6,18 @@
           <h4 class="mb-6 text-sm font-semibold text-gray-900 uppercase">Company</h4>
           <ul class="text-gray-600 font-medium">
             <li class="mb-4">
-              <a
-                href="#"
+              <router-link
+                :to="{ name: 'AboutPage' }"
                 class="hover:underline">
                 About
-              </a>
+              </router-link>
             </li>
             <li class="mb-4">
-              <a
-                href="#"
+              <router-link
+                :to="{ name: 'HowItWorksPage' }"
                 class="hover:underline">
                 How it works
-              </a>
+              </router-link>
             </li>
           </ul>
         </div>

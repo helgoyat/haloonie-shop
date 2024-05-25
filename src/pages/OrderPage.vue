@@ -73,7 +73,7 @@ const getComponent = (val: number): Component => {
     <template v-else>
       <div class="flex flex-col items-center gap-6 my-6">
         <svg
-          class="w-36 h-36 text-gray-400"
+          class="w-36 h-36 text-violet-300"
           aria-hidden="true"
           xmlns="http://www.w3.org/2000/svg"
           width="24"

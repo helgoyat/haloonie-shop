@@ -50,7 +50,7 @@ const getMakeYourBoxCookieList = (cookies: Record<string, number>): Array<string
       const cookie = Cookies.find((e) => e.id === id);
       if (!cookie) return null;
       return (
-        `${cookie.name} ${cookie.brand} (${cookie.bag} x ${cookie.cookiesPerBag} cookies). Quantity: ${cookies[id]}` ||
+        `${cookie.name} - ${cookie.brand} (${cookie.bag} x ${cookie.cookiesPerBag} cookies). Quantity: ${cookies[id]}` ||
         ""
       );
     })
