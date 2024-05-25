@@ -53,13 +53,12 @@ const getLargerImagePath = (image: string): string => {
       <div class="p-3">
         <div class="mb-2 text-right">
           <span
-            class="text-sm text-orange-600 bg-orange-100 font-medium pl-2.5 pr-2 py-1 rounded-s-full">
-            {{ box.cookies[item.id] * item.bag }}
-            {{ box.cookies[item.id] * item.bag > 1 ? "units" : "unit" }}
+            class="text-sm text-orange-500 bg-orange-100 font-medium pl-2.5 pr-1 py-1 rounded-s-full">
+            {{ box.cookies[item.id] * item.bag }} x
           </span>
           <span
-            class="text-sm text-violet-600 bg-violet-100 font-medium pr-2.5 pl-1.5 py-1 rounded-e-full">
-            x {{ item.cookiesPerBag }} {{ item.cookiesPerBag > 1 ? "cookies" : "cookie" }}
+            class="text-sm text-violet-600 bg-violet-100 font-medium pr-2.5 pl-2 py-1 rounded-e-full">
+            {{ item.cookiesPerBag }} {{ item.cookiesPerBag > 1 ? "cookies" : "cookie" }}
           </span>
         </div>
         <div class="text-lg font-semibold tracking-tight text-gray-900">{{ item.name }}</div>

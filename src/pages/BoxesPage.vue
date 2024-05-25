@@ -36,11 +36,7 @@ const goToBoxPage = (boxName: string) => {
     <template v-if="!box">
       <h2>{{ startCase(camelCase((route.params.boxType as string).replace("-", " "))) }}</h2>
       <h6 v-if="isCollections || isSpecials">
-        {{
-          isCollections
-            ? "Assortments of your favorite classic cookies."
-            : "Boxes with exclusive cookies."
-        }}
+        {{ isCollections ? "Assortments of your favorite classic cookies." : "Exclusive cookies." }}
       </h6>
       <div class="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-6 justify-items-center">
         <box-card

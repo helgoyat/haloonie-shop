@@ -61,7 +61,7 @@ onMounted(() => (userBox.value.id = uuidv4()));
 <template>
   <div class="content">
     <h2>Make Your Box</h2>
-    <h6>Select 8 cookies.</h6>
+    <h6>Choose 8 cookies to create a box.</h6>
     <div
       class="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-6 justify-items-center items-start">
       <div
@@ -74,12 +74,12 @@ onMounted(() => (userBox.value.id = uuidv4()));
         <div class="p-3">
           <div class="mb-2 text-right">
             <span
-              class="text-sm text-orange-600 bg-orange-100 font-medium pl-2.5 pr-2 py-1 rounded-s-full">
-              {{ item.bag }} {{ item.bag > 1 ? "units" : "unit" }}
+              class="text-sm text-orange-500 bg-orange-100 font-medium pl-2.5 pr-1 py-1 rounded-s-full">
+              {{ item.bag }} x
             </span>
             <span
-              class="text-sm text-violet-600 bg-violet-100 font-medium pr-2.5 pl-1.5 py-1 rounded-e-full">
-              x {{ item.cookiesPerBag }} {{ item.cookiesPerBag > 1 ? "cookies" : "cookie" }}
+              class="text-sm text-violet-600 bg-violet-100 font-medium pr-2.5 pl-2 py-1 rounded-e-full">
+              {{ item.cookiesPerBag }} {{ item.cookiesPerBag > 1 ? "cookies" : "cookie" }}
             </span>
           </div>
           <div class="text-lg font-semibold tracking-tight text-gray-900">{{ item.name }}</div>

@@ -71,7 +71,7 @@ const getComponent = (val: number): Component => {
       </div>
     </template>
     <template v-else>
-      <div class="flex flex-col items-center gap-4 my-6">
+      <div class="flex flex-col items-center gap-6 my-6">
         <svg
           class="w-36 h-36 text-gray-400"
           aria-hidden="true"
@@ -87,7 +87,13 @@ const getComponent = (val: number): Component => {
             stroke-width="2"
             d="M9 10V6a3 3 0 0 1 3-3v0a3 3 0 0 1 3 3v4m3-2 .917 11.923A1 1 0 0 1 17.92 21H6.08a1 1 0 0 1-.997-1.077L6 8h12Z" />
         </svg>
-        <div class="text-gray-400 text-base">There is no box yet.</div>
+        <router-link :to="{ name: 'MakeYourBoxPage' }">
+          <button
+            type="button"
+            class="px-6 py-3 text-center text-base font-medium text-violet-600 border-2 border-violet-100 rounded-md">
+            Get Started
+          </button>
+        </router-link>
       </div>
     </template>
   </div>
