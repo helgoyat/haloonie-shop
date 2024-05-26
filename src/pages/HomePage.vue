@@ -7,11 +7,13 @@ import { BoxTypeEnum } from "@/types";
 <template>
   <div class="header-container">
     <h1>Shop French Cookies</h1>
-    <button
-      type="button"
-      class="px-6 py-3 text-lg text-white ring-2 ring-offset-4 ring-violet-400 bg-violet-600 font-medium rounded-full text-center">
-      Get started
-    </button>
+    <router-link :to="{ name: 'MakeYourBoxPage' }">
+      <button
+        type="button"
+        class="px-6 py-3 text-lg text-white ring-2 ring-offset-4 ring-violet-400 bg-violet-600 font-medium rounded-full text-center">
+        Get started
+      </button>
+    </router-link>
   </div>
   <div class="content">
     <h3>Welcome to you!</h3>

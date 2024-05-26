@@ -39,10 +39,11 @@ const goToBoxPage = (box: IBox) => {
         :style="`background-image: url(${item.image})`"></div>
       <div class="p-3">
         <div class="text-lg font-semibold tracking-tight text-gray-900">{{ item.name }}</div>
-        <div class="mb-2">{{ item.brand }}</div>
+        <div>{{ item.brand }}</div>
+        <div class="text-sm text-gray-500">{{ item.description }}</div>
         <div
           v-if="getCookieBoxes(item.id).length > 0"
-          class="flex flex-row flex-wrap gap-2">
+          class="flex flex-row flex-wrap gap-2 mt-3">
           <div
             v-for="element in getCookieBoxes(item.id)"
             class="text-sm text-white bg-orange-500 font-medium px-3 py-1 rounded hover:cursor-pointer"

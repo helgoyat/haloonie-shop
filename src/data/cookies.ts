@@ -11,7 +11,7 @@ export const Cookies: ICookie[] = [
   {
     id: "f50f9320-f33e-4ede-8582-c3500532f98c",
     name: "Petit Ecolier",
-    description: "Biscuits barre nappés de chocolat au lait",
+    description: "Tendre Coeur au Lait. Biscuits barre nappés de chocolat au lait.",
     brand: "LU",
     bag: 1,
     cookiesPerBag: 1,
@@ -21,7 +21,7 @@ export const Cookies: ICookie[] = [
   {
     id: "c2ae0379-9801-4e6c-a842-069fc78c4c49",
     name: "Mulino Bianco",
-    description: "Biscuits Baiocchi Snack fourrés aux noisettes & cacao",
+    description: "Biscuits Baiocchi fourrés aux noisettes & cacao.",
     brand: "Barilla",
     bag: 1,
     cookiesPerBag: 6,
@@ -31,7 +31,7 @@ export const Cookies: ICookie[] = [
   {
     id: "90d80965-c02f-4772-9e68-eedd864e0d2a",
     name: "Dinosaurus",
-    description: "Biscuits chocolat noir",
+    description: "Biscuits au chocolat noir.",
     brand: "Lotus",
     bag: 1,
     cookiesPerBag: 3,
@@ -41,7 +41,7 @@ export const Cookies: ICookie[] = [
   {
     id: "8da70bfb-6539-4fe3-a21b-1281808d3a96",
     name: "Granola",
-    description: "Biscuits sablés nappés au chocolat au lait",
+    description: "Biscuits sablés nappés au chocolat au lait.",
     brand: "LU",
     bag: 1,
     cookiesPerBag: 3,
@@ -51,7 +51,7 @@ export const Cookies: ICookie[] = [
   {
     id: "523edc74-9902-4bea-8747-b8c91b3e9b6d",
     name: "Petit Ecolier",
-    description: "Biscuits petit beurre chocolat noir",
+    description: "Biscuits petit beurre au chocolat noir.",
     brand: "LU",
     bag: 1,
     cookiesPerBag: 2,
@@ -61,7 +61,7 @@ export const Cookies: ICookie[] = [
   {
     id: "e8f9491e-1ebc-45d7-9a61-5a094c23a60f",
     name: "Tronches de Cake",
-    description: "Biscuits moelleux au chocolat",
+    description: "Biscuits moelleux au chocolat.",
     brand: "St Michel",
     bag: 1,
     cookiesPerBag: 1,
@@ -71,7 +71,7 @@ export const Cookies: ICookie[] = [
   {
     id: "565db74a-a6bb-4938-8847-8486c6ce1380",
     name: "Palmito",
-    description: "Biscuits feuilletés caramélisés",
+    description: "Biscuits feuilletés caramélisés.",
     brand: "LU",
     bag: 1,
     cookiesPerBag: 3,
@@ -81,7 +81,7 @@ export const Cookies: ICookie[] = [
   {
     id: "bc47b267-7b1f-4a53-9ee4-7b2a892002a5",
     name: "Cards",
-    description: "Gâteau Kinder cards",
+    description: "Gâteau Kinder cards.",
     brand: "Kinder",
     bag: 1,
     cookiesPerBag: 2,
@@ -91,7 +91,7 @@ export const Cookies: ICookie[] = [
   {
     id: "6b7ff405-26d8-4138-9fa2-e39ec4ba6b15",
     name: "M&M's Biscuit",
-    description: "Biscuit chocolat M&M's",
+    description: "Biscuit chocolat M&M's.",
     brand: "M&M's",
     bag: 1,
     cookiesPerBag: 1,
@@ -100,8 +100,8 @@ export const Cookies: ICookie[] = [
   },
   {
     id: "03b47f63-efea-460d-a24e-406aae52b549",
-    name: "Prince",
-    description: "Biscuits petit déjeuner aux céréales",
+    name: "Prince Petit Dej",
+    description: "Biscuits petit déjeuner aux céréales et pépites de chocolat.",
     brand: "LU",
     bag: 1,
     cookiesPerBag: 4,
@@ -110,8 +110,8 @@ export const Cookies: ICookie[] = [
   },
   {
     id: "017848a2-581e-41f3-be44-e4356a54b6af",
-    name: "Granola",
-    description: "Biscuits mini aux pépites de chocolat",
+    name: "Mini Granola",
+    description: "Biscuits mini aux pépites de chocolat.",
     brand: "LU",
     bag: 1,
     cookiesPerBag: 8,
@@ -121,7 +121,7 @@ export const Cookies: ICookie[] = [
   {
     id: "c1bf2eb5-c13f-456e-9524-678b20210c6e",
     name: "Prince",
-    description: "Biscuits fourrés au chocolat au blé complet",
+    description: "Biscuits fourrés au chocolat au blé complet.",
     brand: "LU",
     bag: 1,
     cookiesPerBag: 2,
@@ -131,7 +131,7 @@ export const Cookies: ICookie[] = [
   {
     id: "fbb6ad4d-6559-4018-b66f-c56020061650",
     name: "Pepito Pockitos",
-    description: "Biscuits barre au chocolat et au riz souflé",
+    description: "Biscuits barre au chocolat et au riz souflé.",
     brand: "LU",
     bag: 1,
     cookiesPerBag: 1,
@@ -141,7 +141,7 @@ export const Cookies: ICookie[] = [
   {
     id: "03d8982b-a05b-49c3-a150-c6908f444033",
     name: "Mini BN",
-    description: "Mini biscuits fourrés chocolat",
+    description: "Mini biscuits fourrés chocolat.",
     brand: "BN",
     bag: 1,
     cookiesPerBag: 5,
@@ -151,7 +151,7 @@ export const Cookies: ICookie[] = [
   {
     id: "cd63002d-04b0-49cc-b16a-7e2d58af9d82",
     name: "Mini BN",
-    description: "Mini biscuits fourrés goût fraise",
+    description: "Mini biscuits fourrés goût fraise.",
     brand: "BN",
     bag: 1,
     cookiesPerBag: 5,
@@ -160,8 +160,8 @@ export const Cookies: ICookie[] = [
   },
   {
     id: "7e8fac33-2561-433f-a020-b9162b7f17d3",
-    name: "Petits Coeurs Choco'Croc",
-    description: "Biscuits au chocolat au lait",
+    name: "Petits Coeurs",
+    description: "Choco'Croc. Biscuits au chocolat au lait.",
     brand: "LU",
     bag: 1,
     cookiesPerBag: 8,
@@ -171,7 +171,7 @@ export const Cookies: ICookie[] = [
   {
     id: "9331ad12-29ae-47f2-ae6b-a4af63adaa67",
     name: "Doomino",
-    description: "Gâteau avec nappage au chocolat en poudre",
+    description: "Gâteau avec nappage au chocolat.",
     brand: "St Michel",
     bag: 1,
     cookiesPerBag: 1,
@@ -181,7 +181,7 @@ export const Cookies: ICookie[] = [
   {
     id: "a6efb036-8b64-488f-b7f3-e5cf9f86c5ec",
     name: "Granola",
-    description: "Biscuits barre cookie aux pépites de chocolat",
+    description: "Biscuits barre cookie aux pépites de chocolat.",
     brand: "LU",
     bag: 1,
     cookiesPerBag: 1,
@@ -191,7 +191,7 @@ export const Cookies: ICookie[] = [
   {
     id: "82d9d326-ad7d-4cdd-a61f-db31e4b69900",
     name: "Tartelettes",
-    description: "Biscuits Tartelettes chocolat au lait caramel",
+    description: "Tartelettes au chocolat au lait et caramel.",
     brand: "Bonne Maman",
     bag: 1,
     cookiesPerBag: 1,
@@ -201,7 +201,7 @@ export const Cookies: ICookie[] = [
   {
     id: "87ee42f0-fed7-4b40-9c77-23397b315e6d",
     name: "Delichoc",
-    description: "Gâteau chocolat au lait",
+    description: "Gâteau chocolat au lait.",
     brand: "Delichoc",
     bag: 1,
     cookiesPerBag: 2,
@@ -211,7 +211,7 @@ export const Cookies: ICookie[] = [
   {
     id: "bf09553c-8307-4f8b-aaec-080fa92c8683",
     name: "Doonuts",
-    description: "Doonuts nappés chocolat",
+    description: "Doonuts nappés au chocolat.",
     brand: "St Michel",
     bag: 1,
     cookiesPerBag: 2,
@@ -221,7 +221,7 @@ export const Cookies: ICookie[] = [
   {
     id: "163746cb-fc56-4581-8039-3cf8b0e7bb5c",
     name: "Pepito Mini Rollos",
-    description: "Biscuits fourrés au chocolat au lait",
+    description: "Biscuits fourrés au chocolat au lait.",
     brand: "LU",
     bag: 1,
     cookiesPerBag: 6,
@@ -231,7 +231,7 @@ export const Cookies: ICookie[] = [
   {
     id: "7db5a204-1f51-4b47-8d85-83b2e8017526",
     name: "Twix top",
-    description: "Biscuits Twix top",
+    description: "Biscuits Twix top.",
     brand: "Twix",
     bag: 1,
     cookiesPerBag: 1,
@@ -241,7 +241,7 @@ export const Cookies: ICookie[] = [
   {
     id: "6847c9a7-40f6-4ad9-b79a-6bbecdd2a7a9",
     name: "Le Cookie",
-    description: "Cookies chocolat noisette",
+    description: "Cookies chocolat noisette.",
     brand: "Bonne Maman",
     bag: 1,
     cookiesPerBag: 1,
@@ -251,7 +251,7 @@ export const Cookies: ICookie[] = [
   {
     id: "3b6faf3a-a99a-4860-9237-ff505fcbba42",
     name: "Tartelettes",
-    description: "Tartelettes au citron",
+    description: "Tartelettes au citron.",
     brand: "Bonne Maman",
     bag: 1,
     cookiesPerBag: 1,
@@ -261,7 +261,7 @@ export const Cookies: ICookie[] = [
   {
     id: "02fd05e1-344a-4945-a99f-cf8b8aae1309",
     name: "Granola",
-    description: "Biscuits sablés nappés au chocolat noir",
+    description: "Biscuits sablés nappés au chocolat noir.",
     brand: "LU",
     bag: 1,
     cookiesPerBag: 8,
@@ -271,7 +271,7 @@ export const Cookies: ICookie[] = [
   {
     id: "1c9005fb-e165-4a5e-aabf-f1dd286f7d19",
     name: "Tartelettes",
-    description: "Tartelettes aux framboises",
+    description: "Tartelettes aux framboises.",
     brand: "Bonne Maman",
     bag: 1,
     cookiesPerBag: 1,
@@ -281,7 +281,7 @@ export const Cookies: ICookie[] = [
   {
     id: "925848f2-befd-43af-bc95-bd8850777c56",
     name: "Granola",
-    description: "Cookies extra choco et pépites de chocolat",
+    description: "Cookies extra choco et pépites de chocolat.",
     brand: "LU",
     bag: 1,
     cookiesPerBag: 1,
@@ -291,7 +291,7 @@ export const Cookies: ICookie[] = [
   {
     id: "fc24ff02-d570-40c9-8cdc-cc1b1f452d38",
     name: "Belvita",
-    description: "Biscuits petit déjeuner 'Le Tartiné' chocolat noisette",
+    description: "Biscuits petit déjeuner 'Le Tartiné' chocolat noisette.",
     brand: "LU",
     bag: 1,
     cookiesPerBag: 3,
@@ -301,7 +301,7 @@ export const Cookies: ICookie[] = [
   {
     id: "f2a284aa-bb9d-46a7-895e-17a81b60788e",
     name: "Petit Ecolier",
-    description: "Biscuits petit beurre chocolat au lait",
+    description: "Biscuits petit beurre chocolat au lait.",
     brand: "LU",
     bag: 1,
     cookiesPerBag: 2,
@@ -311,7 +311,7 @@ export const Cookies: ICookie[] = [
   {
     id: "1fdd286f-ee0d-4542-9706-73b9a92ed969",
     name: "BN",
-    description: "Fourres Choco",
+    description: "Biscuits fourrés au chocolat.",
     brand: "BN",
     bag: 1,
     cookiesPerBag: 2,
@@ -320,8 +320,8 @@ export const Cookies: ICookie[] = [
   },
   {
     id: "ab4d5376-4540-47b0-af51-c1d879be41a8",
-    name: "Pepito",
-    description: "Gâteaux aux pépites de chocolat",
+    name: "Pepito Pépites",
+    description: "Gâteaux aux pépites de chocolat.",
     brand: "LU",
     bag: 1,
     cookiesPerBag: 1,
@@ -330,8 +330,8 @@ export const Cookies: ICookie[] = [
   },
   {
     id: "3c9e18eb-e784-425b-8ee3-1f3ca6e45346",
-    name: "Pepito",
-    description: "Biscuits barre fourrés au chocolat au lait",
+    name: "Pepito Pockitos",
+    description: "Biscuits barre fourrés au chocolat au lait.",
     brand: "LU",
     bag: 1,
     cookiesPerBag: 1,
@@ -341,7 +341,7 @@ export const Cookies: ICookie[] = [
   {
     id: "585e01b4-b622-4cf8-b30b-179313c51c15",
     name: "Pepito Mini Roulés",
-    description: "Gâteaux fourrés au chocolat mini roulés",
+    description: "Gâteaux fourrés au chocolat mini roulés.",
     brand: "LU",
     bag: 1,
     cookiesPerBag: 1,
@@ -351,7 +351,7 @@ export const Cookies: ICookie[] = [
   {
     id: "69365e47-acde-4812-8806-4b99ea004d4e",
     name: "Pepito",
-    description: "Chocolat Noir",
+    description: "Nappés au chocolat noir.",
     brand: "LU",
     bag: 1,
     cookiesPerBag: 8,
@@ -361,7 +361,7 @@ export const Cookies: ICookie[] = [
   {
     id: "01764df6-5870-4e21-9c41-c523372863cc",
     name: "Tarto Choco",
-    description: "Biscuit tarto chocolat",
+    description: "Biscuit nappé au chocolat.",
     brand: "BN",
     bag: 1,
     cookiesPerBag: 2,
@@ -371,7 +371,7 @@ export const Cookies: ICookie[] = [
   {
     id: "f7a27502-67fe-48ba-bdb1-f474234bcea8",
     name: "Prince Choco Barre",
-    description: "Biscuits aux pépites chocolat",
+    description: "Biscuits aux pépites chocolat.",
     brand: "LU",
     bag: 1,
     cookiesPerBag: 1,
@@ -381,7 +381,7 @@ export const Cookies: ICookie[] = [
   {
     id: "19915fad-b76d-4522-bbba-3a72812800ac",
     name: "Galette Moelleuse",
-    description: "Galette moelleuse marbrée au chocolat",
+    description: "Galette moelleuse marbrée au chocolat.",
     brand: "St Michel",
     bag: 1,
     cookiesPerBag: 1,
@@ -391,7 +391,7 @@ export const Cookies: ICookie[] = [
   {
     id: "a42990f0-3951-444b-9716-6688ba9e60d2",
     name: "Galette Moelleuse",
-    description: "Galette moelleuse tigrée nappée au chocolat lait",
+    description: "Galette moelleuse tigrée nappée au chocolat lait.",
     brand: "St Michel",
     bag: 1,
     cookiesPerBag: 1,
@@ -401,7 +401,7 @@ export const Cookies: ICookie[] = [
   {
     id: "49dd0213-776e-4774-a022-60ab18f80b01",
     name: "Galette Moelleuse",
-    description: "Biscuits Galettes moelleuse pépites chocolat",
+    description: "Galettes moelleuse pépites chocolat.",
     brand: "St Michel",
     bag: 1,
     cookiesPerBag: 1,
@@ -411,7 +411,7 @@ export const Cookies: ICookie[] = [
   {
     id: "a0ee17a3-00c1-4fce-a4d0-28b34a968c05",
     name: "Brownie a la Française",
-    description: "Mini brownie chocolat cocottes",
+    description: "Mini brownie chocolat.",
     brand: "St Michel",
     bag: 1,
     cookiesPerBag: 1,
@@ -421,7 +421,7 @@ export const Cookies: ICookie[] = [
   {
     id: "4b953e44-99e5-47db-9f5b-800e6e16221d",
     name: "Le Moelleux au chocolat",
-    description: "Gâteau moelleux au chocolat",
+    description: "Gâteau moelleux au chocolat.",
     brand: "Bonne Maman",
     bag: 1,
     cookiesPerBag: 1,
@@ -431,7 +431,7 @@ export const Cookies: ICookie[] = [
   {
     id: "e6cae7c7-8507-4846-bb3b-79b894ef1698",
     name: "La Madeleine",
-    description: "Madeleines au fourrage myrtille",
+    description: "Madeleines au fourrage myrtille.",
     brand: "Bonne Maman",
     bag: 1,
     cookiesPerBag: 1,
@@ -441,7 +441,7 @@ export const Cookies: ICookie[] = [
   {
     id: "7dd68d77-2afa-4aa7-a718-68b1f5b80c07",
     name: "La Madeleine",
-    description: "Madeleines coeur chocolat",
+    description: "Madeleines coeur chocolat.",
     brand: "Bonne Maman",
     bag: 1,
     cookiesPerBag: 1,
@@ -451,7 +451,7 @@ export const Cookies: ICookie[] = [
   {
     id: "f7857c54-c44c-4ea2-a502-fa0a64d77f7c",
     name: "Petits Marbrés",
-    description: "Gâteaux Petits marbrés au chocolat",
+    description: "Gâteaux marbrés au chocolat",
     brand: "Bonne Maman",
     bag: 1,
     cookiesPerBag: 1,
@@ -461,7 +461,7 @@ export const Cookies: ICookie[] = [
   {
     id: "accdfcbd-e7af-44f9-831e-8b8a98b1863d",
     name: "Le Brownie",
-    description: "Mini brownies aux pépites de chocolat",
+    description: "Mini brownies aux pépites de chocolat.",
     brand: "Brossard",
     bag: 1,
     cookiesPerBag: 1,
@@ -471,7 +471,7 @@ export const Cookies: ICookie[] = [
   {
     id: "37310e59-9aee-4063-b852-23d9c9b44825",
     name: "LuLu L'Ourson",
-    description: "Gâteaux fourrés au chocolat",
+    description: "Gâteaux fourrés au chocolat.",
     brand: "LU",
     bag: 1,
     cookiesPerBag: 1,
@@ -481,7 +481,7 @@ export const Cookies: ICookie[] = [
   {
     id: "fd2bd0d9-258b-4cac-86a9-2f8fc4176aa9",
     name: "Cake & Choc",
-    description: "Gâteaux chocolat",
+    description: "Gâteaux chocolat.",
     brand: "Milka",
     bag: 1,
     cookiesPerBag: 1,
@@ -491,7 +491,7 @@ export const Cookies: ICookie[] = [
   {
     id: "7b491487-9ad4-4dc8-b8d7-8e577e86e2dc",
     name: "Savane Max",
-    description: "Gâteau barre au chocolat",
+    description: "Gâteau barre au chocolat.",
     brand: "Brossard",
     bag: 1,
     cookiesPerBag: 1,
@@ -501,7 +501,7 @@ export const Cookies: ICookie[] = [
   {
     id: "7db45f32-0e1b-4ba7-aaf4-3b7dc68ec811",
     name: "P'tit Savane",
-    description: "Gâteau duo Fraise",
+    description: "Gâteau duo Fraise.",
     brand: "Brossard",
     bag: 1,
     cookiesPerBag: 1,
@@ -511,7 +511,7 @@ export const Cookies: ICookie[] = [
   {
     id: "5e94d1a8-b482-4701-b3e7-96aa85edda22",
     name: "Galette Moelleuse",
-    description: "Biscuits Galettes moelleuse nappée au chocolat au lait",
+    description: "Galettes moelleuse nappée au chocolat au lait.",
     brand: "St Michel",
     bag: 1,
     cookiesPerBag: 1,
@@ -521,7 +521,7 @@ export const Cookies: ICookie[] = [
   {
     id: "aae254ee-7368-49f9-a6b4-963bfdee44da",
     name: "Le Brownie",
-    description: "Mini brownies chocolat aux noisettes",
+    description: "Mini brownies chocolat aux noisettes.",
     brand: "Brossard",
     bag: 1,
     cookiesPerBag: 1,
@@ -531,7 +531,7 @@ export const Cookies: ICookie[] = [
   {
     id: "5a0d4964-ab46-49b5-b955-b1ac6664885a",
     name: "Le Brookie",
-    description: "Cookies aux pépites de chocolat sur gâteaux au chocolat",
+    description: "Cookies aux pépites de chocolat sur gâteaux au chocolat.",
     brand: "Brossard",
     bag: 1,
     cookiesPerBag: 1,
@@ -541,7 +541,7 @@ export const Cookies: ICookie[] = [
   {
     id: "7edee0bb-986a-4b9d-bf76-864d9438a81e",
     name: "Brownie a la Française",
-    description: "Mini brownie blanc cocottes",
+    description: "Mini brownie au chocolat blanc.",
     brand: "St Michel",
     bag: 1,
     cookiesPerBag: 1,
@@ -551,7 +551,7 @@ export const Cookies: ICookie[] = [
   {
     id: "4cef0e97-cea3-41f9-90e9-a939632eb02f",
     name: "Savane",
-    description: "Gâteau marbré cacao noisettes",
+    description: "Gâteau marbré cacao noisettes.",
     brand: "Brossard",
     bag: 1,
     cookiesPerBag: 1,
@@ -561,7 +561,7 @@ export const Cookies: ICookie[] = [
   {
     id: "126a8c12-d15f-44e8-b379-8689ab2af98c",
     name: "LuLu L'Ourson",
-    description: "Gâteaux fourrés au chocolat tout chocolat",
+    description: "Gâteaux au chocolat fourrés au chocolat.",
     brand: "LU",
     bag: 1,
     cookiesPerBag: 1,
@@ -571,7 +571,7 @@ export const Cookies: ICookie[] = [
   {
     id: "df470b45-afb8-4add-b019-c05cec804bca",
     name: "Galette Moelleuse",
-    description: "Galette moelleuse tigrée nappée au chocolat blanc",
+    description: "Galette moelleuse tigrée nappée au chocolat blanc.",
     brand: "St Michel",
     bag: 1,
     cookiesPerBag: 1,
@@ -581,7 +581,7 @@ export const Cookies: ICookie[] = [
   {
     id: "b59b8667-5712-46c2-90ff-0c3bb7ba2c04",
     name: "Savane Génoise Roulée",
-    description: "Génoises roulées avec un fourrage au chocolat et à la noisette",
+    description: "Génoises roulées avec un fourrage au chocolat et à la noisette.",
     brand: "Brossard",
     bag: 1,
     cookiesPerBag: 1,
@@ -591,7 +591,7 @@ export const Cookies: ICookie[] = [
   {
     id: "a940d4a8-1cc0-4ea7-b200-9412f2b67037",
     name: "Savane P'tit moelleux",
-    description: "Saveur fraise",
+    description: "Saveur fraise.",
     brand: "Brossard",
     bag: 1,
     cookiesPerBag: 1,
@@ -601,7 +601,7 @@ export const Cookies: ICookie[] = [
   {
     id: "4a02eb7b-8096-400e-ba80-118b42598b4e",
     name: "Napolitain L'Original",
-    description: "Gâteaux au chocolat",
+    description: "Gâteaux au chocolat.",
     brand: "LU",
     bag: 1,
     cookiesPerBag: 1,
@@ -611,7 +611,7 @@ export const Cookies: ICookie[] = [
   {
     id: "83ee9497-ff94-48a1-a160-c4bac246c9dd",
     name: "Napolitain Signature",
-    description: "Gâteaux au chocolat et à la framboise",
+    description: "Gâteaux au chocolat et à la framboise.",
     brand: "LU",
     bag: 1,
     cookiesPerBag: 1,

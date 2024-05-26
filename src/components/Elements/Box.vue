@@ -63,7 +63,8 @@ const getLargerImagePath = (image: string): string => {
         </div>
         <div class="text-lg font-semibold tracking-tight text-gray-900">{{ item.name }}</div>
         <div>{{ item.brand }}</div>
-        <div class="text-gray-500 mt-2 flex flex-row justify-between gap-2 items-center">
+        <div class="text-sm text-gray-500">{{ item.description }}</div>
+        <div class="text-gray-400 mt-2 flex flex-row justify-between gap-2 items-center">
           <a
             class="text-sm hover:underline hover:cursor-pointer"
             :href="getLargerImagePath(item.image)"
