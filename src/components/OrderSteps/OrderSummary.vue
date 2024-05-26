@@ -61,8 +61,8 @@ const getMakeYourBoxCookieList = (cookies: Record<string, number>): Array<string
 <template>
   <div class="w-full flex gap-4 md:flex-row flex-col">
     <div class="border border-gray-100 rounded-md overflow-x-auto">
-      <table class="w-full text-sm text-left rtl:text-right text-gray-500">
-        <thead class="text-sm text-white uppercase bg-gray-700">
+      <table class="w-full text-sm text-left rtl:text-right">
+        <thead class="text-sm text-gray-800 uppercase bg-gray-100">
           <tr>
             <th
               scope="col"
@@ -93,12 +93,12 @@ const getMakeYourBoxCookieList = (cookies: Record<string, number>): Array<string
                   <div>{{ item.name }}</div>
                   <span
                     v-if="isSpecialBox(item.id)"
-                    class="bg-orange-500 text-white border border-orange-500 text-xs font-medium ms-3 px-2 py-1 rounded">
+                    class="bg-amber-500 text-white border border-amber-500 text-xs font-medium ms-3 px-2 py-1 rounded">
                     Special
                   </span>
                   <span
                     v-if="isCollectionBox(item.id)"
-                    class="text-orange-500 bg-white border border-orange-500 text-xs font-medium ms-3 px-2 py-1 rounded">
+                    class="text-amber-500 bg-white border border-amber-500 text-xs font-medium ms-3 px-2 py-1 rounded">
                     Collection
                   </span>
                 </div>

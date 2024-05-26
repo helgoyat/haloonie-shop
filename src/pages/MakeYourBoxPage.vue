@@ -74,7 +74,7 @@ onMounted(() => (userBox.value.id = uuidv4()));
         <div class="p-3">
           <div class="mb-2 text-right">
             <span
-              class="text-sm text-orange-500 bg-orange-100 font-medium pl-2.5 pr-1 py-1 rounded-s-full">
+              class="text-sm text-amber-500 bg-amber-100 font-medium pl-2.5 pr-1 py-1 rounded-s-full">
               {{ item.bag }} x
             </span>
             <span
@@ -164,7 +164,7 @@ onMounted(() => (userBox.value.id = uuidv4()));
       <button
         type="button"
         :disabled="!isUserBoxFull"
-        class="px-6 py-3 text-center inline-flex items-center text-base font-medium text-white disabled:bg-orange-200 bg-orange-500 rounded-md"
+        class="px-6 py-3 text-center inline-flex items-center text-base font-medium text-white disabled:bg-amber-200 bg-amber-500 rounded-md"
         @click="addUserBoxToCart">
         Add to cart
       </button>

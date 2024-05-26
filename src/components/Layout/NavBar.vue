@@ -19,10 +19,10 @@ const { isOrder, boxCount } = storeToRefs(orderStore);
         <router-link
           :to="isOrder ? { name: 'OrderPage' } : { name: 'MakeYourBoxPage' }"
           class="relative font-medium rounded-full text-sm px-4 py-2 text-center inline-flex items-center"
-          :class="isOrder ? 'text-emerald-600 bg-emerald-100' : 'text-white bg-emerald-400'">
+          :class="isOrder ? 'text-amber-600 bg-amber-100' : 'text-white bg-amber-400'">
           <svg
             v-if="isOrder"
-            class="w-5 h-5 me-1 text-emerald-600"
+            class="w-5 h-5 me-1 text-amber-600"
             aria-hidden="true"
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -37,7 +37,7 @@ const { isOrder, boxCount } = storeToRefs(orderStore);
           {{ isOrder ? "Cart" : "Get started" }}
           <div
             v-if="isOrder"
-            class="absolute inline-flex items-center justify-center w-6 h-6 text-xs font-bold text-white bg-emerald-500 border-2 border-white rounded-full -top-2 -end-2">
+            class="absolute inline-flex items-center justify-center w-6 h-6 text-xs font-bold text-white bg-amber-500 border-2 border-white rounded-full -top-2 -end-2">
             {{ boxCount }}
           </div>
         </router-link>

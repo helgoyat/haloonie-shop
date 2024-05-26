@@ -53,7 +53,7 @@ const getLargerImagePath = (image: string): string => {
       <div class="p-3">
         <div class="mb-2 text-right">
           <span
-            class="text-sm text-orange-500 bg-orange-100 font-medium pl-2.5 pr-1 py-1 rounded-s-full">
+            class="text-sm text-amber-500 bg-amber-100 font-medium pl-2.5 pr-1 py-1 rounded-s-full">
             {{ box.cookies[item.id] * item.bag }} x
           </span>
           <span
@@ -79,7 +79,7 @@ const getLargerImagePath = (image: string): string => {
     <template v-if="boxIds[box.id]">
       <button
         type="button"
-        class="text-white bg-orange-500 font-medium rounded-l-full text-sm p-2.5 text-center inline-flex items-center"
+        class="text-white bg-amber-500 font-medium rounded-l-full text-sm p-2.5 text-center inline-flex items-center"
         @click.stop="onClickMinus(box.id)">
         <svg
           class="w-7 h-7"
@@ -96,12 +96,12 @@ const getLargerImagePath = (image: string): string => {
         </svg>
       </button>
       <div
-        class="py-1.5 px-3 border-2 border-orange-500 bg-orange-500 text-white flex items-center justify-center">
+        class="py-1.5 px-3 border-2 border-amber-500 bg-amber-500 text-white flex items-center justify-center">
         {{ boxIds[box.id] }}
       </div>
       <button
         type="button"
-        class="text-white bg-orange-500 font-medium rounded-r-full text-sm p-2.5 text-center inline-flex items-center"
+        class="text-white bg-amber-500 font-medium rounded-r-full text-sm p-2.5 text-center inline-flex items-center"
         @click.stop="addBox(box.id)">
         <svg
           class="w-7 h-7"
@@ -121,7 +121,7 @@ const getLargerImagePath = (image: string): string => {
     <button
       v-else
       type="button"
-      class="px-6 py-3 text-base font-medium text-center text-white bg-orange-500 rounded-md"
+      class="px-6 py-3 text-base font-medium text-center text-white bg-amber-500 rounded-md"
       @click="addBox(box.id)">
       Add to cart
     </button>

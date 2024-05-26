@@ -46,7 +46,7 @@ const goToBoxPage = (box: IBox) => {
           class="flex flex-row flex-wrap gap-2 mt-3">
           <div
             v-for="element in getCookieBoxes(item.id)"
-            class="text-sm text-white bg-orange-500 font-medium px-3 py-1 rounded hover:cursor-pointer"
+            class="text-sm text-white bg-amber-500 font-medium px-3 py-1 rounded hover:cursor-pointer"
             @click="goToBoxPage(element)">
             {{ element.name }} Box
           </div>
