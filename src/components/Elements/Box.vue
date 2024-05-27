@@ -53,11 +53,11 @@ const getLargerImagePath = (image: string): string => {
       <div class="p-3">
         <div class="mb-2 text-right">
           <span
-            class="text-sm text-amber-500 bg-amber-100 font-medium pl-2.5 pr-1 py-1 rounded-s-full">
+            class="text-sm text-emerald-500 bg-emerald-100 font-medium pl-2.5 pr-1 py-1 rounded-s-full">
             {{ box.cookies[item.id] * item.bag }} x
           </span>
           <span
-            class="text-sm text-violet-600 bg-violet-100 font-medium pr-2.5 pl-2 py-1 rounded-e-full">
+            class="text-sm text-emerald-50 bg-emerald-400 font-medium pr-2.5 pl-2 py-1 rounded-e-full">
             {{ item.cookiesPerBag }} {{ item.cookiesPerBag > 1 ? "cookies" : "cookie" }}
           </span>
         </div>
@@ -75,11 +75,11 @@ const getLargerImagePath = (image: string): string => {
       </div>
     </div>
   </div>
-  <div class="flex justify-center my-6">
+  <div class="flex justify-center my-4">
     <template v-if="boxIds[box.id]">
       <button
         type="button"
-        class="text-white bg-amber-500 font-medium rounded-l-full text-sm p-2.5 text-center inline-flex items-center"
+        class="text-white bg-violet-600 font-medium rounded-l-full text-sm p-2.5 text-center inline-flex items-center"
         @click.stop="onClickMinus(box.id)">
         <svg
           class="w-7 h-7"
@@ -96,12 +96,12 @@ const getLargerImagePath = (image: string): string => {
         </svg>
       </button>
       <div
-        class="py-1.5 px-3 border-2 border-amber-500 bg-amber-500 text-white flex items-center justify-center">
+        class="py-1.5 px-3 border-2 border-violet-600 bg-violet-600 text-white flex items-center justify-center">
         {{ boxIds[box.id] }}
       </div>
       <button
         type="button"
-        class="text-white bg-amber-500 font-medium rounded-r-full text-sm p-2.5 text-center inline-flex items-center"
+        class="text-white bg-violet-600 font-medium rounded-r-full text-sm p-2.5 text-center inline-flex items-center"
         @click.stop="addBox(box.id)">
         <svg
           class="w-7 h-7"
@@ -121,7 +121,7 @@ const getLargerImagePath = (image: string): string => {
     <button
       v-else
       type="button"
-      class="px-6 py-3 text-base font-medium text-center text-white bg-amber-500 rounded-md"
+      class="px-6 py-3 text-base font-medium text-center text-white bg-violet-600 rounded-md"
       @click="addBox(box.id)">
       Add to cart
     </button>

@@ -14,7 +14,7 @@
 
 /* Titles */
 h1 {
-  @apply text-5xl brand text-violet-800 text-center;
+  @apply text-5xl brand text-violet-600 text-center;
 }
 
 h2 {

@@ -10,7 +10,7 @@ import { BoxTypeEnum } from "@/types";
     <router-link :to="{ name: 'MakeYourBoxPage' }">
       <button
         type="button"
-        class="px-6 py-3 text-lg text-white ring-2 ring-offset-4 ring-violet-400 bg-violet-600 font-medium rounded-full text-center">
+        class="px-6 py-3 text-lg text-white ring-2 ring-offset-2 ring-violet-400 bg-violet-500 font-medium rounded-full text-center">
         Get started
       </button>
     </router-link>
@@ -32,7 +32,7 @@ import { BoxTypeEnum } from "@/types";
       <router-link :to="{ name: 'HowItWorksPage' }">
         <button
           type="button"
-          class="px-6 py-3 text-center text-base font-medium text-violet-600 border-2 border-violet-100 rounded-md">
+          class="px-6 py-3 text-center text-base font-medium text-violet-600 border-2 border-violet-200 rounded-md">
           Learn more
         </button>
       </router-link>
@@ -43,7 +43,7 @@ import { BoxTypeEnum } from "@/types";
       <router-link :to="{ name: 'BoxesPage', params: { boxType: BoxTypeEnum.Collection } }">
         <button
           type="button"
-          class="px-6 py-3 text-center text-base font-medium text-violet-600 border-2 border-violet-100 rounded-md">
+          class="px-6 py-3 text-center text-base font-medium text-violet-600 border-2 border-violet-200 rounded-md">
           Discover
         </button>
       </router-link>

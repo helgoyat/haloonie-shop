@@ -74,11 +74,11 @@ onMounted(() => (userBox.value.id = uuidv4()));
         <div class="p-3">
           <div class="mb-2 text-right">
             <span
-              class="text-sm text-amber-500 bg-amber-100 font-medium pl-2.5 pr-1 py-1 rounded-s-full">
+              class="text-sm text-emerald-500 bg-emerald-100 font-medium pl-2.5 pr-1 py-1 rounded-s-full">
               {{ item.bag }} x
             </span>
             <span
-              class="text-sm text-violet-600 bg-violet-100 font-medium pr-2.5 pl-2 py-1 rounded-e-full">
+              class="text-sm text-emerald-50 bg-emerald-400 font-medium pr-2.5 pl-2 py-1 rounded-e-full">
               {{ item.cookiesPerBag }} {{ item.cookiesPerBag > 1 ? "cookies" : "cookie" }}
             </span>
           </div>
@@ -118,7 +118,7 @@ onMounted(() => (userBox.value.id = uuidv4()));
                 <button
                   type="button"
                   :disabled="isUserBoxFull"
-                  class="text-white bg-violet-600 disabled:bg-violet-300 font-medium rounded-r-full text-sm p-1.5 text-center inline-flex items-center"
+                  class="text-white bg-violet-600 disabled:bg-violet-200 font-medium rounded-r-full text-sm p-1.5 text-center inline-flex items-center"
                   @click.stop="addCookie(item.id)">
                   <svg
                     class="w-5 h-5"
@@ -139,7 +139,7 @@ onMounted(() => (userBox.value.id = uuidv4()));
                 v-else
                 type="button"
                 :disabled="isUserBoxFull"
-                class="text-white bg-violet-600 disabled:bg-violet-300 font-medium rounded-full text-sm p-1.5 text-center inline-flex items-center"
+                class="text-white bg-violet-600 disabled:bg-violet-200 font-medium rounded-full text-sm p-1.5 text-center inline-flex items-center"
                 @click.stop="addCookie(item.id)">
                 <svg
                   class="w-5 h-5"
@@ -160,11 +160,10 @@ onMounted(() => (userBox.value.id = uuidv4()));
         </div>
       </div>
     </div>
-    <div class="flex justify-center my-6">
+    <div v-if="isUserBoxFull" class="flex justify-center my-4">
       <button
         type="button"
-        :disabled="!isUserBoxFull"
-        class="px-6 py-3 text-center inline-flex items-center text-base font-medium text-white disabled:bg-amber-200 bg-amber-500 rounded-md"
+        class="px-6 py-3 text-center inline-flex items-center text-base font-medium text-white bg-violet-600 rounded-md"
         @click="addUserBoxToCart">
         Add to cart
       </button>
