@@ -93,12 +93,12 @@ const getMakeYourBoxCookieList = (cookies: Record<string, number>): Array<string
                   <div>{{ item.name }}</div>
                   <span
                     v-if="isSpecialBox(item.id)"
-                    class="bg-amber-500 text-white border border-amber-500 text-xs font-medium ms-3 px-2 py-1 rounded">
+                    class="bg-emerald-400 text-white border border-emerald-400 text-xs font-medium ms-3 px-2 py-1 rounded">
                     Special
                   </span>
                   <span
                     v-if="isCollectionBox(item.id)"
-                    class="text-amber-500 bg-white border border-amber-500 text-xs font-medium ms-3 px-2 py-1 rounded">
+                    class="text-emerald-400 bg-white border border-emerald-400 text-xs font-medium ms-3 px-2 py-1 rounded">
                     Collection
                   </span>
                 </div>

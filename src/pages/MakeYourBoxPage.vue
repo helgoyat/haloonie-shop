@@ -160,7 +160,9 @@ onMounted(() => (userBox.value.id = uuidv4()));
         </div>
       </div>
     </div>
-    <div v-if="isUserBoxFull" class="flex justify-center my-4">
+    <div
+      v-if="isUserBoxFull"
+      class="flex justify-center my-4">
       <button
         type="button"
         class="px-6 py-3 text-center inline-flex items-center text-base font-medium text-white bg-violet-600 rounded-md"
