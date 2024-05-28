@@ -7,15 +7,11 @@ import { BoxTypeEnum } from "@/types";
 <template>
   <div class="header-container">
     <h1>Shop French Cookies</h1>
-    <router-link :to="{ name: 'MakeYourBoxPage' }">
-      <button
-        type="button"
-        class="px-6 py-3 text-lg text-white ring-2 ring-offset-2 ring-violet-400 bg-violet-500 font-medium rounded-full text-center">
-        Get started
-      </button>
-    </router-link>
+    <img
+      class="w-[160px]"
+      src="https://cdn.pixabay.com/photo/2021/01/09/01/54/donut-5901143_1280.png" />
   </div>
-  <div class="content">
+  <div class="content !pt-2">
     <h3>Welcome to you!</h3>
     <div class="text-gray-500">
       Track work across the enterprise through an open, collaborative platform. Link issues across
@@ -32,7 +28,7 @@ import { BoxTypeEnum } from "@/types";
       <router-link :to="{ name: 'HowItWorksPage' }">
         <button
           type="button"
-          class="px-6 py-3 text-center text-base font-medium text-violet-600 border-2 border-violet-200 rounded-md">
+          class="px-6 py-3 text-center text-base font-medium text-violet-600 border-2 border-violet-300 rounded-md">
           Learn more
         </button>
       </router-link>
@@ -43,7 +39,7 @@ import { BoxTypeEnum } from "@/types";
       <router-link :to="{ name: 'BoxesPage', params: { boxType: BoxTypeEnum.Collection } }">
         <button
           type="button"
-          class="px-6 py-3 text-center text-base font-medium text-violet-600 border-2 border-violet-200 rounded-md">
+          class="px-6 py-3 text-center text-base font-medium text-violet-600 border-2 border-violet-300 rounded-md">
           Discover
         </button>
       </router-link>
@@ -53,6 +49,6 @@ import { BoxTypeEnum } from "@/types";
 
 <style>
 .header-container {
-  @apply w-full h-[400px] flex flex-col gap-12 justify-center items-center bg-[url('../pictures/theme.jpg')] bg-cover bg-bottom p-4;
+  @apply w-full flex flex-col gap-6 justify-center items-center p-4 pt-10;
 }
 </style>

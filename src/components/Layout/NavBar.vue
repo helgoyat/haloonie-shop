@@ -37,7 +37,7 @@ const { isOrder, boxCount } = storeToRefs(orderStore);
           {{ isOrder ? "Cart" : "Get started" }}
           <div
             v-if="isOrder"
-            class="absolute inline-flex items-center justify-center w-6 h-6 text-xs font-bold text-white bg-amber-600 border-2 border-white rounded-full -top-2 -end-2">
+            class="absolute inline-flex items-center justify-center w-6 h-6 text-xs font-bold text-white bg-violet-500 border-2 border-white rounded-full -top-2 -end-2">
             {{ boxCount }}
           </div>
         </router-link>

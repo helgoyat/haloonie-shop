@@ -29,7 +29,8 @@ const goToBoxPage = (box: IBox) => {
 </script>
 
 <template>
-  <div class="grid grid-cols-4 gap-6 justify-items-center items-start">
+  <div
+    class="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-6 justify-items-center items-start">
     <div
       v-for="item in cookies"
       :key="item.name"
