@@ -6,19 +6,17 @@ import { BoxTypeEnum } from "@/types";
 
 <template>
   <div class="header-container">
-    <h1>Shop French Cookies</h1>
-    <img
-      class="w-[160px]"
-      src="https://cdn.pixabay.com/photo/2021/01/09/01/54/donut-5901143_1280.png" />
+    <h1>Shop French Treats</h1>
+    <h1>🇫🇷</h1>
   </div>
   <div class="content !pt-2">
     <hr-title title="Bonjour" />
-    <div class="text-gray-700 text-xl text-center">
-      Welcome to Haloonie, your destination for authentic French cookies and cakes, carefully boxed
-      and shipped to the USA for your enjoyment.
+    <div class="text-gray-800 text-xl text-center">
+      Welcome to Haloonie, your destination for French treats, carefully boxed and shipped to the
+      USA.
     </div>
-    <div class="grid grid-cols-3 gap-6">
-      <div class="max-w-sm p-6 bg-white border border-gray-200 rounded-lg">
+    <div class="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-6">
+      <div class="w-full p-6 bg-white border border-gray-200 rounded-lg">
         <svg
           class="w-8 h-8 text-violet-500"
           aria-hidden="true"
@@ -35,16 +33,11 @@ import { BoxTypeEnum } from "@/types";
             d="m8.032 12 1.984 1.984 4.96-4.96m4.55 5.272.893-.893a1.984 1.984 0 0 0 0-2.806l-.893-.893a1.984 1.984 0 0 1-.581-1.403V7.04a1.984 1.984 0 0 0-1.984-1.984h-1.262a1.983 1.983 0 0 1-1.403-.581l-.893-.893a1.984 1.984 0 0 0-2.806 0l-.893.893a1.984 1.984 0 0 1-1.403.581H7.04A1.984 1.984 0 0 0 5.055 7.04v1.262c0 .527-.209 1.031-.581 1.403l-.893.893a1.984 1.984 0 0 0 0 2.806l.893.893c.372.372.581.876.581 1.403v1.262a1.984 1.984 0 0 0 1.984 1.984h1.262c.527 0 1.031.209 1.403.581l.893.893a1.984 1.984 0 0 0 2.806 0l.893-.893a1.985 1.985 0 0 1 1.403-.581h1.262a1.984 1.984 0 0 0 1.984-1.984V15.7c0-.527.209-1.031.581-1.403Z" />
         </svg>
         <h5 class="my-2 text-2xl font-semibold text-gray-900">Our Mission</h5>
-        <p class="mb-3 font-normal text-gray-500">
-          We aim to share French cookies and cakes across the Atlantic, offering a taste of France
-          in every bite.
-        </p>
-        <p class="mb-3 font-normal text-gray-500">
-          Our commitment to quality, and customer satisfaction ensures that every box is filled with
-          love and care.
+        <p class="font-normal text-gray-500">
+          Spreading French delight across the Atlantic, one delicious bite at a time.
         </p>
       </div>
-      <div class="max-w-sm p-6 bg-white border border-gray-200 rounded-lg">
+      <div class="w-full p-6 bg-white border border-gray-200 rounded-lg">
         <svg
           class="w-8 h-8 text-violet-500"
           aria-hidden="true"
@@ -62,15 +55,10 @@ import { BoxTypeEnum } from "@/types";
         </svg>
         <h5 class="my-2 text-2xl font-semibold text-gray-900">Enjoy</h5>
         <p class="mb-3 font-normal text-gray-500">
-          Our boxes are perfect for treating yourself or gifting someone special.
-        </p>
-        <p class="mb-3 font-normal text-gray-500">
-          From classic French cookies and madeleines to decadent sablés and galettes, our selection
-          of treats is carefully crafted so you can experience the authentic taste of France without
-          leaving the USA.
+          Whether for self-love or gift-giving, our boxes are the perfect choice.
         </p>
       </div>
-      <div class="max-w-sm p-6 bg-white border border-gray-200 rounded-lg">
+      <div class="w-full p-6 bg-white border border-gray-200 rounded-lg">
         <svg
           class="w-8 h-8 text-violet-500"
           aria-hidden="true"
@@ -88,8 +76,7 @@ import { BoxTypeEnum } from "@/types";
         </svg>
         <h5 class="my-2 text-2xl font-semibold text-gray-900">Shipping</h5>
         <p class="mb-3 font-normal text-gray-500">
-          We ship our boxes to designated FedEx Pickup Offices across the USA, where you can
-          conveniently collect your package at your earliest convenience.
+          Direct from France to your doorstep in the USA.
         </p>
       </div>
     </div>

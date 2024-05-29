@@ -618,18 +618,26 @@ export const Cookies: ICookie[] = [
     image:
       "https://www.coursesu.com/dw/image/v2/BBQX_PRD/on/demandware.static/-/Sites-digitalu-master-catalog/default/dwfa2e63c9/7622201809768_A1L1_2011033_S12.png?sw=250&sh=250&sm=fit",
   },
-  // {
-  //   id: "bd184a37-7697-48f7-9c6a-1828f482c970",
-  //   name: "",
-  //   brand: "",
-  //   image: "",
-  // },
-  // {
-  //   id: "d597e3b4-7de0-4e43-934e-3a475cd2ce5c",
-  //   name: "",
-  //   brand: "",
-  //   image: "",
-  // },
+  {
+    id: "bd184a37-7697-48f7-9c6a-1828f482c970",
+    name: "P'tit Savane",
+    description: "Gâteau P'tit savane chocolat.",
+    brand: "Brossard",
+    bag: 1,
+    cookiesPerBag: 1,
+    image:
+      "https://www.coursesu.com/dw/image/v2/BBQX_PRD/on/demandware.static/-/Sites-digitalu-master-catalog/default/dw3578ea31/3660140929752_A1L1_4994800_S12.png?sw=250&sh=250&sm=fit",
+  },
+  {
+    id: "d597e3b4-7de0-4e43-934e-3a475cd2ce5c",
+    name: "Savane",
+    description: "Gâteau à base de 16% de yaourt.",
+    brand: "Brossard",
+    bag: 1,
+    cookiesPerBag: 1,
+    image:
+      "https://www.coursesu.com/dw/image/v2/BBQX_PRD/on/demandware.static/-/Sites-digitalu-master-catalog/default/dwcc22aa1b/3660140954457_A1L1_2313694_S12.png?sw=250&sh=250&sm=fit",
+  },
   // {
   //   id: "1f8c6bda-97b2-42b9-a1fa-5b191c6dc583",
   //   name: "",
