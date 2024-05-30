@@ -61,7 +61,7 @@ onMounted(() => (userBox.value.id = uuidv4()));
 <template>
   <div class="content">
     <h2>Make Your Box</h2>
-    <h6>By picking 8 items.</h6>
+    <h6>Pick 8 items</h6>
     <div
       class="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-6 justify-items-center items-start">
       <div
@@ -73,12 +73,10 @@ onMounted(() => (userBox.value.id = uuidv4()));
           :style="`background-image: url(${item.image})`"></div>
         <div class="p-3">
           <div class="mb-2 text-right">
-            <span
-              class="text-sm text-emerald-500 bg-emerald-100 font-medium pl-2.5 pr-1 py-1 rounded-s-full">
-              {{ item.bag }} x
+            <span class="text-sm text-violet-600 font-medium">
+              {{ item.bag }} {{ item.bag > 1 ? "units" : "unit" }} x
             </span>
-            <span
-              class="text-sm text-emerald-50 bg-emerald-400 font-medium pr-2.5 pl-2 py-1 rounded-e-full">
+            <span class="text-sm text-violet-600 font-medium">
               {{ item.cookiesPerBag }} {{ item.cookiesPerBag > 1 ? "cookies" : "cookie" }}
             </span>
           </div>

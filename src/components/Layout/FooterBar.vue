@@ -25,11 +25,11 @@
           <h4 class="mb-6 text-sm font-semibold text-gray-900 uppercase">Help center</h4>
           <ul class="text-gray-600 font-medium">
             <li class="mb-4">
-              <a
-                href="#"
+              <router-link
+                :to="{ name: 'FAQPage' }"
                 class="hover:underline">
                 F.A.Q.
-              </a>
+              </router-link>
             </li>
             <li class="mb-4">
               <a
@@ -107,7 +107,7 @@
           </ul>
         </div>
       </div>
-      <div class="py-6 rounded-md text-center">
+      <div class="py-2 rounded-md text-center">
         <span class="text-sm text-gray-500">
           © 2024
           <a href="https://flowbite.com/">Haloonie</a>

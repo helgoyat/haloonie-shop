@@ -52,12 +52,11 @@ const getLargerImagePath = (image: string): string => {
         :style="`background-image: url(${item.image})`"></div>
       <div class="p-3">
         <div class="mb-2 text-right">
-          <span
-            class="text-sm text-emerald-500 bg-emerald-100 font-medium pl-2.5 pr-1 py-1 rounded-s-full">
-            {{ box.cookies[item.id] * item.bag }} x
+          <span class="text-sm text-violet-600 font-medium">
+            {{ box.cookies[item.id] * item.bag }}
+            {{ box.cookies[item.id] * item.bag > 1 ? "units" : "unit" }} x
           </span>
-          <span
-            class="text-sm text-emerald-50 bg-emerald-400 font-medium pr-2.5 pl-2 py-1 rounded-e-full">
+          <span class="text-sm text-violet-600 font-medium">
             {{ item.cookiesPerBag }} {{ item.cookiesPerBag > 1 ? "cookies" : "cookie" }}
           </span>
         </div>

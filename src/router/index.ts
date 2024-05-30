@@ -5,6 +5,7 @@ import NotFoundPage from "@/pages/NotFoundPage.vue";
 import OrderPage from "@/pages/OrderPage.vue";
 import AboutPage from "@/pages/AboutPage.vue";
 import HowItWorksPage from "@/pages/HowItWorksPage.vue";
+import FAQPage from "@/pages/FAQPage.vue";
 import CookiesPage from "@/pages/CookiesPage.vue";
 
 export default [
@@ -37,6 +38,11 @@ export default [
     path: "/order",
     name: "OrderPage",
     component: OrderPage,
+  },
+  {
+    path: "/faq",
+    name: "FAQPage",
+    component: FAQPage,
   },
   {
     path: "/cookies", // to be deleted
