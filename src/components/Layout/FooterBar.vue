@@ -44,18 +44,18 @@
           <h4 class="mb-6 text-sm font-semibold text-gray-900 uppercase">Legal</h4>
           <ul class="text-gray-600 font-medium">
             <li class="mb-4">
-              <a
-                href="#"
+              <router-link
+                :to="{ name: 'PrivacyPolicyPage' }"
                 class="hover:underline">
                 Privacy Policy
-              </a>
+              </router-link>
             </li>
             <li class="mb-4">
-              <a
-                href="#"
+              <router-link
+                :to="{ name: 'TermsAndConditionsPage' }"
                 class="hover:underline">
                 Terms and Conditions
-              </a>
+              </router-link>
             </li>
           </ul>
         </div>

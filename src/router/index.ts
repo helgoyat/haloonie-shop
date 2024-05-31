@@ -6,6 +6,8 @@ import OrderPage from "@/pages/OrderPage.vue";
 import AboutPage from "@/pages/AboutPage.vue";
 import HowItWorksPage from "@/pages/HowItWorksPage.vue";
 import FAQPage from "@/pages/FAQPage.vue";
+import TermsAndConditionsPage from "@/pages/TermsAndConditionsPage.vue";
+import PrivacyPolicyPage from "@/pages/PrivacyPolicyPage.vue";
 import CookiesPage from "@/pages/CookiesPage.vue";
 
 export default [
@@ -43,6 +45,16 @@ export default [
     path: "/faq",
     name: "FAQPage",
     component: FAQPage,
+  },
+  {
+    path: "/terms-and-conditions",
+    name: "TermsAndConditionsPage",
+    component: TermsAndConditionsPage,
+  },
+  {
+    path: "/privacy-policy",
+    name: "PrivacyPolicyPage",
+    component: PrivacyPolicyPage,
   },
   {
     path: "/cookies", // to be deleted

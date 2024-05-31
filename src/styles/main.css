@@ -26,7 +26,7 @@ h3 {
 }
 
 h6 {
-  @apply text-xl text-center text-gray-600 font-semibold;
+  @apply text-xl text-center text-gray-700;
 }
 
 /* Main */
@@ -44,4 +44,8 @@ html {
 
 .faq-title {
   @apply mt-4 font-semibold text-lg;
+}
+
+.faq-section {
+  @apply text-xl text-center text-gray-700 p-3 border-b;
 }
