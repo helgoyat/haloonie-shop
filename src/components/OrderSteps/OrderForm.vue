@@ -71,6 +71,13 @@ import HrTitle from "@/components/Elements/HrTitle.vue";
         <label
           for="state"
           class="block mb-2 text-base font-medium text-gray-900">
+          Is it a gift ? (shipping to different address)
+        </label>
+      </div>
+      <div class="mb-6">
+        <label
+          for="state"
+          class="block mb-2 text-base font-medium text-gray-900">
           U.S. State
         </label>
         <select

@@ -75,7 +75,9 @@ import { BoxTypeEnum } from "@/types";
             d="M13 7h6l2 4m-8-4v8m0-8V6a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v9h2m8 0H9m4 0h2m4 0h2v-4m0 0h-5m3.5 5.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0Zm-10 0a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0Z" />
         </svg>
         <h5 class="my-2 text-2xl font-semibold text-gray-900">Shipping</h5>
-        <p class="font-normal text-gray-500">Direct from France to your doorstep in the USA.</p>
+        <p class="font-normal text-gray-500">
+          Shipped directly from France to your chosen FedEx pickup location in the USA.
+        </p>
       </div>
     </div>
     <div class="flex flex-col items-center my-2">
