@@ -1,31 +1,19 @@
 import HomePage from "@/pages/HomePage.vue";
-import BoxesPage from "@/pages/BoxesPage.vue";
 import MakeYourBoxPage from "@/pages/MakeYourBoxPage.vue";
-import NotFoundPage from "@/pages/NotFoundPage.vue";
+import BoxesPage from "@/pages/BoxesPage.vue";
 import OrderPage from "@/pages/OrderPage.vue";
-import AboutPage from "@/pages/AboutPage.vue";
-import HowItWorksPage from "@/pages/HowItWorksPage.vue";
-import FAQPage from "@/pages/FAQPage.vue";
-import TermsAndConditionsPage from "@/pages/TermsAndConditionsPage.vue";
-import PrivacyPolicyPage from "@/pages/PrivacyPolicyPage.vue";
-import ContactUsPage from "@/pages/ContactUsPage.vue";
-import CookiesPage from "@/pages/CookiesPage.vue";
+import TermsAndConditionsPage from "@/pages/Legal/TermsAndConditionsPage.vue";
+import PrivacyPolicyPage from "@/pages/Legal/PrivacyPolicyPage.vue";
+import HowItWorksPage from "@/pages/Help/HowItWorksPage.vue";
+import FAQPage from "@/pages/Help/FAQPage.vue";
+import ContactUsPage from "@/pages/Help/ContactUsPage.vue";
+import NotFoundPage from "@/pages/Other/NotFoundPage.vue";
 
 export default [
   {
     path: "/",
     name: "HomePage",
     component: HomePage,
-  },
-  {
-    path: "/about",
-    name: "AboutPage",
-    component: AboutPage,
-  },
-  {
-    path: "/how-it-works",
-    name: "HowItWorksPage",
-    component: HowItWorksPage,
   },
   {
     path: "/make-your-box",
@@ -42,11 +30,7 @@ export default [
     name: "OrderPage",
     component: OrderPage,
   },
-  {
-    path: "/faq",
-    name: "FAQPage",
-    component: FAQPage,
-  },
+  // LEGAL
   {
     path: "/terms-and-conditions",
     name: "TermsAndConditionsPage",
@@ -57,16 +41,23 @@ export default [
     name: "PrivacyPolicyPage",
     component: PrivacyPolicyPage,
   },
+  // HELP
+  {
+    path: "/how-it-works",
+    name: "HowItWorksPage",
+    component: HowItWorksPage,
+  },
+  {
+    path: "/faq",
+    name: "FAQPage",
+    component: FAQPage,
+  },
   {
     path: "/contact-us",
     name: "ContactUsPage",
     component: ContactUsPage,
   },
-  {
-    path: "/cookies", // to be deleted
-    name: "CookiesPage",
-    component: CookiesPage,
-  },
+  // OTHER
   {
     path: "/:pathMatch(.*)*",
     name: "NotFoundPage",
