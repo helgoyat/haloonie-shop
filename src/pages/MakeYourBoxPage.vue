@@ -3,13 +3,19 @@ import { onMounted, ref, computed, watch } from "vue";
 import { v4 as uuidv4 } from "uuid";
 import { useOrderStore } from "@/stores";
 import { Treats } from "@/data";
-import { ITreat, IUserBox } from "@/types";
+import { ITreat, IUserBox, TreatTypeEnum } from "@/types";
 import { getTreatTypeLabel } from "@/utils";
 
 const orderStore = useOrderStore();
 const { addUserBox } = orderStore;
 
+const treatType = ref<TreatTypeEnum | null>(null);
 const userBox = ref<IUserBox>({ id: "", treats: {} });
+
+const treatList = computed(() => {
+  if (!treatType.value) return [...Treats];
+  return [...Treats].filter((item) => item.type === treatType.value);
+});
 
 const isUserBoxFull = computed(
   () => Object.values(userBox.value.treats).reduce((total, curr) => total + curr, 0) === 8,
@@ -44,11 +50,16 @@ const addUserBoxToCart = (): void => {
   addUserBox({ ...userBox.value });
   userBox.value = { id: "", treats: {} };
   userBox.value.id = uuidv4();
+  treatType.value = null;
   window.scrollTo(0, 0);
 };
 
 const getTreatQuantityLabel = (treat: ITreat) => {
   return `${treat.bag} x ${treat.treatsPerBag} ${getTreatTypeLabel(treat)}`;
+};
+
+const changeTreatType = (type: TreatTypeEnum | null) => {
+  treatType.value = type;
 };
 
 watch(
@@ -67,11 +78,50 @@ onMounted(() => (userBox.value.id = uuidv4()));
   <div class="content">
     <h2>Make Your Box</h2>
     <h3>Pick 8 items</h3>
+    <div class="flex flex-col items-center">
+      <div
+        class="inline-flex rounded-md"
+        role="group">
+        <button
+          type="button"
+          class="px-4 py-2 text-xs uppercase font-semibold border border-gray-200 rounded-s-md"
+          :class="
+            treatType === null
+              ? 'bg-gray-200 text-gray-800'
+              : 'bg-white text-gray-500 hover:text-gray-600 hover:bg-gray-50'
+          "
+          @click="changeTreatType(null)">
+          All
+        </button>
+        <button
+          type="button"
+          class="px-4 py-2 text-xs uppercase font-semibold border-t border-b border-gray-200"
+          :class="
+            treatType === TreatTypeEnum.Cookie
+              ? 'bg-gray-200 text-gray-800'
+              : 'bg-white text-gray-500 hover:text-gray-600 hover:bg-gray-50'
+          "
+          @click="changeTreatType(TreatTypeEnum.Cookie)">
+          Cookies
+        </button>
+        <button
+          type="button"
+          class="px-4 py-2 text-xs uppercase font-semibold border border-gray-200 rounded-e-md"
+          :class="
+            treatType === TreatTypeEnum.Cake
+              ? 'bg-gray-200 text-gray-800'
+              : 'bg-white text-gray-500 hover:text-gray-600 hover:bg-gray-50'
+          "
+          @click="changeTreatType(TreatTypeEnum.Cake)">
+          Cake
+        </button>
+      </div>
+    </div>
     <div
       class="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-6 justify-items-center items-start">
       <div
-        v-for="item in Treats"
-        :key="item.name"
+        v-for="(item, index) in treatList"
+        :key="`${item.name}-${index}`"
         class="w-full rounded ring-1 ring-gray-100 hover:ring-gray-200 transition-all p-2">
         <div
           class="h-48 w-full bg-contain bg-no-repeat bg-center"
