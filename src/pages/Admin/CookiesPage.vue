@@ -1,15 +1,15 @@
 <script setup lang="ts">
 import { useRouter } from "vue-router";
 import { kebabCase } from "lodash";
-import { Cookies, Boxes } from "@/data";
+import { Treats, Boxes } from "@/data";
 import { IBox } from "@/types";
 
 const router = useRouter();
 
-const getCookieBoxes = (cookieId: string): IBox[] => {
+const getTreatBoxes = (id: string): IBox[] => {
   const result = [];
   for (let item in Boxes) {
-    if (Object.keys(Boxes[item].cookies).includes(cookieId)) {
+    if (Object.keys(Boxes[item].treats).includes(id)) {
       result.push(Boxes[item]);
     }
   }
@@ -25,7 +25,7 @@ const goToBoxPage = (box: IBox) => {
   <div class="content">
     <div class="grid grid-cols-4 gap-6 justify-items-center items-start">
       <div
-        v-for="item in Cookies"
+        v-for="item in Treats"
         :key="item.name"
         class="w-full rounded ring-1 ring-gray-100 hover:ring-gray-200 transition-all p-2">
         <div
@@ -35,10 +35,10 @@ const goToBoxPage = (box: IBox) => {
           <div class="text-lg font-semibold tracking-tight text-gray-900">{{ item.name }}</div>
           <div class="mb-2">{{ item.brand }}</div>
           <div
-            v-if="getCookieBoxes(item.id).length > 0"
+            v-if="getTreatBoxes(item.id).length > 0"
             class="flex flex-row flex-wrap gap-2">
             <div
-              v-for="element in getCookieBoxes(item.id)"
+              v-for="element in getTreatBoxes(item.id)"
               class="text-sm text-gray-800 bg-gray-200 font-medium px-3 py-1 rounded hover:cursor-pointer"
               @click="goToBoxPage(element)">
               {{ element.name }} Box

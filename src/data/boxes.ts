@@ -7,7 +7,7 @@ export const Boxes: IBox[] = [
     type: BoxTypeEnum.Special,
     image: "https://static.wikia.nocookie.net/disney/images/5/57/MarieCat.png",
     price: 48,
-    cookies: {
+    treats: {
       "565db74a-a6bb-4938-8847-8486c6ce1380": 1,
       "37310e59-9aee-4063-b852-23d9c9b44825": 1,
       "126a8c12-d15f-44e8-b379-8689ab2af98c": 1,
@@ -21,7 +21,7 @@ export const Boxes: IBox[] = [
     type: BoxTypeEnum.Collection,
     image: "https://upload.wikimedia.org/wikipedia/commons/4/4c/Petit_%C3%A9colier_Lu_logo.svg",
     price: 63,
-    cookies: {
+    treats: {
       "f50f9320-f33e-4ede-8582-c3500532f98c": 1,
       "523edc74-9902-4bea-8747-b8c91b3e9b6d": 1,
       "f2a284aa-bb9d-46a7-895e-17a81b60788e": 1,
@@ -33,7 +33,7 @@ export const Boxes: IBox[] = [
     type: BoxTypeEnum.Collection,
     image: "https://cdn.worldvectorlogo.com/logos/pepito.svg",
     price: 78,
-    cookies: {
+    treats: {
       "163746cb-fc56-4581-8039-3cf8b0e7bb5c": 2,
       "fbb6ad4d-6559-4018-b66f-c56020061650": 2,
       "ab4d5376-4540-47b0-af51-c1d879be41a8": 2,
@@ -49,7 +49,7 @@ export const Boxes: IBox[] = [
     image:
       "https://www.mavieencouleurs.fr/sites/default/files/2021-04/335316-GRLA-LOGO-Q1-2020.png",
     price: 30,
-    cookies: {
+    treats: {
       "8da70bfb-6539-4fe3-a21b-1281808d3a96": 1,
       "017848a2-581e-41f3-be44-e4356a54b6af": 1,
       "a6efb036-8b64-488f-b7f3-e5cf9f86c5ec": 1,
@@ -63,7 +63,7 @@ export const Boxes: IBox[] = [
     type: BoxTypeEnum.Collection,
     image: "https://lemediacom.com/wp-content/uploads/2022/05/LU_Prince-logo-2.png",
     price: 54,
-    cookies: {
+    treats: {
       "03b47f63-efea-460d-a24e-406aae52b549": 1,
       "c1bf2eb5-c13f-456e-9524-678b20210c6e": 1,
       "f7a27502-67fe-48ba-bdb1-f474234bcea8": 1,
@@ -76,7 +76,7 @@ export const Boxes: IBox[] = [
     image:
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgdhkFRpTGR6V75XQuL5lJ111KXiNQSf1pugUYYlxslw&s",
     price: 62,
-    cookies: {
+    treats: {
       "03d8982b-a05b-49c3-a150-c6908f444033": 1,
       "cd63002d-04b0-49cc-b16a-7e2d58af9d82": 1,
       "1fdd286f-ee0d-4542-9706-73b9a92ed969": 1,
@@ -90,7 +90,7 @@ export const Boxes: IBox[] = [
     image:
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAdezQrFMkABMTkzG0z0Ss3UUJuxALyrtSIqQXbYLdgQ&s",
     price: 40,
-    cookies: {
+    treats: {
       "e8f9491e-1ebc-45d7-9a61-5a094c23a60f": 1,
       "9331ad12-29ae-47f2-ae6b-a4af63adaa67": 1,
       "bf09553c-8307-4f8b-aaec-080fa92c8683": 1,
@@ -109,7 +109,7 @@ export const Boxes: IBox[] = [
     type: BoxTypeEnum.Collection,
     image: "https://cdn.worldvectorlogo.com/logos/bonne-maman.svg",
     price: 46,
-    cookies: {
+    treats: {
       "82d9d326-ad7d-4cdd-a61f-db31e4b69900": 1,
       "6847c9a7-40f6-4ad9-b79a-6bbecdd2a7a9": 1,
       "3b6faf3a-a99a-4860-9237-ff505fcbba42": 1,
@@ -127,7 +127,7 @@ export const Boxes: IBox[] = [
     image:
       "https://solutions.shopmium.com/wp-content/uploads/2022/06/a403c87d0fbae1ebdfbbae30a315fb52.jpeg",
     price: 40,
-    cookies: {
+    treats: {
       "7b491487-9ad4-4dc8-b8d7-8e577e86e2dc": 1,
       "7db45f32-0e1b-4ba7-aaf4-3b7dc68ec811": 1,
       "4cef0e97-cea3-41f9-90e9-a939632eb02f": 1,

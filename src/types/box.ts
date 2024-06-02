@@ -6,10 +6,10 @@ export interface IBox {
   type: BoxTypeEnum;
   image: string;
   price: number;
-  cookies: Record<string, number>;
+  treats: Record<string, number>;
 }
 
 export interface IUserBox {
   id: string;
-  cookies: Record<string, number>;
+  treats: Record<string, number>;
 }

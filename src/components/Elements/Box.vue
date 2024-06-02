@@ -2,8 +2,9 @@
 import { PropType, computed } from "vue";
 import { storeToRefs } from "pinia";
 import { useOrderStore } from "@/stores";
-import { IBox, ICookie } from "@/types";
-import { Cookies } from "@/data";
+import { IBox, ITreat } from "@/types";
+import { Treats } from "@/data";
+import { getTreatTypeLabel } from "@/utils";
 import HrTitle from "@/components/Elements/HrTitle.vue";
 
 const props = defineProps({
@@ -17,11 +18,11 @@ const orderStore = useOrderStore();
 const { boxIds } = storeToRefs(orderStore);
 const { addBox, deleteBox, removeBox } = orderStore;
 
-const cookies = computed((): ICookie[] => {
+const treats = computed((): ITreat[] => {
   if (!props.box) return [];
-  return Object.keys(props.box.cookies)
-    .map((id) => Cookies.find((item) => item.id === id) || null)
-    .filter((e) => !!e) as ICookie[];
+  return Object.keys(props.box.treats)
+    .map((id) => Treats.find((item) => item.id === id) || null)
+    .filter((e) => !!e) as ITreat[];
 });
 
 const onClickMinus = (id: string): void => {
@@ -36,15 +37,21 @@ const onClickMinus = (id: string): void => {
 const getLargerImagePath = (image: string): string => {
   return image.split("?")[0];
 };
+
+const getTreatQuantityLabel = (treat: ITreat) => {
+  return `${props.box.treats[treat.id] * treat.bag} x ${treat.treatsPerBag} ${getTreatTypeLabel(
+    treat,
+  )}`;
+};
 </script>
 
 <template>
   <h2>{{ box.name }}</h2>
-  <hr-title title="Cookies" />
+  <hr-title title="Box" />
   <div
     class="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-6 justify-items-center items-start">
     <div
-      v-for="item in cookies"
+      v-for="item in treats"
       :key="item.name"
       class="w-full rounded ring-1 ring-gray-100 hover:ring-gray-200 transition-all p-2">
       <div
@@ -53,11 +60,7 @@ const getLargerImagePath = (image: string): string => {
       <div class="p-3">
         <div class="mb-2 text-right">
           <span class="text-sm text-violet-600 font-medium">
-            {{ box.cookies[item.id] * item.bag }}
-            {{ box.cookies[item.id] * item.bag > 1 ? "units" : "unit" }} x
-          </span>
-          <span class="text-sm text-violet-600 font-medium">
-            {{ item.cookiesPerBag }} {{ item.cookiesPerBag > 1 ? "cookies" : "cookie" }}
+            {{ getTreatQuantityLabel(item) }}
           </span>
         </div>
         <div class="text-lg font-semibold tracking-tight text-gray-900">{{ item.name }}</div>

@@ -2,48 +2,53 @@
 import { onMounted, ref, computed, watch } from "vue";
 import { v4 as uuidv4 } from "uuid";
 import { useOrderStore } from "@/stores";
-import { Cookies } from "@/data";
-import { IUserBox } from "@/types";
+import { Treats } from "@/data";
+import { ITreat, IUserBox } from "@/types";
+import { getTreatTypeLabel } from "@/utils";
 
 const orderStore = useOrderStore();
 const { addUserBox } = orderStore;
 
-const userBox = ref<IUserBox>({ id: "", cookies: {} });
+const userBox = ref<IUserBox>({ id: "", treats: {} });
 
 const isUserBoxFull = computed(
-  () => Object.values(userBox.value.cookies).reduce((total, curr) => total + curr, 0) === 8,
+  () => Object.values(userBox.value.treats).reduce((total, curr) => total + curr, 0) === 8,
 );
 
 const getLargerImagePath = (image: string): string => {
   return image.split("?")[0];
 };
 
-const addCookie = (id: string): void => {
-  const isCookie = Object.keys(userBox.value.cookies).includes(id);
+const addTreat = (id: string): void => {
+  const isTreat = Object.keys(userBox.value.treats).includes(id);
   if (isUserBoxFull.value) return;
-  if (isCookie) {
-    userBox.value.cookies[id] += 1;
+  if (isTreat) {
+    userBox.value.treats[id] += 1;
   } else {
-    userBox.value.cookies[id] = 1;
+    userBox.value.treats[id] = 1;
   }
 };
 
 const onClickMinus = (id: string): void => {
-  const isCookie = Object.keys(userBox.value.cookies).includes(id);
-  if (!isCookie) return;
+  const isTreat = Object.keys(userBox.value.treats).includes(id);
+  if (!isTreat) return;
 
-  if (userBox.value.cookies[id] === 1) {
-    delete userBox.value.cookies[id];
+  if (userBox.value.treats[id] === 1) {
+    delete userBox.value.treats[id];
   } else {
-    userBox.value.cookies[id] -= 1;
+    userBox.value.treats[id] -= 1;
   }
 };
 
 const addUserBoxToCart = (): void => {
   addUserBox({ ...userBox.value });
-  userBox.value = { id: "", cookies: {} };
+  userBox.value = { id: "", treats: {} };
   userBox.value.id = uuidv4();
   window.scrollTo(0, 0);
+};
+
+const getTreatQuantityLabel = (treat: ITreat) => {
+  return `${treat.bag} x ${treat.treatsPerBag} ${getTreatTypeLabel(treat)}`;
 };
 
 watch(
@@ -65,7 +70,7 @@ onMounted(() => (userBox.value.id = uuidv4()));
     <div
       class="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-6 justify-items-center items-start">
       <div
-        v-for="item in Cookies"
+        v-for="item in Treats"
         :key="item.name"
         class="w-full rounded ring-1 ring-gray-100 hover:ring-gray-200 transition-all p-2">
         <div
@@ -74,10 +79,7 @@ onMounted(() => (userBox.value.id = uuidv4()));
         <div class="p-3">
           <div class="mb-2 text-right">
             <span class="text-sm text-violet-600 font-medium">
-              {{ item.bag }} {{ item.bag > 1 ? "units" : "unit" }} x
-            </span>
-            <span class="text-sm text-violet-600 font-medium">
-              {{ item.cookiesPerBag }} {{ item.cookiesPerBag > 1 ? "cookies" : "cookie" }}
+              {{ getTreatQuantityLabel(item) }}
             </span>
           </div>
           <div class="text-lg font-semibold text-gray-900">{{ item.name }}</div>
@@ -91,7 +93,7 @@ onMounted(() => (userBox.value.id = uuidv4()));
               See image
             </a>
             <div class="flex items-center">
-              <template v-if="userBox.cookies[item.id]">
+              <template v-if="userBox.treats[item.id]">
                 <button
                   type="button"
                   class="text-white bg-violet-600 font-medium rounded-l-full text-sm p-1.5 text-center inline-flex items-center"
@@ -111,13 +113,13 @@ onMounted(() => (userBox.value.id = uuidv4()));
                   </svg>
                 </button>
                 <div class="py-0.5 px-2 border-2 text-white bg-violet-600 border-violet-600">
-                  {{ userBox.cookies[item.id] }}
+                  {{ userBox.treats[item.id] }}
                 </div>
                 <button
                   type="button"
                   :disabled="isUserBoxFull"
                   class="text-white bg-violet-600 disabled:bg-violet-200 font-medium rounded-r-full text-sm p-1.5 text-center inline-flex items-center"
-                  @click.stop="addCookie(item.id)">
+                  @click.stop="addTreat(item.id)">
                   <svg
                     class="w-5 h-5"
                     aria-hidden="true"
@@ -138,7 +140,7 @@ onMounted(() => (userBox.value.id = uuidv4()));
                 type="button"
                 :disabled="isUserBoxFull"
                 class="text-white bg-violet-600 disabled:bg-violet-200 font-medium rounded-full text-sm p-1.5 text-center inline-flex items-center"
-                @click.stop="addCookie(item.id)">
+                @click.stop="addTreat(item.id)">
                 <svg
                   class="w-5 h-5"
                   aria-hidden="true"

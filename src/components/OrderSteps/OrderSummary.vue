@@ -2,8 +2,9 @@
 import { computed } from "vue";
 import { storeToRefs } from "pinia";
 import { useOrderStore } from "@/stores";
-import { Boxes, Cookies, DefaultBoxImage } from "@/data";
+import { Boxes, Treats, DefaultBoxImage } from "@/data";
 import { BoxTypeEnum } from "@/types";
+import { getTreatTypeLabel } from "@/utils";
 
 const orderStore = useOrderStore();
 const { boxIds, boxes, userBoxes, boxCount, isMaxBoxCount } = storeToRefs(orderStore);
@@ -44,14 +45,15 @@ const isCollectionBox = (id: string): boolean => {
   return !!Boxes.find((item) => item.id === id && item.type === BoxTypeEnum.Collection);
 };
 
-const getMakeYourBoxCookieList = (cookies: Record<string, number>): Array<string> => {
-  return Object.keys(cookies)
+const getMakeYourBoxTreatList = (treats: Record<string, number>): Array<string> => {
+  return Object.keys(treats)
     .map((id) => {
-      const cookie = Cookies.find((e) => e.id === id);
-      if (!cookie) return null;
+      const treat = Treats.find((e) => e.id === id);
+      if (!treat) return null;
       return (
-        `${cookie.name} ${cookie.brand}. ${cookie.description} (${cookie.bag} x ${cookie.cookiesPerBag} cookies). Quantity: ${cookies[id]}` ||
-        ""
+        `${treat.name} ${treat.brand}. ${treat.description} (${treat.bag} x ${
+          treat.treatsPerBag
+        } ${getTreatTypeLabel(treat)}). Quantity: ${treats[id]}` || ""
       );
     })
     .filter((item) => !!item) as Array<string>;
@@ -192,7 +194,7 @@ const getMakeYourBoxCookieList = (cookies: Record<string, number>): Array<string
                   v-if="item.isMakeYourBox"
                   class="text-sm text-gray-500 font-normal">
                   <ul class="space-y-1 list-disc list-inside">
-                    <li v-for="el in getMakeYourBoxCookieList(item.cookies)">
+                    <li v-for="el in getMakeYourBoxTreatList(item.treats)">
                       <div
                         class="inline"
                         v-html="el"></div>
