@@ -69,27 +69,6 @@ import HrTitle from "@/components/Elements/HrTitle.vue";
     <form class="max-w-2xl w-full">
       <div class="mb-6">
         <label
-          for="state"
-          class="block mb-2 text-base font-medium text-gray-900">
-          Is it a gift ? (shipping to different address)
-        </label>
-      </div>
-      <div class="mb-6">
-        <label
-          for="state"
-          class="block mb-2 text-base font-medium text-gray-900">
-          U.S. State
-        </label>
-        <select
-          id="state"
-          class="bg-white border border-gray-300 text-gray-900 text-base rounded-lg focus:ring-violet-300 focus:border-violet-300 block w-full p-2.5">
-          <option selected>Select</option>
-          <option value="VA">Virginia</option>
-          <option value="CA">California</option>
-        </select>
-      </div>
-      <div class="mb-6">
-        <label
           for="pickuplocation"
           class="block mb-2 text-base font-medium text-gray-900">
           FedEx Pick-up Location

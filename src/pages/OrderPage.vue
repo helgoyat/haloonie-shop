@@ -20,7 +20,7 @@ const stepTitles: Record<number, string> = {
 
 const nextStepButtonLabels: Record<string, string> = {
   0: "Continue",
-  1: "Checkout",
+  1: "Confirm",
 };
 
 const step = ref<number>(0);

@@ -25,6 +25,10 @@ h3 {
   @apply text-xl text-center text-gray-800;
 }
 
+h4 {
+  @apply text-xl text-gray-800 font-semibold;
+}
+
 /* Main */
 body {
   @apply font-sans;
