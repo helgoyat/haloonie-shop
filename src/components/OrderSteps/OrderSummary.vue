@@ -73,7 +73,7 @@ const getMakeYourBoxTreatList = (treats: Record<string, number>): Array<string> 
             </th>
             <th
               scope="col"
-              class="px-5 py-3 w-14">
+              class="px-5 py-3 text-center w-14">
               Quantity
             </th>
             <th
@@ -95,23 +95,23 @@ const getMakeYourBoxTreatList = (treats: Record<string, number>): Array<string> 
                   <div>{{ item.name }}</div>
                   <span
                     v-if="isSpecialBox(item.id)"
-                    class="bg-emerald-400 text-white border border-emerald-400 text-xs font-medium ms-3 px-2 py-1 rounded">
+                    class="bg-emerald-500 text-white border-2 border-emerald-500 text-xs font-medium ms-3 px-2 py-1 rounded">
                     Special
                   </span>
                   <span
                     v-if="isCollectionBox(item.id)"
-                    class="text-emerald-400 bg-white border border-emerald-400 text-xs font-medium ms-3 px-2 py-1 rounded">
+                    class="text-emerald-500 bg-white border-2 border-emerald-500 text-xs font-medium ms-3 px-2 py-1 rounded">
                     Collection
                   </span>
                 </div>
               </td>
-              <td class="px-5 py-4">
+              <td class="px-5 py-4 text-center">
                 <div
                   v-if="!item.isMakeYourBox"
                   class="flex items-center">
                   <button
                     type="button"
-                    class="text-gray-700 bg-gray-100 font-medium rounded-l-full text-sm p-2.5 text-center inline-flex items-center hover:bg-gray-200 disabled:bg-gray-50"
+                    class="text-violet-700 font-medium rounded-full text-sm p-2.5 text-center inline-flex items-center disabled:text-violet-200"
                     :disabled="boxIds[item.id] < 2"
                     @click="removeBox(item.id)">
                     <svg
@@ -128,12 +128,12 @@ const getMakeYourBoxTreatList = (treats: Record<string, number>): Array<string> 
                         d="M5 12h14" />
                     </svg>
                   </button>
-                  <div class="py-1.5 px-2 border-2 border-gray-100 bg-gray-100 text-gray-700">
+                  <div class="px-3 py-1.5 rounded-full font-semibold bg-violet-50 text-violet-700">
                     {{ item.quantity }}
                   </div>
                   <button
                     type="button"
-                    class="text-gray-700 bg-gray-100 font-medium rounded-r-full text-sm p-2.5 text-center inline-flex items-center hover:bg-gray-200 disabled:bg-gray-50"
+                    class="text-violet-700 font-medium rounded-full text-sm p-2.5 text-center inline-flex items-center disabled:text-violet-200"
                     :disabled="isMaxBoxCount"
                     @click="addBox(item.id)">
                     <svg
@@ -154,7 +154,7 @@ const getMakeYourBoxTreatList = (treats: Record<string, number>): Array<string> 
                 <div
                   v-else
                   class="flex items-center justify-center">
-                  <div class="py-1.5 px-4 text-gray-700">
+                  <div class="px-3 py-1.5 rounded-full font-semibold bg-violet-50 text-violet-700">
                     {{ item.quantity }}
                   </div>
                 </div>
