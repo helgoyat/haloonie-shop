@@ -9,4 +9,5 @@ export interface ITreat {
   bag: number;
   treatsPerBag: number;
   image: string;
+  ingredients: string;
 }

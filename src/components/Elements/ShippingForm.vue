@@ -1,14 +1,10 @@
 <script setup lang="ts">
-// import { computed } from "vue";
 import Info from "@/components/Elements/Info.vue";
-import HrTitle from "@/components/Elements/HrTitle.vue";
-
-// const isFormValid = computed((): boolean => false);
 </script>
 
 <template>
-  <div class="w-full grid grid-cols-1 gap-8 justify-items-center">
-    <hr-title title="Contact" />
+  <div class="w-full grid grid-cols-1 gap-8">
+    <h2 class="text-left">Fill-in Shipping Address</h2>
     <form class="max-w-2xl w-full">
       <div class="grid md:grid-cols-2 md:gap-6">
         <div class="mb-6">
@@ -51,7 +47,7 @@ import HrTitle from "@/components/Elements/HrTitle.vue";
           placeholder="Email"
           required />
       </div>
-      <div>
+      <div class="mb-6">
         <label
           for="confirmEmail"
           class="block mb-2 text-base font-medium text-gray-900">
@@ -64,9 +60,6 @@ import HrTitle from "@/components/Elements/HrTitle.vue";
           placeholder="Confirm email"
           required />
       </div>
-    </form>
-    <hr-title title="Shipping" />
-    <form class="max-w-2xl w-full">
       <div class="mb-6">
         <label
           for="pickuplocation"

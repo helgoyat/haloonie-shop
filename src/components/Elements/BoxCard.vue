@@ -5,7 +5,7 @@ import { useOrderStore } from "@/stores";
 import { IBox } from "@/types";
 
 const orderStore = useOrderStore();
-const { boxIds } = storeToRefs(orderStore);
+const { boxIds, isMaxBoxCount } = storeToRefs(orderStore);
 const { addBox, removeBox, deleteBox } = orderStore;
 
 const props = defineProps({
@@ -60,12 +60,14 @@ const onClickMinus = (id: string): void => {
                   d="M5 12h14" />
               </svg>
             </button>
-            <div class="py-1.5 border-2 text-white bg-violet-600 border-violet-600">
+            <div
+              class="select-none inline-flex items-center justify-center w-6 h-10 border-2 text-white bg-violet-600 border-violet-600">
               {{ boxIds[box.id] }}
             </div>
             <button
               type="button"
-              class="text-white bg-violet-600 font-medium rounded-r-full text-sm p-2.5 text-center inline-flex items-center"
+              :disabled="isMaxBoxCount"
+              class="text-white bg-violet-600 disabled:bg-gray-100 disabled:text-gray-300 font-medium rounded-r-full text-sm p-2.5 text-center inline-flex items-center"
               @click.stop="addBox(box.id)">
               <svg
                 class="w-5 h-5"
@@ -85,7 +87,8 @@ const onClickMinus = (id: string): void => {
           <button
             v-else
             type="button"
-            class="text-white bg-violet-600 font-medium rounded-full text-sm p-2.5 text-center inline-flex items-center"
+            :disabled="isMaxBoxCount"
+            class="text-white bg-violet-600 disabled:bg-gray-100 disabled:text-gray-300 font-medium rounded-full text-sm p-2.5 text-center inline-flex items-center"
             @click.stop="addBox(box.id)">
             <svg
               class="w-5 h-5"

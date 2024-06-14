@@ -15,7 +15,7 @@ const props = defineProps({
 });
 
 const orderStore = useOrderStore();
-const { boxIds } = storeToRefs(orderStore);
+const { boxIds, isMaxBoxCount } = storeToRefs(orderStore);
 const { addBox, deleteBox, removeBox } = orderStore;
 
 const treats = computed((): ITreat[] => {
@@ -98,12 +98,13 @@ const getTreatQuantityLabel = (treat: ITreat) => {
         </svg>
       </button>
       <div
-        class="py-1.5 px-3 border-2 border-violet-600 bg-violet-600 text-white flex items-center justify-center">
+        class="select-none inline-flex items-center justify-center w-8 h-12 border-2 border-violet-600 bg-violet-600 text-white">
         {{ boxIds[box.id] }}
       </div>
       <button
         type="button"
-        class="text-white bg-violet-600 font-medium rounded-r-full text-sm p-2.5 text-center inline-flex items-center"
+        :disabled="isMaxBoxCount"
+        class="text-white bg-violet-600 disabled:bg-gray-100 disabled:text-gray-300 font-medium rounded-r-full text-sm p-2.5 text-center inline-flex items-center"
         @click.stop="addBox(box.id)">
         <svg
           class="w-7 h-7"
@@ -123,7 +124,8 @@ const getTreatQuantityLabel = (treat: ITreat) => {
     <button
       v-else
       type="button"
-      class="px-6 py-3 text-base font-medium text-center text-white bg-violet-600 rounded-md"
+      :disabled="isMaxBoxCount"
+      class="px-6 py-3 text-base disabled:bg-gray-100 disabled:text-gray-300 font-medium text-center text-white bg-violet-600 rounded-md"
       @click="addBox(box.id)">
       Add to cart
     </button>

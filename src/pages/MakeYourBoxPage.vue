@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { onMounted, ref, computed, watch } from "vue";
+import { storeToRefs } from "pinia";
 import { v4 as uuidv4 } from "uuid";
 import { useOrderStore } from "@/stores";
 import { Treats } from "@/data";
@@ -7,6 +8,7 @@ import { ITreat, IUserBox, TreatTypeEnum } from "@/types";
 import { getTreatTypeLabel } from "@/utils";
 
 const orderStore = useOrderStore();
+const { isMaxBoxCount } = storeToRefs(orderStore);
 const { addUserBox } = orderStore;
 
 const treatType = ref<TreatTypeEnum | null>(null);
@@ -84,10 +86,10 @@ onMounted(() => (userBox.value.id = uuidv4()));
         role="group">
         <button
           type="button"
-          class="px-4 py-2 text-xs uppercase font-semibold border border-gray-200 rounded-s-md"
+          class="px-4 py-2 text-xs uppercase font-semibold border border-gray-100 rounded-s-md"
           :class="
             treatType === null
-              ? 'bg-gray-200 text-gray-800'
+              ? 'bg-gray-100 text-gray-800'
               : 'bg-white text-gray-500 hover:text-gray-600 hover:bg-gray-50'
           "
           @click="changeTreatType(null)">
@@ -95,10 +97,10 @@ onMounted(() => (userBox.value.id = uuidv4()));
         </button>
         <button
           type="button"
-          class="px-4 py-2 text-xs uppercase font-semibold border-t border-b border-gray-200"
+          class="px-4 py-2 text-xs uppercase font-semibold border-t border-b border-gray-100"
           :class="
             treatType === TreatTypeEnum.Cookie
-              ? 'bg-gray-200 text-gray-800'
+              ? 'bg-gray-100 text-gray-800'
               : 'bg-white text-gray-500 hover:text-gray-600 hover:bg-gray-50'
           "
           @click="changeTreatType(TreatTypeEnum.Cookie)">
@@ -106,10 +108,10 @@ onMounted(() => (userBox.value.id = uuidv4()));
         </button>
         <button
           type="button"
-          class="px-4 py-2 text-xs uppercase font-semibold border border-gray-200 rounded-e-md"
+          class="px-4 py-2 text-xs uppercase font-semibold border border-gray-100 rounded-e-md"
           :class="
             treatType === TreatTypeEnum.Cake
-              ? 'bg-gray-200 text-gray-800'
+              ? 'bg-gray-100 text-gray-800'
               : 'bg-white text-gray-500 hover:text-gray-600 hover:bg-gray-50'
           "
           @click="changeTreatType(TreatTypeEnum.Cake)">
@@ -162,13 +164,14 @@ onMounted(() => (userBox.value.id = uuidv4()));
                       d="M5 12h14" />
                   </svg>
                 </button>
-                <div class="py-0.5 px-2 border-2 text-white bg-violet-600 border-violet-600">
+                <div
+                  class="select-none inline-flex items-center justify-center w-6 h-8 border-2 text-white bg-violet-600 border-violet-600">
                   {{ userBox.treats[item.id] }}
                 </div>
                 <button
                   type="button"
                   :disabled="isUserBoxFull"
-                  class="text-white bg-violet-600 disabled:bg-violet-200 font-medium rounded-r-full text-sm p-1.5 text-center inline-flex items-center"
+                  class="text-white bg-violet-600 disabled:bg-gray-100 disabled:text-gray-300 font-medium rounded-r-full text-sm p-1.5 text-center inline-flex items-center"
                   @click.stop="addTreat(item.id)">
                   <svg
                     class="w-5 h-5"
@@ -188,8 +191,8 @@ onMounted(() => (userBox.value.id = uuidv4()));
               <button
                 v-else
                 type="button"
-                :disabled="isUserBoxFull"
-                class="text-white bg-violet-600 disabled:bg-violet-200 font-medium rounded-full text-sm p-1.5 text-center inline-flex items-center"
+                :disabled="isUserBoxFull || isMaxBoxCount"
+                class="text-white bg-violet-600 disabled:bg-gray-100 disabled:text-gray-300 font-medium rounded-full text-sm p-1.5 text-center inline-flex items-center"
                 @click.stop="addTreat(item.id)">
                 <svg
                   class="w-5 h-5"
