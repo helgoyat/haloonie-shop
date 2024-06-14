@@ -77,49 +77,51 @@ const getTreatQuantityLabel = (treat: ITreat) => {
       </div>
     </div>
   </div>
-  <div class="flex justify-center my-4">
+  <div class="flex justify-center items-center my-4">
     <template v-if="boxIds[box.id]">
-      <button
-        type="button"
-        class="text-white bg-violet-600 font-medium rounded-l-full text-sm p-2.5 text-center inline-flex items-center"
-        @click.stop="onClickMinus(box.id)">
-        <svg
-          class="w-7 h-7"
-          aria-hidden="true"
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24">
-          <path
-            stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M5 12h14" />
-        </svg>
-      </button>
-      <div
-        class="select-none inline-flex items-center justify-center w-8 h-12 border-2 border-violet-600 bg-violet-600 text-white">
-        {{ boxIds[box.id] }}
+      <div class="flex justify-center items-center border border-violet-200 p-2 rounded-full">
+        <button
+          type="button"
+          class="text-white bg-violet-600 font-medium rounded-full text-sm p-2 text-center inline-flex items-center"
+          @click.stop="onClickMinus(box.id)">
+          <svg
+            class="w-5 h-5"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24">
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M5 12h14" />
+          </svg>
+        </button>
+        <div
+          class="select-none text-lg inline-flex items-center justify-center w-10 text-violet-700 font-semibold">
+          {{ boxIds[box.id] }}
+        </div>
+        <button
+          type="button"
+          :disabled="isMaxBoxCount"
+          class="text-white bg-violet-600 disabled:bg-gray-100 disabled:text-gray-300 font-medium rounded-full text-sm p-2 text-center inline-flex items-center"
+          @click.stop="addBox(box.id)">
+          <svg
+            class="w-5 h-5"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24">
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M5 12h14m-7 7V5" />
+          </svg>
+        </button>
       </div>
-      <button
-        type="button"
-        :disabled="isMaxBoxCount"
-        class="text-white bg-violet-600 disabled:bg-gray-100 disabled:text-gray-300 font-medium rounded-r-full text-sm p-2.5 text-center inline-flex items-center"
-        @click.stop="addBox(box.id)">
-        <svg
-          class="w-7 h-7"
-          aria-hidden="true"
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24">
-          <path
-            stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M5 12h14m-7 7V5" />
-        </svg>
-      </button>
     </template>
     <button
       v-else

@@ -44,7 +44,7 @@ const onClickMinus = (id: string): void => {
           <template v-if="boxIds[box.id]">
             <button
               type="button"
-              class="text-white bg-violet-600 font-medium rounded-l-full text-sm p-2.5 text-center inline-flex items-center"
+              class="text-white bg-violet-600 font-medium rounded-full text-sm p-2 text-center inline-flex items-center"
               @click.stop="onClickMinus(box.id)">
               <svg
                 class="w-5 h-5"
@@ -61,13 +61,13 @@ const onClickMinus = (id: string): void => {
               </svg>
             </button>
             <div
-              class="select-none inline-flex items-center justify-center w-6 h-10 border-2 text-white bg-violet-600 border-violet-600">
+              class="select-none text-lg inline-flex items-center justify-center w-8 text-violet-700 font-semibold">
               {{ boxIds[box.id] }}
             </div>
             <button
               type="button"
               :disabled="isMaxBoxCount"
-              class="text-white bg-violet-600 disabled:bg-gray-100 disabled:text-gray-300 font-medium rounded-r-full text-sm p-2.5 text-center inline-flex items-center"
+              class="text-white bg-violet-600 disabled:bg-gray-100 disabled:text-gray-300 font-medium rounded-full text-sm p-2 text-center inline-flex items-center"
               @click.stop="addBox(box.id)">
               <svg
                 class="w-5 h-5"
@@ -88,7 +88,7 @@ const onClickMinus = (id: string): void => {
             v-else
             type="button"
             :disabled="isMaxBoxCount"
-            class="text-white bg-violet-600 disabled:bg-gray-100 disabled:text-gray-300 font-medium rounded-full text-sm p-2.5 text-center inline-flex items-center"
+            class="text-white bg-violet-600 disabled:bg-gray-100 disabled:text-gray-300 font-medium rounded-full text-sm p-2 text-center inline-flex items-center"
             @click.stop="addBox(box.id)">
             <svg
               class="w-5 h-5"

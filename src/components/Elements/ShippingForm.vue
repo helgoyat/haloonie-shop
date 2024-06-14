@@ -4,7 +4,7 @@ import Info from "@/components/Elements/Info.vue";
 
 <template>
   <div class="w-full grid grid-cols-1 gap-8">
-    <h2 class="text-left">Fill-in Shipping Address</h2>
+    <h2 class="text-left">Shipping Address</h2>
     <form class="max-w-2xl w-full">
       <div class="grid md:grid-cols-2 md:gap-6">
         <div class="mb-6">
