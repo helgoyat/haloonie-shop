@@ -61,7 +61,7 @@ const onClickMinus = (id: string): void => {
               </svg>
             </button>
             <div
-              class="select-none text-lg inline-flex items-center justify-center w-8 text-violet-700 font-semibold">
+              class="select-none text-lg inline-flex items-center justify-center w-8 text-violet-700">
               {{ boxIds[box.id] }}
             </div>
             <button

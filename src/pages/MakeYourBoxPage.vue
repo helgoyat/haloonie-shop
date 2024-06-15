@@ -148,7 +148,7 @@ onMounted(() => (userBox.value.id = uuidv4()));
               <template v-if="userBox.treats[item.id]">
                 <button
                   type="button"
-                  class="text-white bg-violet-600 font-medium rounded-l-full text-sm p-1.5 text-center inline-flex items-center"
+                  class="text-white bg-violet-600 font-medium rounded-full text-sm p-1 text-center inline-flex items-center"
                   @click.stop="onClickMinus(item.id)">
                   <svg
                     class="w-5 h-5"
@@ -165,13 +165,13 @@ onMounted(() => (userBox.value.id = uuidv4()));
                   </svg>
                 </button>
                 <div
-                  class="select-none inline-flex items-center justify-center w-6 h-8 border-2 text-white bg-violet-600 border-violet-600">
+                  class="select-none text-base inline-flex items-center justify-center w-6 text-violet-700">
                   {{ userBox.treats[item.id] }}
                 </div>
                 <button
                   type="button"
                   :disabled="isUserBoxFull"
-                  class="text-white bg-violet-600 disabled:bg-gray-100 disabled:text-gray-300 font-medium rounded-r-full text-sm p-1.5 text-center inline-flex items-center"
+                  class="text-white bg-violet-600 disabled:bg-gray-100 disabled:text-gray-300 font-medium rounded-full text-sm p-1 text-center inline-flex items-center"
                   @click.stop="addTreat(item.id)">
                   <svg
                     class="w-5 h-5"
@@ -192,7 +192,7 @@ onMounted(() => (userBox.value.id = uuidv4()));
                 v-else
                 type="button"
                 :disabled="isUserBoxFull || isMaxBoxCount"
-                class="text-white bg-violet-600 disabled:bg-gray-100 disabled:text-gray-300 font-medium rounded-full text-sm p-1.5 text-center inline-flex items-center"
+                class="text-white bg-violet-600 disabled:bg-gray-100 disabled:text-gray-300 font-medium rounded-full text-sm p-1 text-center inline-flex items-center"
                 @click.stop="addTreat(item.id)">
                 <svg
                   class="w-5 h-5"

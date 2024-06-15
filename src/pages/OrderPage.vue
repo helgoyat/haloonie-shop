@@ -113,7 +113,7 @@ const getMakeYourBoxTreatList = (treats: Record<string, number>): Array<string> 
                     class="flex items-center">
                     <button
                       type="button"
-                      class="text-violet-700 font-medium rounded-full text-sm p-1 text-center inline-flex items-center border-2 border-violet-300 disabled:text-gray-200 disabled:border-gray-100"
+                      class="text-violet-700 font-medium rounded-full text-sm p-1 text-center inline-flex items-center border border-violet-600 disabled:text-gray-200 disabled:border-gray-100"
                       :disabled="boxIds[item.id] < 2"
                       @click="removeBox(item.id)">
                       <svg
@@ -136,7 +136,7 @@ const getMakeYourBoxTreatList = (treats: Record<string, number>): Array<string> 
                     </div>
                     <button
                       type="button"
-                      class="text-violet-700 font-medium rounded-full text-sm p-1 text-center inline-flex items-center border-2 border-violet-300 disabled:text-gray-200 disabled:border-gray-100"
+                      class="text-violet-700 font-medium rounded-full text-sm p-1 text-center inline-flex items-center border border-violet-600 disabled:text-gray-200 disabled:border-gray-100"
                       :disabled="isMaxBoxCount"
                       @click="addBox(item.id)">
                       <svg
