@@ -6,7 +6,7 @@ import { BoxTypeEnum } from "@/types";
 
 <template>
   <div class="header-container">
-    <h1>Shop French Treats</h1>
+    <h1 class="my-4">Shop French Treats</h1>
     <h1>🇫🇷</h1>
   </div>
   <div class="content !pt-2">
