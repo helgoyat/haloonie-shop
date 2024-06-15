@@ -86,33 +86,33 @@ onMounted(() => (userBox.value.id = uuidv4()));
         role="group">
         <button
           type="button"
-          class="px-4 py-2 text-xs uppercase font-semibold border border-gray-100 rounded-s-md"
+          class="px-4 py-2 text-xs uppercase font-semibold border border-violet-100 rounded-s-md"
           :class="
             treatType === null
-              ? 'bg-gray-100 text-gray-800'
-              : 'bg-white text-gray-500 hover:text-gray-600 hover:bg-gray-50'
+              ? 'bg-violet-600 text-white'
+              : 'bg-white text-gray-500 hover:text-violet-600'
           "
           @click="changeTreatType(null)">
           All
         </button>
         <button
           type="button"
-          class="px-4 py-2 text-xs uppercase font-semibold border-t border-b border-gray-100"
+          class="px-4 py-2 text-xs uppercase font-semibold border-t border-b border-violet-100"
           :class="
             treatType === TreatTypeEnum.Cookie
-              ? 'bg-gray-100 text-gray-800'
-              : 'bg-white text-gray-500 hover:text-gray-600 hover:bg-gray-50'
+              ? 'bg-violet-600 text-white'
+              : 'bg-white text-gray-500 hover:text-violet-600'
           "
           @click="changeTreatType(TreatTypeEnum.Cookie)">
           Cookies
         </button>
         <button
           type="button"
-          class="px-4 py-2 text-xs uppercase font-semibold border border-gray-100 rounded-e-md"
+          class="px-4 py-2 text-xs uppercase font-semibold border border-violet-100 rounded-e-md"
           :class="
             treatType === TreatTypeEnum.Cake
-              ? 'bg-gray-100 text-gray-800'
-              : 'bg-white text-gray-500 hover:text-gray-600 hover:bg-gray-50'
+              ? 'bg-violet-600 text-white'
+              : 'bg-white text-gray-500 hover:text-violet-600'
           "
           @click="changeTreatType(TreatTypeEnum.Cake)">
           Cake
