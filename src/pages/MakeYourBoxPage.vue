@@ -79,40 +79,36 @@ onMounted(() => (userBox.value.id = uuidv4()));
 <template>
   <div class="content">
     <h2>Make Your Box</h2>
-    <h3>Pick 8 items</h3>
+    <h3 class="text-center">Pick 8 items</h3>
     <div class="flex flex-col items-center">
       <div
-        class="inline-flex rounded-md"
+        class="inline-flex rounded-sm"
         role="group">
         <button
           type="button"
-          class="px-4 py-2 text-xs uppercase font-semibold border border-violet-100 rounded-s-md"
-          :class="
-            treatType === null
-              ? 'bg-violet-600 text-white'
-              : 'bg-white text-gray-500 hover:text-violet-600'
-          "
+          class="px-4 py-2 text-xs uppercase font-semibold border border-violet-600 rounded-s-md"
+          :class="treatType === null ? 'bg-violet-600 text-white' : 'bg-white text-violet-600'"
           @click="changeTreatType(null)">
           All
         </button>
         <button
           type="button"
-          class="px-4 py-2 text-xs uppercase font-semibold border-t border-b border-violet-100"
+          class="px-4 py-2 text-xs uppercase font-semibold border-t border-b border-violet-600"
           :class="
             treatType === TreatTypeEnum.Cookie
               ? 'bg-violet-600 text-white'
-              : 'bg-white text-gray-500 hover:text-violet-600'
+              : 'bg-white text-violet-600'
           "
           @click="changeTreatType(TreatTypeEnum.Cookie)">
           Cookies
         </button>
         <button
           type="button"
-          class="px-4 py-2 text-xs uppercase font-semibold border border-violet-100 rounded-e-md"
+          class="px-4 py-2 text-xs uppercase font-semibold border border-violet-600 rounded-e-md"
           :class="
             treatType === TreatTypeEnum.Cake
               ? 'bg-violet-600 text-white'
-              : 'bg-white text-gray-500 hover:text-violet-600'
+              : 'bg-white text-violet-600'
           "
           @click="changeTreatType(TreatTypeEnum.Cake)">
           Cake
@@ -137,7 +133,7 @@ onMounted(() => (userBox.value.id = uuidv4()));
           <div class="text-lg font-semibold text-gray-900">{{ item.name }}</div>
           <div>{{ item.brand }}</div>
           <div class="text-sm text-gray-500">{{ item.description }}</div>
-          <div class="text-gray-400 mt-2 flex flex-row justify-between gap-2 items-center">
+          <div class="text-gray-400 mt-3 flex flex-row justify-between gap-2 items-center">
             <a
               class="text-sm hover:underline hover:cursor-pointer"
               :href="getLargerImagePath(item.image)"
