@@ -77,9 +77,9 @@ const getTreatQuantityLabel = (treat: ITreat) => {
       </div>
     </div>
   </div>
-  <div class="flex justify-center items-center my-4">
+  <div class="flex justify-center items-center my-2">
     <template v-if="boxIds[box.id]">
-      <div class="flex justify-center items-center border border-violet-200 p-2 rounded-full">
+      <div class="flex justify-center items-center border border-violet-200 p-[5px] rounded-full">
         <button
           type="button"
           class="text-white bg-violet-600 font-medium rounded-full text-sm p-2 text-center inline-flex items-center"
