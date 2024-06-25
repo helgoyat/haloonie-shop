@@ -8,8 +8,14 @@ import HowItWorksPage from "@/pages/Help/HowItWorksPage.vue";
 import FAQPage from "@/pages/Help/FAQPage.vue";
 import ContactUsPage from "@/pages/Help/ContactUsPage.vue";
 import NotFoundPage from "@/pages/Other/NotFoundPage.vue";
+import CookiesPage from "@/pages/Admin/CookiesPage.vue";
 
 export default [
+  {
+    path: "/admin",
+    name: "CookiesPage",
+    component: CookiesPage,
+  },
   {
     path: "/",
     name: "HomePage",
