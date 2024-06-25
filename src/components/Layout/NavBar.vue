@@ -69,17 +69,7 @@ const { isOrder, boxCount } = storeToRefs(orderStore);
         <ul
           class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white">
           <li
-            v-for="item in [
-              { name: 'Make Your Box', to: { name: 'MakeYourBoxPage' } },
-              {
-                name: 'Collections',
-                to: { name: 'BoxesPage', params: { boxType: BoxTypeEnum.Collection } },
-              },
-              {
-                name: 'Specials',
-                to: { name: 'BoxesPage', params: { boxType: BoxTypeEnum.Special } },
-              },
-            ]"
+            v-for="item in [{ name: 'Our Boxes', to: { name: 'MakeYourBoxPage' } }]"
             :key="item.name">
             <router-link
               :to="item.to"

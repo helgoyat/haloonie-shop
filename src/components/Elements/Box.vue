@@ -48,6 +48,13 @@ const getTreatQuantityLabel = (treat: ITreat) => {
 <template>
   <h2>{{ box.name }}</h2>
   <hr-title title="Box" />
+  <div class="grid grid-cols-2 gap-6">
+    <div
+      class="w-full h-96 bg-cover bg-no-repeat bg-center rounded-xl shadow-sm"
+      :style="`background-image: url('https://cf.degustabox.com/en/public/images/1709743155_db-uk-full-box-feb-2024-web-.jpg')`"></div>
+    <div class="rounded-xl p-4 border border-gray-200">Description</div>
+  </div>
+  <hr-title title="Treats" />
   <div
     class="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-6 justify-items-center items-start">
     <div
