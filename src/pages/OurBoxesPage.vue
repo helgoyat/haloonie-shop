@@ -1,28 +1,21 @@
 <script setup lang="ts">
-import { computed } from "vue";
-import { useRouter, useRoute } from "vue-router";
+import { useRouter } from "vue-router";
 import { storeToRefs } from "pinia";
-import { kebabCase, startCase, camelCase } from "lodash";
+import { kebabCase } from "lodash";
 import { useRootStore } from "@/stores";
 import { Boxes } from "@/data";
-import { IBox } from "@/types";
 import BoxCard from "@/components/Elements/BoxCard.vue";
 import Box from "@/components/Elements/Box.vue";
 
 const router = useRouter();
-const route = useRoute();
 
 const rootStore = useRootStore();
 const { box } = storeToRefs(rootStore);
 
-const boxes = computed((): IBox[] => {
-  return Boxes.filter((item) => item.type === route.params.boxType);
-});
-
 const goToBoxPage = (boxName: string) => {
   router.push({
-    name: "BoxesPage",
-    params: { ...route.params, boxName: kebabCase(boxName) },
+    name: "OurBoxesPage",
+    params: { boxName: kebabCase(boxName) },
   });
 };
 </script>
@@ -30,10 +23,10 @@ const goToBoxPage = (boxName: string) => {
 <template>
   <div class="content">
     <template v-if="!box">
-      <h2>{{ startCase(camelCase((route.params.boxType as string).replace("-", " "))) }}</h2>
+      <h2>Our Boxes</h2>
       <div class="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-6 justify-items-center">
         <box-card
-          v-for="item in boxes"
+          v-for="item in Boxes"
           :key="item.name"
           :box="item"
           @click="goToBoxPage(item.name)" />

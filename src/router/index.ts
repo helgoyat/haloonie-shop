@@ -1,10 +1,8 @@
 import HomePage from "@/pages/HomePage.vue";
-import MakeYourBoxPage from "@/pages/MakeYourBoxPage.vue";
-import BoxesPage from "@/pages/BoxesPage.vue";
+import OurBoxesPage from "@/pages/OurBoxesPage.vue";
 import OrderPage from "@/pages/OrderPage.vue";
 import TermsAndConditionsPage from "@/pages/Legal/TermsAndConditionsPage.vue";
 import PrivacyPolicyPage from "@/pages/Legal/PrivacyPolicyPage.vue";
-import HowItWorksPage from "@/pages/Help/HowItWorksPage.vue";
 import FAQPage from "@/pages/Help/FAQPage.vue";
 import ContactUsPage from "@/pages/Help/ContactUsPage.vue";
 import NotFoundPage from "@/pages/Other/NotFoundPage.vue";
@@ -22,14 +20,9 @@ export default [
     component: HomePage,
   },
   {
-    path: "/make-your-box",
-    name: "MakeYourBoxPage",
-    component: MakeYourBoxPage,
-  },
-  {
-    path: "/:boxType/:boxName?",
-    name: "BoxesPage",
-    component: BoxesPage,
+    path: "/our-boxes/:boxName?",
+    name: "OurBoxesPage",
+    component: OurBoxesPage,
   },
   {
     path: "/order",
@@ -48,11 +41,6 @@ export default [
     component: PrivacyPolicyPage,
   },
   // HELP
-  {
-    path: "/how-it-works",
-    name: "HowItWorksPage",
-    component: HowItWorksPage,
-  },
   {
     path: "/faq",
     name: "FAQPage",

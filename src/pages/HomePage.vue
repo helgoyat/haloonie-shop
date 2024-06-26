@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import Featured from "@/components/Elements/Featured.vue";
 import HrTitle from "@/components/Elements/HrTitle.vue";
-import { BoxTypeEnum } from "@/types";
 </script>
 
 <template>
@@ -80,19 +79,10 @@ import { BoxTypeEnum } from "@/types";
         </p>
       </div>
     </div>
-    <div class="flex flex-col items-center my-2">
-      <router-link :to="{ name: 'HowItWorksPage' }">
-        <button
-          type="button"
-          class="px-6 py-3 text-center text-base font-medium text-violet-600 border-2 border-violet-300 rounded-md">
-          Learn more
-        </button>
-      </router-link>
-    </div>
     <hr-title title="Featured" />
     <featured />
     <div class="flex flex-col items-center my-2">
-      <router-link :to="{ name: 'BoxesPage', params: { boxType: BoxTypeEnum.Collection } }">
+      <router-link :to="{ name: 'OurBoxesPage' }">
         <button
           type="button"
           class="px-6 py-3 text-center text-base font-medium text-violet-600 border-2 border-violet-300 rounded-md">

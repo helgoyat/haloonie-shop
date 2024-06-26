@@ -1,18 +1,14 @@
-import { IBox, IUserBox } from "@/types";
+import { IBox } from "@/types";
 import { ref, computed } from "vue";
 import { Boxes, MaxBoxCount } from "@/data";
 
 const orderStore = () => {
   const boxIds = ref<Record<string, number>>({});
-  const userBoxes = ref<IUserBox[]>([]);
 
-  const isOrder = computed(
-    (): boolean => [...Object.keys(boxIds.value), ...userBoxes.value].length > 0,
-  );
+  const isOrder = computed((): boolean => [...Object.keys(boxIds.value)].length > 0);
 
-  const boxCount = computed(
-    (): number =>
-      Object.values(boxIds.value).reduce((total, curr) => total + curr, 0) + userBoxes.value.length,
+  const boxCount = computed((): number =>
+    Object.values(boxIds.value).reduce((total, curr) => total + curr, 0),
   );
 
   const isMaxBoxCount = computed((): boolean => boxCount.value >= MaxBoxCount);
@@ -41,32 +37,15 @@ const orderStore = () => {
     }
   };
 
-  const deleteBox = (id: string, isMakeYourBox: boolean = false): void => {
-    if (!isMakeYourBox) {
-      const isBox = Object.keys(boxIds.value).includes(id);
-      if (isBox) {
-        delete boxIds.value[id];
-      }
-    } else {
-      const isBox = userBoxes.value.find((item) => item.id === id);
-      if (isBox) {
-        userBoxes.value = userBoxes.value.filter((item) => item.id !== id);
-      }
+  const deleteBox = (id: string): void => {
+    const isBox = Object.keys(boxIds.value).includes(id);
+    if (isBox) {
+      delete boxIds.value[id];
     }
-  };
-
-  const addUserBox = (userBox: IUserBox): void => {
-    if (isMaxBoxCount.value) return;
-    userBoxes.value.push(userBox);
-  };
-
-  const deleteUserBox = (id: string): void => {
-    userBoxes.value = userBoxes.value.filter((item) => item.id !== id);
   };
 
   return {
     boxIds,
-    userBoxes,
     isOrder,
     boxCount,
     isMaxBoxCount,
@@ -74,8 +53,6 @@ const orderStore = () => {
     addBox,
     removeBox,
     deleteBox,
-    addUserBox,
-    deleteUserBox,
   };
 };
 

@@ -55,13 +55,6 @@
             </li>
             <li class="mb-4">
               <router-link
-                :to="{ name: 'HowItWorksPage' }"
-                class="hover:underline">
-                How it works
-              </router-link>
-            </li>
-            <li class="mb-4">
-              <router-link
                 :to="{ name: 'ContactUsPage' }"
                 class="hover:underline">
                 Contact us
