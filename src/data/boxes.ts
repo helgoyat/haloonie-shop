@@ -4,6 +4,7 @@ export const Boxes: IBox[] = [
   {
     id: "fae39da9-2601-4ba8-8382-62a867aa71d9",
     name: "Marie De France",
+    description: "Description",
     image: "https://static.wikia.nocookie.net/disney/images/5/57/MarieCat.png",
     price: 48,
     treats: {
@@ -17,6 +18,7 @@ export const Boxes: IBox[] = [
   {
     id: "4e8ba3ce-2f68-4e14-a37d-53c2680accd7",
     name: "Petit Ecolier",
+    description: "Description",
     image: "https://upload.wikimedia.org/wikipedia/commons/4/4c/Petit_%C3%A9colier_Lu_logo.svg",
     price: 63,
     treats: {
@@ -28,6 +30,7 @@ export const Boxes: IBox[] = [
   {
     id: "fa2215fc-e281-412c-bc47-b46324eefa53",
     name: "Pepito",
+    description: "Description",
     image: "https://cdn.worldvectorlogo.com/logos/pepito.svg",
     price: 78,
     treats: {
@@ -42,6 +45,7 @@ export const Boxes: IBox[] = [
   {
     id: "c5bf8a6b-770f-411f-956a-b9945dc6a9c2",
     name: "Granola",
+    description: "Description",
     image:
       "https://www.mavieencouleurs.fr/sites/default/files/2021-04/335316-GRLA-LOGO-Q1-2020.png",
     price: 30,
@@ -56,6 +60,7 @@ export const Boxes: IBox[] = [
   {
     id: "29b9c25f-d220-48d4-b7a7-dbf41312bfd1",
     name: "Prince",
+    description: "Description",
     image: "https://lemediacom.com/wp-content/uploads/2022/05/LU_Prince-logo-2.png",
     price: 54,
     treats: {
@@ -67,6 +72,7 @@ export const Boxes: IBox[] = [
   {
     id: "9aa04c84-5ec8-4c70-a644-03e7ec6688e9",
     name: "Bn",
+    description: "Description",
     image:
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgdhkFRpTGR6V75XQuL5lJ111KXiNQSf1pugUYYlxslw&s",
     price: 62,
@@ -80,6 +86,7 @@ export const Boxes: IBox[] = [
   {
     id: "068f549a-2a7e-4b43-8b17-3272932c8992",
     name: "St Michel",
+    description: "Description",
     image:
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAdezQrFMkABMTkzG0z0Ss3UUJuxALyrtSIqQXbYLdgQ&s",
     price: 40,
@@ -99,6 +106,7 @@ export const Boxes: IBox[] = [
   {
     id: "b20dbfa2-db7d-48b8-84f0-611d5f3b68f6",
     name: "Bonne Maman",
+    description: "Description",
     image: "https://cdn.worldvectorlogo.com/logos/bonne-maman.svg",
     price: 46,
     treats: {
@@ -115,6 +123,7 @@ export const Boxes: IBox[] = [
   {
     id: "b2e189c8-7fa3-436a-931a-afb64cd9c15e",
     name: "Savane",
+    description: "Description",
     image:
       "https://solutions.shopmium.com/wp-content/uploads/2022/06/a403c87d0fbae1ebdfbbae30a315fb52.jpeg",
     price: 40,

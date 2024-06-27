@@ -4,10 +4,10 @@ import Info from "@/components/Elements/Info.vue";
 
 <template>
   <div class="w-full grid grid-cols-1 gap-8">
-    <h2 class="text-left">Shipping Address</h2>
-    <form class="max-w-2xl w-full">
+    <h2 class="text-left">Fill-in Form</h2>
+    <form class="max-w-2xl w-full grid grid-cols-1 gap-6">
       <div class="grid md:grid-cols-2 md:gap-6">
-        <div class="mb-6">
+        <div>
           <label
             for="firstName"
             class="block mb-2 text-base font-medium text-gray-900">
@@ -20,7 +20,7 @@ import Info from "@/components/Elements/Info.vue";
             placeholder="First name"
             required />
         </div>
-        <div class="mb-6">
+        <div>
           <label
             for="lastName"
             class="block mb-2 text-base font-medium text-gray-900">
@@ -34,7 +34,7 @@ import Info from "@/components/Elements/Info.vue";
             required />
         </div>
       </div>
-      <div class="mb-6">
+      <div>
         <label
           for="email"
           class="block mb-2 text-base font-medium text-gray-900">
@@ -47,7 +47,7 @@ import Info from "@/components/Elements/Info.vue";
           placeholder="Email"
           required />
       </div>
-      <div class="mb-6">
+      <div>
         <label
           for="confirmEmail"
           class="block mb-2 text-base font-medium text-gray-900">
@@ -60,27 +60,9 @@ import Info from "@/components/Elements/Info.vue";
           placeholder="Confirm email"
           required />
       </div>
-      <div class="mb-6">
-        <label
-          for="pickuplocation"
-          class="block mb-2 text-base font-medium text-gray-900">
-          FedEx Pick-up Location
-        </label>
-        <select
-          id="pickuplocation"
-          class="bg-white border border-gray-300 text-gray-900 text-base rounded-lg focus:ring-violet-300 focus:border-violet-300 block w-full p-2.5">
-          <option selected>Select</option>
-          <option value="Reston">Reston</option>
-          <option value="Washington">Washington D.C.</option>
-          <option value="Herndon">Herndon</option>
-          <option value="Fairfax">Fairfax</option>
-        </select>
-      </div>
-      <div class="mb-6">
+      <div class="my-2">
         <info />
-      </div>
-      <div class="mb-6">
-        <label class="inline-flex items-center me-5 cursor-pointer">
+        <label class="inline-flex items-center me-5 cursor-pointer mt-6">
           <input
             type="checkbox"
             value=""

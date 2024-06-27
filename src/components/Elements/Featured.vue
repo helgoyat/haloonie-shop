@@ -24,7 +24,7 @@ const getTreatBoxes = (id: string): IBox[] => {
 };
 
 const goToBoxPage = (box: IBox) => {
-  router.push({ name: "BoxesPage", params: { boxType: box.type, boxName: kebabCase(box.name) } });
+  router.push({ name: "OurBoxesPage", params: { boxName: kebabCase(box.name) } });
 };
 </script>
 
@@ -47,8 +47,23 @@ const goToBoxPage = (box: IBox) => {
           class="flex flex-row flex-wrap gap-2 mt-3">
           <div
             v-for="element in getTreatBoxes(item.id)"
-            class="text-sm text-amber-500 bg-white border border-amber-500 font-medium px-3 py-1 rounded hover:cursor-pointer"
+            class="text-sm text-amber-500 bg-white border border-amber-500 font-medium pl-2 pr-3 py-1 rounded hover:cursor-pointer inline-flex items-center gap-1"
             @click="goToBoxPage(element)">
+            <svg
+              class="w-6 h-6 text-amber-500"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              fill="none"
+              viewBox="0 0 24 24">
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M19 12H5m14 0-4 4m4-4-4-4" />
+            </svg>
             {{ element.name }} Box
           </div>
         </div>

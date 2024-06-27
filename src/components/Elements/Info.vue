@@ -1,7 +1,7 @@
 <template>
   <div
     id="alert-additional-content-1"
-    class="p-4 mb-4 text-violet-800 border border-violet-300 rounded-lg bg-violet-50 dark:bg-gray-800 dark:text-violet-400 dark:border-violet-800"
+    class="p-4 text-violet-800 border border-violet-300 rounded-lg bg-violet-50 dark:bg-gray-800 dark:text-violet-400 dark:border-violet-800"
     role="alert">
     <div class="flex items-center">
       <svg

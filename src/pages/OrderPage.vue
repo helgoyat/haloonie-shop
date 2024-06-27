@@ -140,7 +140,7 @@ const cartBoxes = computed((): Array<any> => {
           </tbody>
         </table>
       </div>
-      <div class="w-full flex gap-4 md:flex-row flex-col">
+      <div class="w-full flex gap-8 md:flex-row flex-col">
         <div class="border border-violet-200 rounded-md p-8">
           <shipping-form />
         </div>
