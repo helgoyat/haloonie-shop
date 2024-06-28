@@ -162,19 +162,67 @@ const cartBoxes = computed((): Array<any> => {
                     <div>Box count</div>
                     <div>{{ boxCount }}</div>
                   </div>
-                  <div class="flex flex-row justify-between">
-                    <div>Subtotal</div>
-                    <div>$117.00</div>
-                  </div>
-                  <div class="flex flex-row justify-between">
-                    <div>Tax</div>
-                    <div>$7.00</div>
-                  </div>
                   <div class="flex flex-row justify-between text-red-600 font-bold">
                     <div>Total</div>
                     <div>$124.00</div>
                   </div>
-                  <div class="text-gray-400 italic text-sm">Includes shipping and import tax.</div>
+                  <div class="text-gray-400 text-sm">
+                    Includes shipping cost. Sales tax will be added at check-out.
+                  </div>
+                  <div class="inline-flex items-center gap-1 text-emerald-600">
+                    <svg
+                      class="w-5 h-5"
+                      aria-hidden="true"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      fill="none"
+                      viewBox="0 0 24 24">
+                      <path
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M5 11.917 9.724 16.5 19 7.5" />
+                    </svg>
+                    Shipping.
+                  </div>
+                  <div class="inline-flex items-center gap-1 text-emerald-600">
+                    <svg
+                      class="w-5 h-5"
+                      aria-hidden="true"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      fill="none"
+                      viewBox="0 0 24 24">
+                      <path
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M5 11.917 9.724 16.5 19 7.5" />
+                    </svg>
+                    Import tax.
+                  </div>
+                  <div class="inline-flex items-center gap-1 text-gray-400">
+                    <svg
+                      class="w-5 h-5"
+                      aria-hidden="true"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      fill="none"
+                      viewBox="0 0 24 24">
+                      <path
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M5 12h14m-7 7V5" />
+                    </svg>
+                    Sales tax.
+                  </div>
                 </td>
               </tr>
             </tbody>

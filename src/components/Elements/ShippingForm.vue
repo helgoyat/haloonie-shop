@@ -79,7 +79,7 @@ import Info from "@/components/Elements/Info.vue";
           type="button"
           :disabled="false"
           class="px-6 py-3 text-base disabled:bg-gray-100 disabled:text-gray-300 font-medium text-center text-white bg-violet-600 rounded-md">
-          Place Order
+          Order
         </button>
       </div>
     </form>
