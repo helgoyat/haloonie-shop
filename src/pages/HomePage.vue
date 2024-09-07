@@ -5,7 +5,7 @@ import HrTitle from "@/components/Elements/HrTitle.vue";
 
 <template>
   <div class="header-container">
-    <h1 class="my-4">Shop French Treats</h1>
+    <h1 class="my-4 leading-[60px]">Shop French Treats</h1>
     <h1>🇫🇷</h1>
   </div>
   <div class="content !pt-2">

@@ -48,7 +48,7 @@ const getTreatQuantityLabel = (treat: ITreat) => {
 <template>
   <h2>{{ box.name }}</h2>
   <hr-title title="Box" />
-  <div class="grid grid-cols-2 gap-6">
+  <div class="grid md:grid-cols-2 grid-cols-1 gap-6">
     <div
       class="w-full h-96 bg-cover bg-no-repeat bg-center rounded-xl shadow-sm"
       style="
