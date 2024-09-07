@@ -17,7 +17,7 @@ const getTreatBoxes = (id: string): IBox[] => {
 };
 
 const goToBoxPage = (box: IBox) => {
-  router.push({ name: "BoxesPage", params: { boxType: box.type, boxName: kebabCase(box.name) } });
+  router.push({ name: "OurBoxesPage", params: { boxName: kebabCase(box.name) } });
 };
 </script>
 
