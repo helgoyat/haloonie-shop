@@ -5,7 +5,7 @@ import { kebabCase } from "lodash";
 import { useRootStore } from "@/stores";
 import { Boxes } from "@/data";
 import BoxCard from "@/components/Elements/BoxCard.vue";
-import Box from "@/components/Elements/Box.vue";
+import BoxView from "@/components/Elements/BoxView.vue";
 
 const router = useRouter();
 
@@ -32,7 +32,7 @@ const goToBoxPage = (boxName: string) => {
           @click="goToBoxPage(item.name)" />
       </div>
     </template>
-    <box
+    <box-view
       v-else
       :box="box" />
   </div>

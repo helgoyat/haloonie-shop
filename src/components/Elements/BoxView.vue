@@ -73,9 +73,14 @@ const getLargerImagePath = (image: string): string => {
       v-for="item in treats"
       :key="item.name"
       class="w-full rounded ring-1 ring-gray-100 hover:ring-gray-200 transition-all p-2">
-      <div
-        class="h-48 w-full bg-contain bg-no-repeat bg-center"
-        :style="`background-image: url(${item.image})`"></div>
+      <a
+        class="cursor-pointer"
+        :href="getLargerImagePath(item.image)"
+        target="_blank">
+        <div
+          class="h-48 w-full bg-contain bg-no-repeat bg-center"
+          :style="`background-image: url(${item.image})`"></div>
+      </a>
       <div class="p-3">
         <div class="mb-2 text-right">
           <span
@@ -91,12 +96,7 @@ const getLargerImagePath = (image: string): string => {
         <div>{{ item.brand }}</div>
         <div class="text-sm text-gray-500">{{ item.description }}</div>
         <div class="text-gray-400 mt-2 flex flex-row justify-between gap-2 items-center">
-          <a
-            class="text-sm hover:underline hover:cursor-pointer"
-            :href="getLargerImagePath(item.image)"
-            target="_blank">
-            See image
-          </a>
+          <a class="text-sm hover:underline hover:cursor-pointer">See ingredients</a>
         </div>
       </div>
     </div>
