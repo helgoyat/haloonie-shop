@@ -32,7 +32,8 @@ const cartBoxes = computed((): Array<any> => {
     <template v-if="isOrder">
       <div class="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-6 items-start">
         <div
-          v-for="(item, index) in cartBoxes"
+          v-for="item in cartBoxes"
+          :key="item.id"
           class="p-6 border rounded-md border-gray-300">
           <div class="flex flex-row justify-between items-center gap-2">
             <div class="overflow-hidden text-nowrap text-ellipsis">{{ item.name }}</div>
