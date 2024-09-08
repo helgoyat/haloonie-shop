@@ -34,8 +34,8 @@ const cartBoxes = computed((): Array<any> => {
         <div
           v-for="(item, index) in cartBoxes"
           class="p-6 border rounded-md border-gray-300">
-          <div class="flex flex-row justify-between items-center">
-            <div>{{ item.name }}</div>
+          <div class="flex flex-row justify-between items-center gap-2">
+            <div class="overflow-hidden text-nowrap text-ellipsis">{{ item.name }}</div>
             <div>
               <button
                 type="button"

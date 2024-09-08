@@ -50,9 +50,9 @@ const getLargerImagePath = (image: string): string => {
       "></div>
     <div class="rounded-xl p-6 border border-gray-200 flex flex-col gap-6">
       <div>{{ box.description }}</div>
-      <div class="w-fit flex flex-row gap-2 py-2 px-4 rounded-md bg-amber-100 text-amber-500">
+      <div class="w-fit flex flex-row gap-2 py-2 px-4 rounded-md bg-amber-100 text-amber-600">
         <svg
-          class="w-6 h-6 text-amber-500"
+          class="w-6 h-6 text-amber-600"
           aria-hidden="true"
           xmlns="http://www.w3.org/2000/svg"
           width="24"

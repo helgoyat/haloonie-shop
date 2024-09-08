@@ -5,7 +5,7 @@
         <div>
           <h4 class="mb-6 text-sm font-semibold text-gray-900 uppercase">Company</h4>
           <ul class="text-gray-600 font-medium">
-            <li class="mb-4">
+            <li class="mb-2">
               <div class="inline-flex gap-2">
                 <svg
                   class="w-6 h-6 text-gray-700"
@@ -23,7 +23,7 @@
                 haloonie@mail.com
               </div>
             </li>
-            <li class="mb-4 inline-flex gap-2">
+            <li class="inline-flex gap-2">
               <div class="inline-flex gap-2">
                 <svg
                   class="w-6 h-6 text-gray-700"
@@ -57,7 +57,7 @@
                 F.A.Q.
               </router-link>
             </li>
-            <li class="mb-4">
+            <li>
               <router-link
                 :to="{ name: 'ContactUsPage' }"
                 class="hover:underline">
@@ -76,7 +76,7 @@
                 Privacy Policy
               </router-link>
             </li>
-            <li class="mb-4">
+            <li>
               <router-link
                 :to="{ name: 'TermsAndConditionsPage' }"
                 class="hover:underline">
