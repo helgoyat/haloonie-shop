@@ -141,11 +141,11 @@ const cartBoxes = computed((): Array<any> => {
         </table>
       </div>
       <div class="w-full flex gap-8 md:flex-row flex-col">
-        <div class="border border-violet-200 rounded-md p-8">
+        <div class="border border-violet-200 rounded-md p-8 order-1">
           <shipping-form />
         </div>
         <div class="flex-1 min-w-56 border border-violet-200 rounded-md overflow-hidden">
-          <table class="w-full text-base text-left rtl:text-right text-violet-600">
+          <table class="w-full text-base text-left rtl:text-right">
             <thead class="text-sm text-white uppercase bg-violet-600">
               <tr>
                 <th
@@ -158,7 +158,7 @@ const cartBoxes = computed((): Array<any> => {
             <tbody>
               <tr>
                 <td class="px-5 py-4 flex flex-col gap-3 text-base">
-                  <div class="flex flex-row justify-between text-gray-700">
+                  <div class="flex flex-row justify-between">
                     <div>Box count</div>
                     <div>{{ boxCount }}</div>
                   </div>
@@ -166,9 +166,8 @@ const cartBoxes = computed((): Array<any> => {
                     <div>Total</div>
                     <div>$124.00</div>
                   </div>
-                  <div class="text-gray-400 text-sm">
-                    Includes shipping cost. Sales tax will be added at check-out.
-                  </div>
+                  <hr class="my-4" />
+                  <div>Includes:</div>
                   <div class="inline-flex items-center gap-1 text-emerald-600">
                     <svg
                       class="w-5 h-5"
@@ -185,25 +184,7 @@ const cartBoxes = computed((): Array<any> => {
                         stroke-width="2"
                         d="M5 11.917 9.724 16.5 19 7.5" />
                     </svg>
-                    Shipping.
-                  </div>
-                  <div class="inline-flex items-center gap-1 text-emerald-600">
-                    <svg
-                      class="w-5 h-5"
-                      aria-hidden="true"
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      fill="none"
-                      viewBox="0 0 24 24">
-                      <path
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M5 11.917 9.724 16.5 19 7.5" />
-                    </svg>
-                    Import tax.
+                    Shipping within U.S.
                   </div>
                   <div class="inline-flex items-center gap-1 text-gray-400">
                     <svg
@@ -221,7 +202,10 @@ const cartBoxes = computed((): Array<any> => {
                         stroke-width="2"
                         d="M5 12h14m-7 7V5" />
                     </svg>
-                    Sales tax.
+                    Sales tax
+                  </div>
+                  <div class="text-gray-400 text-sm">
+                    Sales tax will be calculated at check-out.
                   </div>
                 </td>
               </tr>

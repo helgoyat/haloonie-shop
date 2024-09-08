@@ -6,8 +6,7 @@ export interface ITreat {
   description: string;
   brand: string;
   type: TreatTypeEnum;
-  bag: number;
-  treatsPerBag: number;
+  treatsPerIndividualBag: number;
   image: string;
   ingredients: string;
 }

@@ -14,8 +14,7 @@ export const Treats: ITreat[] = [
     description: "Tendre Coeur au Lait. Biscuits barre nappés de chocolat au lait.",
     brand: "LU",
     type: TreatTypeEnum.Cookie,
-    bag: 1,
-    treatsPerBag: 1,
+    treatsPerIndividualBag: 1,
     ingredients: "",
     image:
       "https://www.coursesu.com/dw/image/v2/BBQX_PRD/on/demandware.static/-/Sites-digitalu-master-catalog/default/dwdb7ff4d0/3017760002905_H1N1_800367_S10.png?sw=250&sh=250&sm=fit",
@@ -26,8 +25,7 @@ export const Treats: ITreat[] = [
     description: "Biscuits Baiocchi fourrés aux noisettes & cacao.",
     brand: "Barilla",
     type: TreatTypeEnum.Cookie,
-    bag: 1,
-    treatsPerBag: 6,
+    treatsPerIndividualBag: 6,
     ingredients: "",
     image:
       "https://www.coursesu.com/dw/image/v2/BBQX_PRD/on/demandware.static/-/Sites-digitalu-master-catalog/default/dw02cee235/8076809517706_A1L1_2312100_S12.png?sw=250&sh=250&sm=fit",
@@ -38,8 +36,7 @@ export const Treats: ITreat[] = [
     description: "Biscuits au chocolat noir.",
     brand: "Lotus",
     type: TreatTypeEnum.Cookie,
-    bag: 1,
-    treatsPerBag: 3,
+    treatsPerIndividualBag: 3,
     ingredients: "",
     image:
       "https://www.coursesu.com/dw/image/v2/BBQX_PRD/on/demandware.static/-/Sites-digitalu-master-catalog/default/dw771729a3/5410126004021_A_7130141_S01.png?sw=250&sh=250&sm=fit",
@@ -50,8 +47,7 @@ export const Treats: ITreat[] = [
     description: "Biscuits sablés nappés au chocolat au lait.",
     brand: "LU",
     type: TreatTypeEnum.Cookie,
-    bag: 1,
-    treatsPerBag: 3,
+    treatsPerIndividualBag: 3,
     ingredients: "",
     image:
       "https://www.coursesu.com/dw/image/v2/BBQX_PRD/on/demandware.static/-/Sites-digitalu-master-catalog/default/dw00863372/3017760635295_A1L1_4364861_S12.png?sw=250&sh=250&sm=fit",
@@ -62,8 +58,7 @@ export const Treats: ITreat[] = [
     description: "Biscuits petit beurre au chocolat noir.",
     brand: "LU",
     type: TreatTypeEnum.Cookie,
-    bag: 1,
-    treatsPerBag: 2,
+    treatsPerIndividualBag: 2,
     ingredients: "",
     image:
       "https://www.coursesu.com/dw/image/v2/BBQX_PRD/on/demandware.static/-/Sites-digitalu-master-catalog/default/dwe9fda129/3017760002035_H1N1_92355_S10.png?sw=250&sh=250&sm=fit",
@@ -74,8 +69,7 @@ export const Treats: ITreat[] = [
     description: "Biscuits moelleux au chocolat.",
     brand: "St Michel",
     type: TreatTypeEnum.Cookie,
-    bag: 1,
-    treatsPerBag: 1,
+    treatsPerIndividualBag: 1,
     ingredients: "",
     image:
       "https://www.coursesu.com/dw/image/v2/BBQX_PRD/on/demandware.static/-/Sites-digitalu-master-catalog/default/dwc1ef13ff/3178530405804_A1L1_7009259_S12.png?sw=250&sh=250&sm=fit",
@@ -86,8 +80,7 @@ export const Treats: ITreat[] = [
     description: "Biscuits feuilletés caramélisés.",
     brand: "LU",
     type: TreatTypeEnum.Cookie,
-    bag: 1,
-    treatsPerBag: 3,
+    treatsPerIndividualBag: 3,
     ingredients: "",
     image:
       "https://www.coursesu.com/dw/image/v2/BBQX_PRD/on/demandware.static/-/Sites-digitalu-master-catalog/default/dw74c8689f/3017760030106_H1N1_21350_S10.png?sw=250&sh=250&sm=fit",
@@ -98,8 +91,7 @@ export const Treats: ITreat[] = [
     description: "Gâteau Kinder cards.",
     brand: "Kinder",
     type: TreatTypeEnum.Cookie,
-    bag: 1,
-    treatsPerBag: 2,
+    treatsPerIndividualBag: 2,
     ingredients: "",
     image:
       "https://www.coursesu.com/dw/image/v2/BBQX_PRD/on/demandware.static/-/Sites-digitalu-master-catalog/default/dwe342ba8a/8000500269169_A1L1_5231731_S12.png?sw=250&sh=250&sm=fit",
@@ -110,8 +102,7 @@ export const Treats: ITreat[] = [
     description: "Biscuit chocolat M&M's.",
     brand: "M&M's",
     type: TreatTypeEnum.Cookie,
-    bag: 1,
-    treatsPerBag: 1,
+    treatsPerIndividualBag: 1,
     ingredients: "",
     image:
       "https://www.coursesu.com/dw/image/v2/BBQX_PRD/on/demandware.static/-/Sites-digitalu-master-catalog/default/dw76e48d62/5900951251818_H1L1_7219122_S10.png?sw=250&sh=250&sm=fit",
@@ -122,8 +113,7 @@ export const Treats: ITreat[] = [
     description: "Biscuits petit déjeuner aux céréales et pépites de chocolat.",
     brand: "LU",
     type: TreatTypeEnum.Cookie,
-    bag: 1,
-    treatsPerBag: 4,
+    treatsPerIndividualBag: 4,
     ingredients: "",
     image:
       "https://www.coursesu.com/dw/image/v2/BBQX_PRD/on/demandware.static/-/Sites-digitalu-master-catalog/default/dw711ff465/3017760306492_H1N1_142980_S10.png?sw=250&sh=250&sm=fit",
@@ -134,8 +124,7 @@ export const Treats: ITreat[] = [
     description: "Biscuits mini aux pépites de chocolat.",
     brand: "LU",
     type: TreatTypeEnum.Cookie,
-    bag: 1,
-    treatsPerBag: 8,
+    treatsPerIndividualBag: 8,
     ingredients: "",
     image:
       "https://www.coursesu.com/dw/image/v2/BBQX_PRD/on/demandware.static/-/Sites-digitalu-master-catalog/default/dwc79f38f8/7622210420213_H1N1_1268965_S10.png?sw=250&sh=250&sm=fit",
@@ -146,8 +135,7 @@ export const Treats: ITreat[] = [
     description: "Biscuits fourrés au chocolat au blé complet.",
     brand: "LU",
     type: TreatTypeEnum.Cookie,
-    bag: 1,
-    treatsPerBag: 2,
+    treatsPerIndividualBag: 2,
     ingredients: "",
     image:
       "https://www.coursesu.com/dw/image/v2/BBQX_PRD/on/demandware.static/-/Sites-digitalu-master-catalog/default/dwfa805be9/5410041423600_H1N1_1425685_S10.png?sw=250&sh=250&sm=fit",
@@ -158,8 +146,7 @@ export const Treats: ITreat[] = [
     description: "Biscuits barre au chocolat et au riz souflé.",
     brand: "LU",
     type: TreatTypeEnum.Cookie,
-    bag: 1,
-    treatsPerBag: 1,
+    treatsPerIndividualBag: 1,
     ingredients: "",
     image:
       "https://www.coursesu.com/dw/image/v2/BBQX_PRD/on/demandware.static/-/Sites-digitalu-master-catalog/default/dw20bb4cce/3017760465496_H1N1_4178262_S10.png?sw=250&sh=250&sm=fit",
@@ -170,8 +157,7 @@ export const Treats: ITreat[] = [
     description: "Mini biscuits fourrés chocolat.",
     brand: "BN",
     type: TreatTypeEnum.Cookie,
-    bag: 1,
-    treatsPerBag: 5,
+    treatsPerIndividualBag: 5,
     ingredients: "",
     image:
       "https://www.coursesu.com/dw/image/v2/BBQX_PRD/on/demandware.static/-/Sites-digitalu-master-catalog/default/dw2d9849b6/3061990141101_A1L1_4355277_S12.png?sw=250&sh=250&sm=fit",
@@ -182,8 +168,7 @@ export const Treats: ITreat[] = [
     description: "Mini biscuits fourrés goût fraise.",
     brand: "BN",
     type: TreatTypeEnum.Cookie,
-    bag: 1,
-    treatsPerBag: 5,
+    treatsPerIndividualBag: 5,
     ingredients: "",
     image:
       "https://www.coursesu.com/dw/image/v2/BBQX_PRD/on/demandware.static/-/Sites-digitalu-master-catalog/default/dw48a04fef/3061990141118_A1L1_1315795_S12.png?sw=250&sh=250&sm=fit",
@@ -194,8 +179,7 @@ export const Treats: ITreat[] = [
     description: "Choco'Croc. Biscuits au chocolat au lait.",
     brand: "LU",
     type: TreatTypeEnum.Cookie,
-    bag: 1,
-    treatsPerBag: 8,
+    treatsPerIndividualBag: 8,
     ingredients: "",
     image:
       "https://www.coursesu.com/dw/image/v2/BBQX_PRD/on/demandware.static/-/Sites-digitalu-master-catalog/default/dw1fbcd401/3056440212494_H1N1_562734_S10.png?sw=250&sh=250&sm=fit",
@@ -206,8 +190,7 @@ export const Treats: ITreat[] = [
     description: "Gâteau avec nappage au chocolat.",
     brand: "St Michel",
     type: TreatTypeEnum.Cake,
-    bag: 1,
-    treatsPerBag: 1,
+    treatsPerIndividualBag: 1,
     ingredients: "",
     image:
       "https://www.coursesu.com/dw/image/v2/BBQX_PRD/on/demandware.static/-/Sites-digitalu-master-catalog/default/dw1695d5a2/3178530421194_A1L1_2562252_S12.png?sw=250&sh=250&sm=fit",
@@ -218,8 +201,7 @@ export const Treats: ITreat[] = [
     description: "Biscuits barre cookie aux pépites de chocolat.",
     brand: "LU",
     type: TreatTypeEnum.Cookie,
-    bag: 1,
-    treatsPerBag: 1,
+    treatsPerIndividualBag: 1,
     ingredients: "",
     image:
       "https://www.coursesu.com/dw/image/v2/BBQX_PRD/on/demandware.static/-/Sites-digitalu-master-catalog/default/dw5c251217/7622210701336_H1N1_5777400_S10.png?sw=250&sh=250&sm=fit",
@@ -230,8 +212,7 @@ export const Treats: ITreat[] = [
     description: "Tartelettes au chocolat au lait et caramel.",
     brand: "Bonne Maman",
     type: TreatTypeEnum.Cookie,
-    bag: 1,
-    treatsPerBag: 1,
+    treatsPerIndividualBag: 1,
     ingredients: "",
     image:
       "https://www.coursesu.com/dw/image/v2/BBQX_PRD/on/demandware.static/-/Sites-digitalu-master-catalog/default/dw22d2da0e/3178530403022_A1L1_2805784_S12.png?sw=250&sh=250&sm=fit",
@@ -242,8 +223,7 @@ export const Treats: ITreat[] = [
     description: "Gâteau chocolat au lait.",
     brand: "Delichoc",
     type: TreatTypeEnum.Cookie,
-    bag: 1,
-    treatsPerBag: 2,
+    treatsPerIndividualBag: 2,
     ingredients: "",
     image:
       "https://www.coursesu.com/dw/image/v2/BBQX_PRD/on/demandware.static/-/Sites-digitalu-master-catalog/default/dw71614dfa/3116430218483_A1L1_6646900_S12.png?sw=250&sh=250&sm=fit",
@@ -254,8 +234,7 @@ export const Treats: ITreat[] = [
     description: "Doonuts nappés au chocolat.",
     brand: "St Michel",
     type: TreatTypeEnum.Cake,
-    bag: 1,
-    treatsPerBag: 1,
+    treatsPerIndividualBag: 1,
     ingredients: "",
     image:
       "https://www.coursesu.com/dw/image/v2/BBQX_PRD/on/demandware.static/-/Sites-digitalu-master-catalog/default/dw6d4510c4/3178530414370_H1N1_3862210_S10.png?sw=250&sh=250&sm=fit",
@@ -266,8 +245,7 @@ export const Treats: ITreat[] = [
     description: "Biscuits fourrés au chocolat au lait.",
     brand: "LU",
     type: TreatTypeEnum.Cookie,
-    bag: 1,
-    treatsPerBag: 6,
+    treatsPerIndividualBag: 6,
     ingredients: "",
     image:
       "https://www.coursesu.com/dw/image/v2/BBQX_PRD/on/demandware.static/-/Sites-digitalu-master-catalog/default/dw4c67dbad/3017760589895_H1L1_2291564_S10.png?sw=250&sh=250&sm=fit",
@@ -278,8 +256,7 @@ export const Treats: ITreat[] = [
     description: "Biscuits Twix top.",
     brand: "Twix",
     type: TreatTypeEnum.Cookie,
-    bag: 1,
-    treatsPerBag: 1,
+    treatsPerIndividualBag: 1,
     ingredients: "",
     image:
       "https://www.coursesu.com/dw/image/v2/BBQX_PRD/on/demandware.static/-/Sites-digitalu-master-catalog/default/dw1c1c0c66/5900951312038_A1N1_6812220_S13.png?sw=250&sh=250&sm=fit",
@@ -290,8 +267,7 @@ export const Treats: ITreat[] = [
     description: "Cookies chocolat noisette.",
     brand: "Bonne Maman",
     type: TreatTypeEnum.Cookie,
-    bag: 1,
-    treatsPerBag: 1,
+    treatsPerIndividualBag: 1,
     ingredients: "",
     image:
       "https://www.coursesu.com/dw/image/v2/BBQX_PRD/on/demandware.static/-/Sites-digitalu-master-catalog/default/dwed0f5587/3178530405781_A1L1_7037953_S12.png?sw=250&sh=250&sm=fit",
@@ -302,8 +278,7 @@ export const Treats: ITreat[] = [
     description: "Tartelettes au citron.",
     brand: "Bonne Maman",
     type: TreatTypeEnum.Cookie,
-    bag: 1,
-    treatsPerBag: 1,
+    treatsPerIndividualBag: 1,
     ingredients: "",
     image:
       "https://www.coursesu.com/dw/image/v2/BBQX_PRD/on/demandware.static/-/Sites-digitalu-master-catalog/default/dw2e7e3f44/3178530402988_A1L1_2770003_S12.png?sw=250&sh=250&sm=fit",
@@ -314,8 +289,7 @@ export const Treats: ITreat[] = [
     description: "Biscuits sablés nappés au chocolat noir.",
     brand: "LU",
     type: TreatTypeEnum.Cookie,
-    bag: 1,
-    treatsPerBag: 8,
+    treatsPerIndividualBag: 8,
     ingredients: "",
     image:
       "https://www.coursesu.com/dw/image/v2/BBQX_PRD/on/demandware.static/-/Sites-digitalu-master-catalog/default/dwf93b347e/3017760595193_H1N1_4761417_S10.png?sw=250&sh=250&sm=fit",
@@ -326,8 +300,7 @@ export const Treats: ITreat[] = [
     description: "Tartelettes aux framboises.",
     brand: "Bonne Maman",
     type: TreatTypeEnum.Cookie,
-    bag: 1,
-    treatsPerBag: 1,
+    treatsPerIndividualBag: 1,
     ingredients: "",
     image:
       "https://www.coursesu.com/dw/image/v2/BBQX_PRD/on/demandware.static/-/Sites-digitalu-master-catalog/default/dwfec36df1/3178530402995_A1L1_2782844_S12.png?sw=250&sh=250&sm=fit",
@@ -338,8 +311,7 @@ export const Treats: ITreat[] = [
     description: "Cookies extra choco et pépites de chocolat.",
     brand: "LU",
     type: TreatTypeEnum.Cookie,
-    bag: 1,
-    treatsPerBag: 1,
+    treatsPerIndividualBag: 1,
     ingredients: "",
     image:
       "https://www.coursesu.com/dw/image/v2/BBQX_PRD/on/demandware.static/-/Sites-digitalu-master-catalog/default/dwd2766b09/7622201495022_H1N1_6317814_S10.png?sw=250&sh=250&sm=fit",
@@ -350,8 +322,7 @@ export const Treats: ITreat[] = [
     description: "Biscuits petit déjeuner 'Le Tartiné' chocolat noisette.",
     brand: "LU",
     type: TreatTypeEnum.Cookie,
-    bag: 1,
-    treatsPerBag: 3,
+    treatsPerIndividualBag: 3,
     ingredients: "",
     image:
       "https://www.coursesu.com/dw/image/v2/BBQX_PRD/on/demandware.static/-/Sites-digitalu-master-catalog/default/dw06a53941/7622300788094_H1N1_6300719_S10.png?sw=250&sh=250&sm=fit",
@@ -362,8 +333,7 @@ export const Treats: ITreat[] = [
     description: "Biscuits petit beurre chocolat au lait.",
     brand: "LU",
     type: TreatTypeEnum.Cookie,
-    bag: 1,
-    treatsPerBag: 2,
+    treatsPerIndividualBag: 2,
     ingredients: "",
     image:
       "https://www.coursesu.com/dw/image/v2/BBQX_PRD/on/demandware.static/-/Sites-digitalu-master-catalog/default/dw731a8c19/7622210422026_H1N1_92401_S10.png?sw=250&sh=250&sm=fit",
@@ -374,8 +344,7 @@ export const Treats: ITreat[] = [
     description: "Biscuits fourrés au chocolat.",
     brand: "BN",
     type: TreatTypeEnum.Cookie,
-    bag: 1,
-    treatsPerBag: 2,
+    treatsPerIndividualBag: 2,
     ingredients: "",
     image:
       "https://www.coursesu.com/dw/image/v2/BBQX_PRD/on/demandware.static/-/Sites-digitalu-master-catalog/default/dweeb4abce/3061990142672_A_382753061990142672_S01.jpeg?sw=250&sh=250&sm=fit",
@@ -386,8 +355,7 @@ export const Treats: ITreat[] = [
     description: "Gâteaux aux pépites de chocolat.",
     brand: "LU",
     type: TreatTypeEnum.Cookie,
-    bag: 1,
-    treatsPerBag: 1,
+    treatsPerIndividualBag: 1,
     ingredients: "",
     image:
       "https://www.coursesu.com/dw/image/v2/BBQX_PRD/on/demandware.static/-/Sites-digitalu-master-catalog/default/dwcad62719/3048282900646_H1L1_2461242_S10.png?sw=250&sh=250&sm=fit",
@@ -398,8 +366,7 @@ export const Treats: ITreat[] = [
     description: "Biscuits barre fourrés au chocolat au lait.",
     brand: "LU",
     type: TreatTypeEnum.Cookie,
-    bag: 1,
-    treatsPerBag: 1,
+    treatsPerIndividualBag: 1,
     ingredients: "",
     image:
       "https://www.coursesu.com/dw/image/v2/BBQX_PRD/on/demandware.static/-/Sites-digitalu-master-catalog/default/dw638e69a6/3017760329798_H1N1_475734_S10.png?sw=250&sh=250&sm=fit",
@@ -410,8 +377,7 @@ export const Treats: ITreat[] = [
     description: "Gâteaux fourrés au chocolat mini roulés.",
     brand: "LU",
     type: TreatTypeEnum.Cake,
-    bag: 1,
-    treatsPerBag: 1,
+    treatsPerIndividualBag: 1,
     ingredients: "",
     image:
       "https://www.coursesu.com/dw/image/v2/BBQX_PRD/on/demandware.static/-/Sites-digitalu-master-catalog/default/dw056e1a20/3017760314497_H1L1_2479168_S10.png?sw=250&sh=250&sm=fit",
@@ -422,8 +388,7 @@ export const Treats: ITreat[] = [
     description: "Nappés au chocolat noir.",
     brand: "LU",
     type: TreatTypeEnum.Cookie,
-    bag: 1,
-    treatsPerBag: 8,
+    treatsPerIndividualBag: 8,
     ingredients: "",
     image:
       "https://www.coursesu.com/dw/image/v2/BBQX_PRD/on/demandware.static/-/Sites-digitalu-master-catalog/default/dw2ef0c65d/2000000902524_A_905932000000902524_S01.png?sw=250&sh=250&sm=fit",
@@ -434,8 +399,7 @@ export const Treats: ITreat[] = [
     description: "Biscuit nappé au chocolat.",
     brand: "BN",
     type: TreatTypeEnum.Cookie,
-    bag: 1,
-    treatsPerBag: 2,
+    treatsPerIndividualBag: 2,
     ingredients: "",
     image:
       "https://www.coursesu.com/dw/image/v2/BBQX_PRD/on/demandware.static/-/Sites-digitalu-master-catalog/default/dwb5821afa/3061990143785_A1L1_3903315_S12.png?sw=250&sh=250&sm=fit",
@@ -446,8 +410,7 @@ export const Treats: ITreat[] = [
     description: "Biscuits aux pépites chocolat.",
     brand: "LU",
     type: TreatTypeEnum.Cookie,
-    bag: 1,
-    treatsPerBag: 1,
+    treatsPerIndividualBag: 1,
     ingredients: "",
     image:
       "https://www.coursesu.com/dw/image/v2/BBQX_PRD/on/demandware.static/-/Sites-digitalu-master-catalog/default/dwc1ca00e2/3017760404396_A1L1_51748_S12.png?sw=250&sh=250&sm=fit",
@@ -458,8 +421,7 @@ export const Treats: ITreat[] = [
     description: "Galette moelleuse marbrée au chocolat.",
     brand: "St Michel",
     type: TreatTypeEnum.Cake,
-    bag: 1,
-    treatsPerBag: 1,
+    treatsPerIndividualBag: 1,
     ingredients: "",
     image:
       "https://www.coursesu.com/dw/image/v2/BBQX_PRD/on/demandware.static/-/Sites-digitalu-master-catalog/default/dw2205e643/3178530422733_A1L1_4044297_S12.png?sw=250&sh=250&sm=fit",
@@ -470,8 +432,7 @@ export const Treats: ITreat[] = [
     description: "Galette moelleuse tigrée nappée au chocolat lait.",
     brand: "St Michel",
     type: TreatTypeEnum.Cake,
-    bag: 1,
-    treatsPerBag: 1,
+    treatsPerIndividualBag: 1,
     ingredients: "",
     image:
       "https://www.coursesu.com/dw/image/v2/BBQX_PRD/on/demandware.static/-/Sites-digitalu-master-catalog/default/dw219860fc/3178530423792_A1L1_3861237_S12.png?sw=250&sh=250&sm=fit",
@@ -482,8 +443,7 @@ export const Treats: ITreat[] = [
     description: "Galettes moelleuse pépites chocolat.",
     brand: "St Michel",
     type: TreatTypeEnum.Cake,
-    bag: 1,
-    treatsPerBag: 1,
+    treatsPerIndividualBag: 1,
     ingredients: "",
     image:
       "https://www.coursesu.com/dw/image/v2/BBQX_PRD/on/demandware.static/-/Sites-digitalu-master-catalog/default/dw8ee5ba1d/3178530421118_A1L1_2562473_S12.png?sw=250&sh=250&sm=fit",
@@ -494,8 +454,7 @@ export const Treats: ITreat[] = [
     description: "Mini brownie chocolat.",
     brand: "St Michel",
     type: TreatTypeEnum.Cake,
-    bag: 1,
-    treatsPerBag: 1,
+    treatsPerIndividualBag: 1,
     ingredients: "",
     image:
       "https://www.coursesu.com/dw/image/v2/BBQX_PRD/on/demandware.static/-/Sites-digitalu-master-catalog/default/dw1a88eb55/3178530411553_A1L1_5934935_S12.png?sw=250&sh=250&sm=fit",
@@ -506,8 +465,7 @@ export const Treats: ITreat[] = [
     description: "Gâteau moelleux au chocolat.",
     brand: "Bonne Maman",
     type: TreatTypeEnum.Cake,
-    bag: 1,
-    treatsPerBag: 1,
+    treatsPerIndividualBag: 1,
     ingredients: "",
     image:
       "https://www.coursesu.com/dw/image/v2/BBQX_PRD/on/demandware.static/-/Sites-digitalu-master-catalog/default/dwe5a329db/3178530425208_A1L1_7054381_S12.png?sw=250&sh=250&sm=fit",
@@ -518,8 +476,7 @@ export const Treats: ITreat[] = [
     description: "Madeleines au fourrage myrtille.",
     brand: "Bonne Maman",
     type: TreatTypeEnum.Cake,
-    bag: 1,
-    treatsPerBag: 1,
+    treatsPerIndividualBag: 1,
     ingredients: "",
     image:
       "https://www.coursesu.com/dw/image/v2/BBQX_PRD/on/demandware.static/-/Sites-digitalu-master-catalog/default/dw026457cf/3178530421392_A1L1_4631853_S12.png?sw=250&sh=250&sm=fit",
@@ -530,8 +487,7 @@ export const Treats: ITreat[] = [
     description: "Madeleines coeur chocolat.",
     brand: "Bonne Maman",
     type: TreatTypeEnum.Cake,
-    bag: 1,
-    treatsPerBag: 1,
+    treatsPerIndividualBag: 1,
     ingredients: "",
     image:
       "https://www.coursesu.com/dw/image/v2/BBQX_PRD/on/demandware.static/-/Sites-digitalu-master-catalog/default/dwe6bb7ec4/3178530420395_A1L1_6426575_S12.png?sw=250&sh=250&sm=fit",
@@ -542,8 +498,7 @@ export const Treats: ITreat[] = [
     description: "Gâteaux marbrés au chocolat",
     brand: "Bonne Maman",
     type: TreatTypeEnum.Cake,
-    bag: 1,
-    treatsPerBag: 1,
+    treatsPerIndividualBag: 1,
     ingredients: "",
     image:
       "https://www.coursesu.com/dw/image/v2/BBQX_PRD/on/demandware.static/-/Sites-digitalu-master-catalog/default/dw43dd0d76/3178530412741_A1L1_5775640_S12.png?sw=250&sh=250&sm=fit",
@@ -554,8 +509,7 @@ export const Treats: ITreat[] = [
     description: "Mini brownies aux pépites de chocolat.",
     brand: "Brossard",
     type: TreatTypeEnum.Cake,
-    bag: 1,
-    treatsPerBag: 1,
+    treatsPerIndividualBag: 1,
     ingredients: "",
     image:
       "https://www.coursesu.com/dw/image/v2/BBQX_PRD/on/demandware.static/-/Sites-digitalu-master-catalog/default/dw67f87c66/3498425591253_A1R1_11056_S18.png?sw=250&sh=250&sm=fit",
@@ -566,8 +520,7 @@ export const Treats: ITreat[] = [
     description: "Gâteaux fourrés au chocolat.",
     brand: "LU",
     type: TreatTypeEnum.Cake,
-    bag: 1,
-    treatsPerBag: 1,
+    treatsPerIndividualBag: 1,
     ingredients: "",
     image:
       "https://www.coursesu.com/dw/image/v2/BBQX_PRD/on/demandware.static/-/Sites-digitalu-master-catalog/default/dw0e90cca6/3048282322646_H1N1_179051_S10.png?sw=250&sh=250&sm=fit",
@@ -578,8 +531,7 @@ export const Treats: ITreat[] = [
     description: "Gâteaux chocolat.",
     brand: "Milka",
     type: TreatTypeEnum.Cake,
-    bag: 1,
-    treatsPerBag: 1,
+    treatsPerIndividualBag: 1,
     ingredients: "",
     image:
       "https://www.coursesu.com/dw/image/v2/BBQX_PRD/on/demandware.static/-/Sites-digitalu-master-catalog/default/dw6bf7f9e9/7622300784751_H1L1_6303457_S10.png?sw=250&sh=250&sm=fit",
@@ -590,8 +542,7 @@ export const Treats: ITreat[] = [
     description: "Gâteau barre au chocolat.",
     brand: "Brossard",
     type: TreatTypeEnum.Cake,
-    bag: 1,
-    treatsPerBag: 1,
+    treatsPerIndividualBag: 1,
     ingredients: "",
     image:
       "https://www.coursesu.com/dw/image/v2/BBQX_PRD/on/demandware.static/-/Sites-digitalu-master-catalog/default/dwd0e7ca6e/3660140958851_A1L1_6296733_S12.png?sw=250&sh=250&sm=fit",
@@ -602,8 +553,7 @@ export const Treats: ITreat[] = [
     description: "Gâteau duo Fraise.",
     brand: "Brossard",
     type: TreatTypeEnum.Cake,
-    bag: 1,
-    treatsPerBag: 1,
+    treatsPerIndividualBag: 1,
     ingredients: "",
     image:
       "https://www.coursesu.com/dw/image/v2/BBQX_PRD/on/demandware.static/-/Sites-digitalu-master-catalog/default/dwab769ed4/3660140945455_A1L1_5609571_S12.png?sw=250&sh=250&sm=fit",
@@ -614,8 +564,7 @@ export const Treats: ITreat[] = [
     description: "Galettes moelleuse nappée au chocolat au lait.",
     brand: "St Michel",
     type: TreatTypeEnum.Cake,
-    bag: 1,
-    treatsPerBag: 1,
+    treatsPerIndividualBag: 1,
     ingredients: "",
     image:
       "https://www.coursesu.com/dw/image/v2/BBQX_PRD/on/demandware.static/-/Sites-digitalu-master-catalog/default/dwd7ba7154/3178530421132_A1L1_2562396_S12.png?sw=250&sh=250&sm=fit",
@@ -626,8 +575,7 @@ export const Treats: ITreat[] = [
     description: "Mini brownies chocolat aux noisettes.",
     brand: "Brossard",
     type: TreatTypeEnum.Cake,
-    bag: 1,
-    treatsPerBag: 1,
+    treatsPerIndividualBag: 1,
     ingredients: "",
     image:
       "https://www.coursesu.com/dw/image/v2/BBQX_PRD/on/demandware.static/-/Sites-digitalu-master-catalog/default/dwedcda5c6/3498425590355_A1R1_11134_S18.png?sw=250&sh=250&sm=fit",
@@ -638,8 +586,7 @@ export const Treats: ITreat[] = [
     description: "Cookies aux pépites de chocolat sur gâteaux au chocolat.",
     brand: "Brossard",
     type: TreatTypeEnum.Cake,
-    bag: 1,
-    treatsPerBag: 1,
+    treatsPerIndividualBag: 1,
     ingredients: "",
     image:
       "https://www.coursesu.com/dw/image/v2/BBQX_PRD/on/demandware.static/-/Sites-digitalu-master-catalog/default/dw79d2ceb4/3660140942058_A1R1_2977611_S18.png?sw=250&sh=250&sm=fit",
@@ -650,8 +597,7 @@ export const Treats: ITreat[] = [
     description: "Mini brownie au chocolat blanc.",
     brand: "St Michel",
     type: TreatTypeEnum.Cake,
-    bag: 1,
-    treatsPerBag: 1,
+    treatsPerIndividualBag: 1,
     ingredients: "",
     image:
       "https://www.coursesu.com/dw/image/v2/BBQX_PRD/on/demandware.static/-/Sites-digitalu-master-catalog/default/dw5a6f746c/3178530411560_A1L1_5935374_S12.png?sw=250&sh=250&sm=fit",
@@ -662,8 +608,7 @@ export const Treats: ITreat[] = [
     description: "Gâteau marbré cacao noisettes.",
     brand: "Brossard",
     type: TreatTypeEnum.Cake,
-    bag: 1,
-    treatsPerBag: 1,
+    treatsPerIndividualBag: 1,
     ingredients: "",
     image:
       "https://www.coursesu.com/dw/image/v2/BBQX_PRD/on/demandware.static/-/Sites-digitalu-master-catalog/default/dwacc18c05/3660140954358_A1L1_2329335_S12.png?sw=250&sh=250&sm=fit",
@@ -674,8 +619,7 @@ export const Treats: ITreat[] = [
     description: "Gâteaux au chocolat fourrés au chocolat.",
     brand: "LU",
     type: TreatTypeEnum.Cake,
-    bag: 1,
-    treatsPerBag: 1,
+    treatsPerIndividualBag: 1,
     ingredients: "",
     image:
       "https://www.coursesu.com/dw/image/v2/BBQX_PRD/on/demandware.static/-/Sites-digitalu-master-catalog/default/dw90e7fe5c/3017769149854_H1N1_5682464_S10.png?sw=250&sh=250&sm=fit",
@@ -686,8 +630,7 @@ export const Treats: ITreat[] = [
     description: "Galette moelleuse tigrée nappée au chocolat blanc.",
     brand: "St Michel",
     type: TreatTypeEnum.Cake,
-    bag: 1,
-    treatsPerBag: 1,
+    treatsPerIndividualBag: 1,
     ingredients: "",
     image:
       "https://www.coursesu.com/dw/image/v2/BBQX_PRD/on/demandware.static/-/Sites-digitalu-master-catalog/default/dwdaff8d34/3178530423808_A1N1_7078100_S13.png?sw=250&sh=250&sm=fit",
@@ -698,8 +641,7 @@ export const Treats: ITreat[] = [
     description: "Génoises roulées avec un fourrage au chocolat et à la noisette.",
     brand: "Brossard",
     type: TreatTypeEnum.Cake,
-    bag: 1,
-    treatsPerBag: 1,
+    treatsPerIndividualBag: 1,
     ingredients: "",
     image:
       "https://www.coursesu.com/dw/image/v2/BBQX_PRD/on/demandware.static/-/Sites-digitalu-master-catalog/default/dw8e072a2e/3660140960359_A1L1_6547595_S12.png?sw=250&sh=250&sm=fit",
@@ -710,8 +652,7 @@ export const Treats: ITreat[] = [
     description: "Saveur fraise.",
     brand: "Brossard",
     type: TreatTypeEnum.Cake,
-    bag: 1,
-    treatsPerBag: 1,
+    treatsPerIndividualBag: 1,
     ingredients: "",
     image:
       "https://www.coursesu.com/dw/image/v2/BBQX_PRD/on/demandware.static/-/Sites-digitalu-master-catalog/default/dw90e0a5b1/3660140967051_A1L1_6720580_S12.png?sw=250&sh=250&sm=fit",
@@ -722,8 +663,7 @@ export const Treats: ITreat[] = [
     description: "Gâteaux au chocolat.",
     brand: "LU",
     type: TreatTypeEnum.Cake,
-    bag: 1,
-    treatsPerBag: 1,
+    treatsPerIndividualBag: 1,
     ingredients: "",
     image:
       "https://www.coursesu.com/dw/image/v2/BBQX_PRD/on/demandware.static/-/Sites-digitalu-master-catalog/default/dwd38b774c/7622201809638_H1N1_2010913_S10.png?sw=250&sh=250&sm=fit",
@@ -734,8 +674,7 @@ export const Treats: ITreat[] = [
     description: "Gâteaux au chocolat et à la framboise.",
     brand: "LU",
     type: TreatTypeEnum.Cake,
-    bag: 1,
-    treatsPerBag: 1,
+    treatsPerIndividualBag: 1,
     ingredients: "",
     image:
       "https://www.coursesu.com/dw/image/v2/BBQX_PRD/on/demandware.static/-/Sites-digitalu-master-catalog/default/dwfa2e63c9/7622201809768_A1L1_2011033_S12.png?sw=250&sh=250&sm=fit",
@@ -746,8 +685,7 @@ export const Treats: ITreat[] = [
     description: "Gâteau P'tit savane chocolat.",
     brand: "Brossard",
     type: TreatTypeEnum.Cake,
-    bag: 1,
-    treatsPerBag: 1,
+    treatsPerIndividualBag: 1,
     ingredients: "",
     image:
       "https://www.coursesu.com/dw/image/v2/BBQX_PRD/on/demandware.static/-/Sites-digitalu-master-catalog/default/dw3578ea31/3660140929752_A1L1_4994800_S12.png?sw=250&sh=250&sm=fit",
@@ -758,8 +696,7 @@ export const Treats: ITreat[] = [
     description: "Gâteau à base de 16% de yaourt.",
     brand: "Brossard",
     type: TreatTypeEnum.Cake,
-    bag: 1,
-    treatsPerBag: 1,
+    treatsPerIndividualBag: 1,
     ingredients: "",
     image:
       "https://www.coursesu.com/dw/image/v2/BBQX_PRD/on/demandware.static/-/Sites-digitalu-master-catalog/default/dwcc22aa1b/3660140954457_A1L1_2313694_S12.png?sw=250&sh=250&sm=fit",

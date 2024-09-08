@@ -37,12 +37,6 @@ const onClickMinus = (id: string): void => {
 const getLargerImagePath = (image: string): string => {
   return image.split("?")[0];
 };
-
-const getTreatQuantityLabel = (treat: ITreat) => {
-  return `${props.box.treats[treat.id] * treat.bag} x ${treat.treatsPerBag} ${getTreatTypeLabel(
-    treat,
-  )}`;
-};
 </script>
 
 <template>
@@ -56,8 +50,7 @@ const getTreatQuantityLabel = (treat: ITreat) => {
       "></div>
     <div class="rounded-xl p-6 border border-gray-200 flex flex-col gap-6">
       <div>{{ box.description }}</div>
-      <div
-        class="w-fit flex flex-row gap-2 py-2 px-4 rounded-full text-amber-500 border border-amber-500">
+      <div class="w-fit flex flex-row gap-2 py-2 px-4 rounded-md bg-amber-100 text-amber-500">
         <svg
           class="w-6 h-6 text-amber-500"
           aria-hidden="true"
@@ -69,7 +62,7 @@ const getTreatQuantityLabel = (treat: ITreat) => {
           <path
             d="M20 7h-.7c.229-.467.349-.98.351-1.5a3.5 3.5 0 0 0-3.5-3.5c-1.717 0-3.215 1.2-4.331 2.481C10.4 2.842 8.949 2 7.5 2A3.5 3.5 0 0 0 4 5.5c.003.52.123 1.033.351 1.5H4a2 2 0 0 0-2 2v2a1 1 0 0 0 1 1h18a1 1 0 0 0 1-1V9a2 2 0 0 0-2-2Zm-9.942 0H7.5a1.5 1.5 0 0 1 0-3c.9 0 2 .754 3.092 2.122-.219.337-.392.635-.534.878Zm6.1 0h-3.742c.933-1.368 2.371-3 3.739-3a1.5 1.5 0 0 1 0 3h.003ZM13 14h-2v8h2v-8Zm-4 0H4v6a2 2 0 0 0 2 2h3v-8Zm6 0v8h3a2 2 0 0 0 2-2v-6h-5Z" />
         </svg>
-        <div>Surprise included</div>
+        <div>Surprise in the Box</div>
       </div>
     </div>
   </div>
@@ -85,8 +78,13 @@ const getTreatQuantityLabel = (treat: ITreat) => {
         :style="`background-image: url(${item.image})`"></div>
       <div class="p-3">
         <div class="mb-2 text-right">
-          <span class="text-sm text-violet-600 font-medium">
-            {{ getTreatQuantityLabel(item) }}
+          <span
+            class="text-sm text-red-600 font-medium bg-red-100 border border-red-600 rounded-sm pl-2 pr-1 py-1">
+            {{ props.box.treats[item.id] }} x
+          </span>
+          <span
+            class="ml-1 text-sm text-violet-600 font-medium border border-purple-600 rounded-sm px-2 py-1">
+            {{ `${item.treatsPerIndividualBag} ${getTreatTypeLabel(item)}` }}
           </span>
         </div>
         <div class="text-lg font-semibold tracking-tight text-gray-900">{{ item.name }}</div>
