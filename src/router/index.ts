@@ -6,14 +6,8 @@ import PrivacyPolicyPage from "@/pages/Legal/PrivacyPolicyPage.vue";
 import FAQPage from "@/pages/Help/FAQPage.vue";
 import ContactUsPage from "@/pages/Help/ContactUsPage.vue";
 import NotFoundPage from "@/pages/Other/NotFoundPage.vue";
-// import CookiesPage from "@/pages/Admin/CookiesPage.vue";
 
 export default [
-  // {
-  //   path: "/admin",
-  //   name: "CookiesPage",
-  //   component: CookiesPage,
-  // },
   {
     path: "/",
     name: "HomePage",
@@ -29,7 +23,6 @@ export default [
     name: "OrderPage",
     component: OrderPage,
   },
-  // LEGAL
   {
     path: "/terms-and-conditions",
     name: "TermsAndConditionsPage",
@@ -40,7 +33,6 @@ export default [
     name: "PrivacyPolicyPage",
     component: PrivacyPolicyPage,
   },
-  // HELP
   {
     path: "/faq",
     name: "FAQPage",
@@ -51,7 +43,6 @@ export default [
     name: "ContactUsPage",
     component: ContactUsPage,
   },
-  // OTHER
   {
     path: "/:pathMatch(.*)*",
     name: "NotFoundPage",

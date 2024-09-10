@@ -5,7 +5,7 @@ import { useOrderStore } from "@/stores";
 import { IBox, ITreat } from "@/types";
 import { Treats } from "@/data";
 import { getTreatTypeLabel } from "@/utils";
-import HrTitle from "@/components/Elements/HrTitle.vue";
+import SectionTitle from "@/components/Elements/SectionTitle.vue";
 
 const props = defineProps({
   box: {
@@ -41,7 +41,7 @@ const getLargerImagePath = (image: string): string => {
 
 <template>
   <h2>{{ box.name }}</h2>
-  <hr-title title="Box" />
+  <section-title title="Box" />
   <div class="grid md:grid-cols-2 grid-cols-1 gap-6">
     <div
       class="w-full h-96 bg-cover bg-no-repeat bg-center rounded-xl shadow-sm"
@@ -66,7 +66,7 @@ const getLargerImagePath = (image: string): string => {
       </div>
     </div>
   </div>
-  <hr-title title="Treats" />
+  <section-title title="Treats" />
   <div
     class="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-6 justify-items-center items-start">
     <div
@@ -103,10 +103,10 @@ const getLargerImagePath = (image: string): string => {
   </div>
   <div class="flex justify-center items-center my-2">
     <template v-if="boxIds[box.id]">
-      <div class="flex justify-center items-center border border-violet-200 p-[5px] rounded-full">
+      <div class="flex justify-center items-center border border-violet-200 p-2 rounded-full">
         <button
           type="button"
-          class="text-white bg-violet-600 font-medium rounded-full text-sm p-2 text-center inline-flex items-center"
+          class="button-primary"
           @click.stop="onClickMinus(box.id)">
           <svg
             class="w-5 h-5"
@@ -129,7 +129,7 @@ const getLargerImagePath = (image: string): string => {
         <button
           type="button"
           :disabled="isMaxBoxCount"
-          class="text-white bg-violet-600 disabled:bg-gray-100 disabled:text-gray-300 font-medium rounded-full text-sm p-2 text-center inline-flex items-center"
+          class="button-primary"
           @click.stop="addBox(box.id)">
           <svg
             class="w-5 h-5"
@@ -151,9 +151,15 @@ const getLargerImagePath = (image: string): string => {
       v-else
       type="button"
       :disabled="isMaxBoxCount"
-      class="px-6 py-3 text-base disabled:bg-gray-100 disabled:text-gray-300 font-medium text-center text-white bg-violet-600 rounded-md"
+      class="px-6 py-3 text-base hover:bg-violet-700 focus:ring-4 focus:ring-violet-300 disabled:bg-gray-100 disabled:text-gray-300 font-medium text-center text-white bg-violet-600 rounded-md"
       @click="addBox(box.id)">
       Add to cart
     </button>
   </div>
 </template>
+
+<style scoped>
+.button-primary {
+  @apply text-white bg-violet-600 hover:bg-violet-700 focus:ring-4 focus:ring-violet-300 disabled:bg-gray-100 disabled:text-gray-300 font-medium rounded-full text-sm p-2 text-center inline-flex items-center;
+}
+</style>

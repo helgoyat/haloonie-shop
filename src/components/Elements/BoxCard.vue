@@ -44,7 +44,7 @@ const onClickMinus = (id: string): void => {
           <template v-if="boxIds[box.id]">
             <button
               type="button"
-              class="text-white bg-violet-600 font-medium rounded-full text-sm p-2 text-center inline-flex items-center"
+              class="button-primary"
               @click.stop="onClickMinus(box.id)">
               <svg
                 class="w-5 h-5"
@@ -67,7 +67,7 @@ const onClickMinus = (id: string): void => {
             <button
               type="button"
               :disabled="isMaxBoxCount"
-              class="text-white bg-violet-600 disabled:bg-gray-100 disabled:text-gray-300 font-medium rounded-full text-sm p-2 text-center inline-flex items-center"
+              class="button-primary"
               @click.stop="addBox(box.id)">
               <svg
                 class="w-5 h-5"
@@ -88,7 +88,7 @@ const onClickMinus = (id: string): void => {
             v-else
             type="button"
             :disabled="isMaxBoxCount"
-            class="text-white bg-violet-600 disabled:bg-gray-100 disabled:text-gray-300 font-medium rounded-full text-sm p-2 text-center inline-flex items-center"
+            class="button-primary"
             @click.stop="addBox(box.id)">
             <svg
               class="w-5 h-5"
@@ -109,3 +109,9 @@ const onClickMinus = (id: string): void => {
     </div>
   </div>
 </template>
+
+<style scoped>
+.button-primary {
+  @apply text-white bg-violet-600 hover:bg-violet-700 focus:ring-4 focus:ring-violet-300 disabled:bg-gray-100 disabled:text-gray-300 font-medium rounded-full text-sm p-2 text-center inline-flex items-center;
+}
+</style>

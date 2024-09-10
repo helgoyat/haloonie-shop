@@ -8,13 +8,15 @@ const { isOrder, boxCount } = storeToRefs(orderStore);
 
 <template>
   <nav class="bg-white sticky w-full z-20 top-0 start-0 border-b border-gray-200">
-    <div class="max-w-screen-lg flex items-center justify-between mx-auto p-4">
-      <router-link
-        to="/"
-        class="flex items-center space-x-3 rtl:space-x-reverse">
-        <span class="brand text-purple-600 self-center text-3xl whitespace-nowrap">Haloonie</span>
-      </router-link>
-      <div class="items-center justify-between flex w-auto">
+    <div class="max-w-screen-lg flex items-center mx-auto p-4 justify-between">
+      <div class="sm:basis-1/3 text-left">
+        <router-link
+          to="/"
+          class="flex items-center space-x-3 rtl:space-x-reverse">
+          <span class="brand text-purple-600 self-center text-3xl whitespace-nowrap">Haloonie</span>
+        </router-link>
+      </div>
+      <div class="sm:basis-1/3 justify-center items-center flex w-auto">
         <ul>
           <li
             v-for="item in [{ name: 'Our Boxes', to: { name: 'OurBoxesPage' } }]"
@@ -28,7 +30,7 @@ const { isOrder, boxCount } = storeToRefs(orderStore);
           </li>
         </ul>
       </div>
-      <div>
+      <div class="sm:basis-1/3 text-right">
         <router-link
           :to="isOrder ? { name: 'OrderPage' } : { name: 'OurBoxesPage' }"
           class="relative font-medium rounded-full text-sm px-4 py-2 text-center inline-flex items-center"

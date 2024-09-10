@@ -1,9 +1,7 @@
-<script setup lang="ts">
-import Message from "@/components/Elements/Message.vue";
-</script>
-
 <template>
   <div class="content">
-    <message text="Not found" />
+    <div class="flex flex-col justify-items-center">
+      <span class="text-gray-500 text-lg text-center">Not Found</span>
+    </div>
   </div>
 </template>

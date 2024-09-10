@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import Info from "@/components/Elements/Info.vue";
+import InfoAlert from "@/components/Elements/InfoAlert.vue";
 </script>
 
 <template>
@@ -61,7 +61,7 @@ import Info from "@/components/Elements/Info.vue";
           required />
       </div>
       <div class="my-2">
-        <info />
+        <info-alert />
         <label class="inline-flex items-center me-5 cursor-pointer mt-6">
           <input
             type="checkbox"

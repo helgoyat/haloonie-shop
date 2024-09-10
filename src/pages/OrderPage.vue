@@ -3,6 +3,7 @@ import { computed } from "vue";
 import { storeToRefs } from "pinia";
 import { useOrderStore } from "@/stores";
 import ShippingForm from "@/components/Elements/ShippingForm.vue";
+import SectionTitle from "@/components/Elements/SectionTitle.vue";
 
 const orderStore = useOrderStore();
 const { isOrder, boxIds, boxes, boxCount, isMaxBoxCount } = storeToRefs(orderStore);
@@ -29,12 +30,13 @@ const cartBoxes = computed((): Array<any> => {
 
 <template>
   <div class="content">
+    <section-title title="Your Boxes" />
     <template v-if="isOrder">
       <div class="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-6 items-start">
         <div
           v-for="item in cartBoxes"
           :key="item.id"
-          class="p-6 border rounded-md border-gray-300">
+          class="p-4 border rounded-md border-gray-300">
           <div class="flex flex-row justify-between items-center gap-2">
             <div class="overflow-hidden text-nowrap text-ellipsis">{{ item.name }}</div>
             <div>

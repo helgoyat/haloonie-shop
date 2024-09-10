@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import Featured from "@/components/Elements/Featured.vue";
-import HrTitle from "@/components/Elements/HrTitle.vue";
+import SectionTitle from "@/components/Elements/SectionTitle.vue";
 </script>
 
 <template>
@@ -9,7 +9,7 @@ import HrTitle from "@/components/Elements/HrTitle.vue";
     <h1>🇫🇷</h1>
   </div>
   <div class="content !pt-2">
-    <hr-title title="Bonjour" />
+    <section-title title="Bonjour" />
     <div class="text-gray-800 text-xl text-center">
       Welcome to Haloonie, your destination for French treats, carefully boxed and shipped to the
       USA.
@@ -79,7 +79,7 @@ import HrTitle from "@/components/Elements/HrTitle.vue";
         </p>
       </div>
     </div>
-    <hr-title title="Featured" />
+    <section-title title="Featured" />
     <featured />
     <div class="flex flex-col items-center my-2">
       <router-link :to="{ name: 'OurBoxesPage' }">
