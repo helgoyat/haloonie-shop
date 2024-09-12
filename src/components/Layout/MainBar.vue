@@ -16,19 +16,18 @@ const { isOrder, boxCount } = storeToRefs(orderStore);
           <span class="brand text-purple-600 self-center text-3xl whitespace-nowrap">Haloonie</span>
         </router-link>
       </div>
-      <div class="sm:basis-1/3 justify-center items-center flex w-auto">
-        <ul>
-          <li
-            v-for="item in [{ name: 'Our Boxes', to: { name: 'OurBoxesPage' } }]"
-            :key="item.name">
-            <router-link
-              :to="item.to"
-              active-class="text-violet-500"
-              class="block py-2 px-3 text-gray-900 rounded hover:text-violet-700 md:p-0">
-              {{ item.name }}
-            </router-link>
-          </li>
-        </ul>
+      <div class="sm:basis-1/3 items-center justify-evenly flex w-auto gap-2">
+        <router-link
+          v-for="item in [
+            { name: 'Collections', to: { name: 'OurBoxesPage' } },
+            { name: 'Specials', to: { name: 'OurBoxesPage' } },
+          ]"
+          :key="item.name"
+          :to="item.to"
+          active-class="text-violet-500"
+          class="text-gray-900 rounded hover:text-violet-700">
+          {{ item.name }}
+        </router-link>
       </div>
       <div class="sm:basis-1/3 text-right">
         <router-link
