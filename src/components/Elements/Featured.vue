@@ -30,7 +30,7 @@ const goToBoxPage = (box: IBox) => {
 
 <template>
   <div
-    class="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-6 justify-items-center items-start">
+    class="grid lg:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-6 justify-items-center items-start">
     <div
       v-for="item in treats"
       :key="item.name"

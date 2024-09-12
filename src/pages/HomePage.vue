@@ -14,7 +14,7 @@ import SectionTitle from "@/components/Elements/SectionTitle.vue";
       Welcome to Haloonie, your destination for French treats, carefully boxed and shipped to the
       USA.
     </div>
-    <div class="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-6">
+    <div class="grid md:grid-cols-3 grid-cols-1 gap-6">
       <div class="w-full p-6 bg-white border border-gray-200 rounded-lg">
         <svg
           class="w-8 h-8 text-violet-500"

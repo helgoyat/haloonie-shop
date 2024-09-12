@@ -8,7 +8,7 @@ const { isOrder, boxCount } = storeToRefs(orderStore);
 
 <template>
   <nav class="bg-white sticky w-full z-20 top-0 start-0 border-b border-gray-200">
-    <div class="max-w-screen-lg flex items-center mx-auto p-4 justify-between">
+    <div class="max-w-screen-lg flex items-center mx-auto p-4 justify-between gap-2">
       <div class="sm:basis-1/3 text-left">
         <router-link
           to="/"
