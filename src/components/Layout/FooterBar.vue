@@ -125,7 +125,7 @@
       <div class="py-2 rounded-md text-center">
         <span class="text-sm text-gray-500">
           © 2024
-          <a href="https://flowbite.com/">Haloonie</a>
+          <a>Haloonie</a>
           - All Rights Reserved.
         </span>
       </div>

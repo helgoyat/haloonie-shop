@@ -13,14 +13,13 @@ const { isOrder, boxCount } = storeToRefs(orderStore);
         <router-link
           to="/"
           class="flex items-center space-x-3 rtl:space-x-reverse">
-          <span class="brand text-purple-600 self-center text-3xl whitespace-nowrap">Haloonie</span>
+          <span class="brand text-violet-600 self-center text-3xl whitespace-nowrap">Haloonie</span>
         </router-link>
       </div>
       <div class="sm:basis-1/3 items-center justify-evenly flex w-auto gap-2">
         <router-link
           v-for="item in [
-            { name: 'Collections', to: { name: 'OurBoxesPage' } },
-            { name: 'Specials', to: { name: 'OurBoxesPage' } },
+            { name: 'Our Boxes', to: { name: 'OurBoxesPage' } },
           ]"
           :key="item.name"
           :to="item.to"

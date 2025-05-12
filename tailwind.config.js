@@ -6,5 +6,5 @@ export default {
       ringColor: ["group-hover"],
     },
   },
-  plugins: [require("flowbite/plugin")],
+  // plugins: [require("flowbite/plugin")],
 };

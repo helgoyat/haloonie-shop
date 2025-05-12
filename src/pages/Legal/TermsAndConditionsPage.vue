@@ -3,7 +3,7 @@
     <h2>Terms and Conditions</h2>
     <h3>1. Introduction</h3>
     <p>
-      Welcome to Haloonie, our website www.haloonie.com, owned by Haloonie LLC, your gateway to
+      Welcome to Haloonie, our website www.haloonie.com, owned by Haloonie, your gateway to
       delicious French treats!
     </p>
     <p>
@@ -21,8 +21,7 @@
       and conditions.
     </p>
     <p>
-      The term "Haloonie" or "us" or "we" refers to the owner of the website whose registered office
-      is Reston, VA, 20194. The term "you" refers to the user or viewer of our website. The term
+      The term "Haloonie" or "us" or "we" refers to the owner of the website. The term "you" refers to the user or viewer of our website. The term
       "Products" or "Product" refers to the Haloonie boxes or box, including the treats. The term
       "treats" refers to the French cookies, cakes and sweets.
     </p>
@@ -36,13 +35,6 @@
       2.2. By submitting the order form, you confirm that all information provided is accurate and
       complete.
     </p>
-    <p>You warrant that:</p>
-    <ul class="space-y-1 list-disc list-inside">
-      <li>You are legally capable of entering into binding contracts.</li>
-      <li>You are at least 18 years old.</li>
-      <li>You are resident in the United States of America.</li>
-      <li>You are accessing our site from that country.</li>
-    </ul>
     <p>
       2.3. After placing an order on our standard order form, you will receive an email from us
       acknowledging that we have received your order (Order Received). Note that this does not mean
@@ -98,37 +90,6 @@
       or consequential.. This includes any liability for damage or loss once the Products are in
       FedEx's possession.
     </p>
-    <p>6.4. We do not assume any responsibility derived, by way of example but not limited to:</p>
-    <ul class="space-y-1 list-disc list-inside">
-      <li>
-        Haloonie is not liable for direct or indirect and/or intangible damages, including personal
-        injury, suffered as a result of the use and/or ingestion of the Products supplied.
-      </li>
-      <li>
-        The Products that make up the Haloonie come directly from the Brands, and therefore they are
-        responsible for the fact that such products have been certified and have passed all relevant
-        sanitary controls, to be made available to the general public.
-      </li>
-    </ul>
-    <p>
-      6.5. By using this website, you acknowledge that you're using it at your own risk. We won't be
-      held responsible for any consequences. It's your responsibility to ensure that any
-      information, products, or services you access through this website meet your individual needs
-      and expectations.
-    </p>
-    <p>
-      6.6. We and any third parties involved disclaim any warranty or guarantee regarding the
-      accuracy, timeliness, performance, completeness, or suitability of the information and
-      materials on this website for any specific purpose. You understand that the information and
-      materials may contain mistakes or inaccuracies, and we explicitly exclude liability for any
-      errors or inaccuracies to the maximum extent allowed by law.
-    </p>
-    <p>
-      6.7. This website may occasionally feature links to other websites as a convenience for you to
-      access additional information. Please note that these links do not imply our endorsement of
-      those websites. We are not responsible for the content or accuracy of the linked websites, and
-      you access them at your own discretion.
-    </p>
     <h3>7. Intellectual Property</h3>
     <p>7.1. Our website, content, and Products are protected by intellectual property rights.</p>
     <p>7.2. You may not reproduce or use our intellectual property without permission.</p>
@@ -137,21 +98,5 @@
       media (Commentary), please ensure that your opinions are genuinely held and reflect your
       honest experience.
     </p>
-    <h3>8. Governing Law and Jurisdiction</h3>
-    <p>
-      8.1. These Terms are governed by and construed in accordance with Virginia law. Your use of
-      this website and any dispute arising out of such use of the website is subject to the laws of
-      the state of Virginia.
-    </p>
-    <p>8.2. Any disputes will be resolved through informal negotiations or small claims court.</p>
-    <h3>9. Changes to Terms</h3>
-    <p>9.1. We reserve the right to update these Terms at any time.</p>
-    <p>
-      9.2. Your continued use of our website and online shop constitutes acceptance of any changes.
-    </p>
-    <h3>10. Contact Us</h3>
-    <p>If you have questions or concerns, please contact us at haloonie@mail.com.</p>
-    <p>Effective Date: Tuesday, June 4.</p>
-    <p>Haloonie</p>
   </div>
 </template>

@@ -1,7 +1,3 @@
-<script setup lang="ts">
-import InfoAlert from "@/components/Elements/InfoAlert.vue";
-</script>
-
 <template>
   <div class="w-full grid grid-cols-1 gap-8">
     <h2 class="text-left">Fill-in The Form</h2>
@@ -61,7 +57,6 @@ import InfoAlert from "@/components/Elements/InfoAlert.vue";
           required />
       </div>
       <div class="my-2">
-        <info-alert />
         <label class="inline-flex items-center me-5 cursor-pointer mt-6">
           <input
             type="checkbox"

@@ -2,20 +2,6 @@ import { IBox } from "@/types";
 
 export const Boxes: IBox[] = [
   {
-    id: "fae39da9-2601-4ba8-8382-62a867aa71d9",
-    name: "Marie De France",
-    description: "Description",
-    image: "https://static.wikia.nocookie.net/disney/images/5/57/MarieCat.png",
-    price: 48,
-    treats: {
-      "565db74a-a6bb-4938-8847-8486c6ce1380": 1,
-      "37310e59-9aee-4063-b852-23d9c9b44825": 1,
-      "126a8c12-d15f-44e8-b379-8689ab2af98c": 1,
-      "4a02eb7b-8096-400e-ba80-118b42598b4e": 1,
-      "83ee9497-ff94-48a1-a160-c4bac246c9dd": 1,
-    },
-  },
-  {
     id: "4e8ba3ce-2f68-4e14-a37d-53c2680accd7",
     name: "Petit Ecolier",
     description: "Description",
@@ -38,7 +24,6 @@ export const Boxes: IBox[] = [
       "fbb6ad4d-6559-4018-b66f-c56020061650": 2,
       "ab4d5376-4540-47b0-af51-c1d879be41a8": 2,
       "3c9e18eb-e784-425b-8ee3-1f3ca6e45346": 2,
-      "585e01b4-b622-4cf8-b30b-179313c51c15": 2,
       "69365e47-acde-4812-8806-4b99ea004d4e": 1,
     },
   },

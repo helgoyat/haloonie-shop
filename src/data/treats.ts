@@ -4,7 +4,7 @@ export const FeaturedTreats: string[] = [
   "c1bf2eb5-c13f-456e-9524-678b20210c6e",
   "a6efb036-8b64-488f-b7f3-e5cf9f86c5ec",
   "bf09553c-8307-4f8b-aaec-080fa92c8683",
-  "585e01b4-b622-4cf8-b30b-179313c51c15",
+  "4b953e44-99e5-47db-9f5b-800e6e16221d",
 ];
 
 export const Treats: ITreat[] = [
@@ -370,17 +370,6 @@ export const Treats: ITreat[] = [
     ingredients: "",
     image:
       "https://www.coursesu.com/dw/image/v2/BBQX_PRD/on/demandware.static/-/Sites-digitalu-master-catalog/default/dw638e69a6/3017760329798_H1N1_475734_S10.png?sw=250&sh=250&sm=fit",
-  },
-  {
-    id: "585e01b4-b622-4cf8-b30b-179313c51c15",
-    name: "Pepito Mini Roulés",
-    description: "Gâteaux fourrés au chocolat mini roulés.",
-    brand: "LU",
-    type: TreatTypeEnum.Cake,
-    treatsPerIndividualBag: 1,
-    ingredients: "",
-    image:
-      "https://www.coursesu.com/dw/image/v2/BBQX_PRD/on/demandware.static/-/Sites-digitalu-master-catalog/default/dw056e1a20/3017760314497_H1L1_2479168_S10.png?sw=250&sh=250&sm=fit",
   },
   {
     id: "69365e47-acde-4812-8806-4b99ea004d4e",
