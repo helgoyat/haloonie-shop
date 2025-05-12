@@ -18,9 +18,7 @@ const { isOrder, boxCount } = storeToRefs(orderStore);
       </div>
       <div class="sm:basis-1/3 items-center justify-evenly flex w-auto gap-2">
         <router-link
-          v-for="item in [
-            { name: 'Our Boxes', to: { name: 'OurBoxesPage' } },
-          ]"
+          v-for="item in [{ name: 'Our Boxes', to: { name: 'OurBoxesPage' } }]"
           :key="item.name"
           :to="item.to"
           active-class="text-violet-500"

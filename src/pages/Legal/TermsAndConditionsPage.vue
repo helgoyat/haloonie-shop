@@ -21,9 +21,10 @@
       and conditions.
     </p>
     <p>
-      The term "Haloonie" or "us" or "we" refers to the owner of the website. The term "you" refers to the user or viewer of our website. The term
-      "Products" or "Product" refers to the Haloonie boxes or box, including the treats. The term
-      "treats" refers to the French cookies, cakes and sweets.
+      The term "Haloonie" or "us" or "we" refers to the owner of the website. The term "you" refers
+      to the user or viewer of our website. The term "Products" or "Product" refers to the Haloonie
+      boxes or box, including the treats. The term "treats" refers to the French cookies, cakes and
+      sweets.
     </p>
     <h3>2. Ordering and Payment</h3>
     <p>
