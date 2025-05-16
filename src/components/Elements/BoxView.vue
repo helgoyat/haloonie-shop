@@ -46,7 +46,7 @@ const getLargerImagePath = (image: string): string => {
     <div
       class="w-full h-96 bg-cover bg-no-repeat bg-center rounded-xl shadow-sm"
       style="
-        background-image: url(&quot;https://cf.degustabox.com/en/public/images/1709743155_db-uk-full-box-feb-2024-web-.jpg&quot;);
+        background-image: url(https://images.unsplash.com/photo-1744076816644-5cad94b46055?q=80&w=3164&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
       "></div>
     <div class="rounded-xl p-6 border border-gray-200 flex flex-col gap-6">
       <div>{{ box.description }}</div>
